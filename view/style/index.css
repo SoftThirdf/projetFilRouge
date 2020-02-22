@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+:root {
+  --rouge-logo: #ce062d;
+  --orange-logo: #e87f0b;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.sousH2 {
+  margin: 0;
+  margin-bottom: 2%;
+  border: 1px solid var(--orange-logo);
+  width: 5%;
+}
+
+/* ========================= HEADER ============================ */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+
+.linkBlack {
+  text-decoration: none;
+  color: black;
+}
+
+.s100 {
+  width: 100%;
+}
+
+.btn {
+  border: solid black;
+  padding: 3%;
+  border-radius: 7%;
+}
+
+.btn:hover {
+  background-color: var(--rouge-logo);
+  color: white;
+}
+
+#conteneurNavigation {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#conteneurLogoMenu {
+  width: 20%;
+}
+
+#conteneurConnexionMenu {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  text-align: center;
+}
+
+#navigation {
+  width: 80%;
+}
+
+#navigationOl {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+#navigationOl li a:hover {
+  color: var(--orange-logo);
+}
+
+#loginLogo {
+  width: 15%;
+}
+
+/* ========================= BODY ============================ */
+.marginBotConteneur3 {
+  margin-bottom: 3%;
+}
+
+/* ================ MiddlePage =================== */
+.conteneurPage {
+  width: 95%;
+  margin: auto;
+}
+
+.imgArticle {
+  width: 100%;
+}
+
+#ConteneurArticles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteneurMiddleArticle {
+  text-align: center;
+  width: 30%;
+}
+
+#conteneurMiddlePage {}
+
+/* ================ SPONSORS =================== */
+.sponsor {
+  width: 15%;
+}
+
+#conteneurSponsor {
+  background-color: white;
+}
+
+#conteneurImagesSponsor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========================= FOOTER ============================ */
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #F2F2F2;
+  margin-top: 3%;
+}
+
+.navigationFooterOl {
+  list-style: none;
+  margin: 0;
+}
+
+.marginBottom10 {
+  margin-bottom: 10%;
+}
+
+.linkWhite {
+  color: black;
+}
+
+#conteneurNavigationFooter {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+#navigationFooter {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 75%;
+}
