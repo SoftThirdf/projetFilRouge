@@ -131,7 +131,9 @@ CREATE TABLE observe (
 CREATE TABLE marque (
   id_match CHAR(5) NOT NULL,
   id_set CHAR(6) NOT NULL,
+  id_joueur CHAR(4) NOT NULL,
   nb_jeu_simple TINYINT NOT NULL,
   FOREIGN KEY (id_Match) REFERENCES RENCONTRE (id_Match),
-  FOREIGN KEY (id_set) REFERENCES BALLE_SET (id_set)
+  FOREIGN KEY (id_set) REFERENCES BALLE_SET (id_set),
+  FOREIGN KEY (id_joueur) REFERENCES JOUEUR (id_joueur)
 );

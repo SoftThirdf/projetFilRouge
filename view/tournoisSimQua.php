@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style/index.css">
-  <link rel="stylesheet" href="style/tournois.css">
+  <link rel="stylesheet" href="../view/style/index.css">
+  <link rel="stylesheet" href="../view/style/tournois.css">
   <title>Accueil</title>
 </head>
 
@@ -13,7 +13,7 @@
   <header class="s100" id="haut">
     <div id="conteneurNavigation">
       <div id="conteneurLogoMenu">
-        <a href="index.php" class="s100"><img src="img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
+        <a href="index.php" class="s100"><img src="../view/img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
       </div>
       <nav id="navigation">
         <ol id="navigationOl">
@@ -37,7 +37,7 @@
   </header>
 
   <div id="conteneurBody">
-    <h2>Tableaux des tournois</h2>
+    <h2>Tableau du tournoi simple qualificatif</h2>
     <hr class="sousH2">
     <div id="conteneurTournois">
       <div class="tournoi">
@@ -54,58 +54,52 @@
       </div>
     </div>
 
-    <h3>1/8 ème de finale</h3>
     <div id="conteneurArbre">
-      <?php
+      <div class="phaseTournoi">
+        <h3>1/8ème de finale</h3>
 
-      //GENERER EN PHP les rencontres
+        <?php
 
+        global $tab;
+        var_dump($tab);
+        $idMatch = '';
+        foreach ($tab as $key => $value) {
+          if ($idMatch != $value['id_Match']) {
+            $idMatch = $value['id_Match'];
+            $nomJoueur = $value['Nom_joueur'];
+            $prenomJoueur = $value['Prenom_joueur'];
+            $natJoueur = $value['Nationalite_joueur'];
+            echo "
+            <div class=\"conteneurRencontres\">
+              <div class=\"rencontre\">
+                <table>
+                  <tbody>
+                    <tr class=\"joueur\">
+                      <td class=\"nom\">$nomJoueur</td>
+                      <td class=\"prenom\">$prenomJoueur</td>
+                      <td class=\"nation\">$natJoueur<td>
+                      <td class=\"set\">6</td>
+                      <td class=\"set\">2</td>
+                      <td class=\"set\">6</td>
+                    </tr>
+                    <tr class=\"joueur\">
+                      <td class=\"nom\">Nom</td>
+                      <td class=\"prenom\">Prénom</td>
+                      <td class=\"nation\">FR<td>
+                      <td class=\"set\">4</td>
+                      <td class=\"set\">6</td>
+                      <td class=\"set\">3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            ";
+          }
+        }
 
-       ?>
-      <div class="rencontre">
-        <table>
-          <tbody>
-            <tr class="joueur">
-              <td class="nom">Nom</td>
-              <td class="prenom">Prénom</td>
-              <td class="nation">FR<td>
-              <td class="set">6</td>
-              <td class="set">2</td>
-              <td class="set">6</td>
-            </tr>
-            <tr class="joueur">
-              <td class="nom">Nom</td>
-              <td class="prenom">Prénom</td>
-              <td class="nation">FR<td>
-              <td class="set">4</td>
-              <td class="set">6</td>
-              <td class="set">3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        ?>
 
-      <div class="rencontre">
-        <table>
-          <tbody>
-            <tr class="joueur">
-              <td class="nom">Nom</td>
-              <td class="prenom">Prénom</td>
-              <td class="nation">FR<td>
-              <td class="set">6</td>
-              <td class="set">2</td>
-              <td class="set">6</td>
-            </tr>
-            <tr class="joueur">
-              <td class="nom">Nom</td>
-              <td class="prenom">Prénom</td>
-              <td class="nation">FR<td>
-              <td class="set">4</td>
-              <td class="set">6</td>
-              <td class="set">3</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>
@@ -114,7 +108,7 @@
 
 <footer>
   <div id="conteneurNavigationFooter">
-    <a href="index.php" class="s100"><img src="img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
+    <a href="../view/index.php" class="s100"><img src="../view/img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
   </div>
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
