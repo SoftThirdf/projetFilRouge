@@ -1,6 +1,6 @@
 #conteneurTournois {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .tournoi {
@@ -10,16 +10,17 @@
   border-radius: 5%;
 }
 
-.linkTournoi {
-  display: flex;
-  justify-content: space-around;
-}
-
-.linkTournoi p {
-  margin: 0;
-}
-
 #conteneurBody {
   width: 80%;
   margin: 0 auto;
+}
+
+/* ================================= RENCONTRE ================================= */
+table, tr, .set {
+  border: 1px solid #e1e1e1;
+}
+
+#conteneurArbre {
+  display: flex;
+  justify-content: space-around;
 }
