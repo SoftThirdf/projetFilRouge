@@ -56,7 +56,12 @@
 
     <h3>1/8 ème de finale</h3>
     <div id="conteneurArbre">
-      <!-- A GENERER EN PHP -->
+      <?php
+
+      //GENERER EN PHP les rencontres
+
+
+       ?>
       <div class="rencontre">
         <table>
           <tbody>
