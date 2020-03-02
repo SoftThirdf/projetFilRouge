@@ -1,0 +1,14 @@
+#conteneurTournois {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tournoi {
+  width: 20%;
+  text-align: center;
+}
+
+#conteneurBody {
+  width: 95%;
+  margin: 0 auto;
+}
