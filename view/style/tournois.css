@@ -5,10 +5,21 @@
 
 .tournoi {
   width: 20%;
-  text-align: center;
+  padding: 1% 0%;
+  border: 2px solid #e1e1e1;
+  border-radius: 5%;
+}
+
+.linkTournoi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.linkTournoi p {
+  margin: 0;
 }
 
 #conteneurBody {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
 }

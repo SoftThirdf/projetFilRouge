@@ -1,20 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans');
 
 :root {
   --rouge-logo: #ce062d;
   --orange-logo: #e87f0b;
 }
 
-html {
-  font-family: 'Open Sans', sans-serif;
-}
-
 body {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -29,7 +26,6 @@ h1, h2, h3 {
 header {
   display: flex;
   align-items: center;
-  background-color: #F2F2F2;
 }
 
 .linkBlack {
@@ -52,7 +48,7 @@ header {
 }
 
 .btn {
-  border: 0.1em solid black;
+  border: 2px solid black;
   border-radius: 7%;
   padding: 3%;
 }
@@ -65,8 +61,10 @@ header {
 #conteneurNavigation {
   display: flex;
   align-items: center;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #conteneurLogoMenu {
@@ -82,7 +80,6 @@ header {
 
 #navigation {
   width: 60%;
-  padding: 0;
 }
 
 #navigationOl {
@@ -91,14 +88,19 @@ header {
   list-style: none;
   margin: 0;
   width: 100%;
+  padding: 0;
+  font-size: 115%;
+  font-weight: bold;
 }
 
 .linkBlackOrange:hover {
   color: var(--orange-logo);
+  text-decoration: none;
 }
 
 .linkBlackRouge:hover {
   color: var(--rouge-logo);
+  text-decoration: none;
 }
 
 #loginLogo {
@@ -112,7 +114,7 @@ header {
 
 /* ================ MiddlePage =================== */
 .conteneurPage {
-  width: 95%;
+  width: 80%;
   margin: auto;
 }
 
