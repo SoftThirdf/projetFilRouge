@@ -1,0 +1,22 @@
+body {background-color: white;
+      font-family: sans-serif;}
+
+.conteneur{
+  display: flex;
+
+}
+
+.roundedImage{
+    width:100%;
+    justify-content: space-between;
+
+
+}
+
+.lienImage{
+  width: 100% ;
+
+}
+#conteneurBody{
+
+}
