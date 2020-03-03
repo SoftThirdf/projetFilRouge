@@ -7,20 +7,8 @@
   </head>
   <body>
     <div "conteneur">
-      <?php
-       if (isset($_POST['mdp'])&&isset($_POST['login']))
-       {
-         if($_POST['login']=="filrouge@iae.fr"&&$_POST['mdp']=="filrouge")
-         {
-        echo"<a href=\"Moncompte.html\"></a>";
-         }
-       }
-       else {
-         echo "Identifiant ou mot de passe incorrect";
-       }
-       ?>
      </div>
-       <form action="Forconnexion.php" method="post">
+       <form action="Moncompte.php" method="post">
        <tr>
        <td>Adresse mail</td>
        <td><input type="text" name="login">
