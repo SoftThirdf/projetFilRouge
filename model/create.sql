@@ -32,7 +32,7 @@ CREATE TABLE ramasseur (
   nom_ramasseur VARCHAR(25) NOT NULL,
   prenom_ramasseur VARCHAR(25) NOT NULL,
   telephone_ramasseur VARCHAR(15) NOT NULL,
-  id_equipe_ramasseur CHAR(4) NOT NULL,
+  id_equipe_ramasseur CHAR(5) NOT NULL,
   FOREIGN KEY (id_equipe_ramasseur) REFERENCES EQUIPE_RAMASSEUR (id_equipe_ramasseur)
 );
 
@@ -84,8 +84,8 @@ CREATE TABLE vip (
   nb_grands_chelems TINYINT NOT NULL,
   classement_ATP_Simple VARCHAR(6) NOT NULL,
   classement_ATP_Double VARCHAR(7) NOT NULL,
-  popularite_VIP VARCHAR(15) NOT NULL,
-  FOREIGN KEY (popularite_VIP) REFERENCES POPULARITE (popularite_VIP)
+  id_Popularite CHAR(5) NOT NULL,
+  FOREIGN KEY (id_Popularite) REFERENCES POPULARITE (id_Popularite)
 );
 
 CREATE TABLE arbitre (
