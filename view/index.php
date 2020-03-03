@@ -15,22 +15,25 @@
   <header class="s100" id="haut">
     <div id="conteneurNavigation">
       <div id="conteneurLogoMenu">
-        <a href="index.html" class="s100"><img src="img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
+        <a href="index.php" class="s100"><img src="img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
       </div>
       <nav id="navigation">
         <ol id="navigationOl">
-          <li> <a href="index.html" class="linkBlack">Accueil</a></li>
-          <li><a href="#" class="linkBlack">Tableau du tournoi</a></li>
-          <li><a href="#" class="linkBlack">VIP</a></li>
+          <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
+          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li><a href="#" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
       <div id="conteneurConnexionMenu">
-        <div id="btnConnexion" class="btn">
-          <a href="Forconnexion.php" class="linkBlack">Connexion</a>
-        </div>
-        <div id="btnInscription" class="btn">
-          <a href="#" class="linkBlack">S'inscrire</a>
-        </div>
+
+        <a href="#" class="linkBlack btn" id="btnConnexion">
+          <div>Connexion</div>
+        </a>
+
+        <a href="#" class="linkBlack btn" id="btnInscription">
+          <div>S'inscrire </div>
+        </a>
+
       </div>
     </div>
   </header>
@@ -131,12 +134,12 @@
 
 <footer>
   <div id="conteneurNavigationFooter">
-    <a href="index.html" class="s100"><img src="img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
+    <a href="index.php" class="s100"><img src="img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
   </div>
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="#" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="#" class="linkWhite">Tableau du tournoi</a></li>
+      <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQua.php" class="linkWhite">Tableau du tournoi</a></li>
       <li><a href="#" class="linkWhite">VIP</a></li>
 
     </ol>
