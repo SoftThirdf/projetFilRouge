@@ -56,71 +56,32 @@
 
     <div id="conteneurArbre">
       <div class="phaseTournoi">
-        <h3>1/8ème de finale</h3>
         <?php
 
-        global $tab;
-        $idMatch = '';
-        $idJoueur = '';
-        $idMatch = $tab[0]['id_Match'];
-        $idJoueur = $tab[0]['id_joueur'];
-        $nomJoueur = $tab[0]['Nom_joueur'];
-        $prenomJoueur = $tab[0]['Prenom_joueur'];
-        $natJoueur = $tab[0]['Nationalite_joueur'];
-        $set = $tab[0]['Nb_jeu_simple'];
+        global $tabFinal;
 
-        echo "
-        <div class=\"conteneurRencontres\">
-        <div class=\"rencontre\">
-        <table>
-        <tr class=\"joueur\">
-        <td class=\"nom\">$nomJoueur</td>
-        <td class=\"prenom\">$prenomJoueur</td>
-        <td class=\"nation\">$natJoueur<td>";
-
-        foreach ($tab as $key => $value) {
-          if ($idMatch != $value['id_Match'] && $idJoueur != $value['id_joueur']) {
-            $idMatch = $value['id_Match'];
-            $idJoueur = $value['id_joueur'];
-            $nomJoueur = $value['Nom_joueur'];
-            $prenomJoueur = $value['Prenom_joueur'];
-            $natJoueur = $value['Nationalite_joueur'];
-            $set = $value['Nb_jeu_simple'];
-            echo"</tr>
-            </table>
-        </div>";
+        foreach ($tabFinal as $phase => $matchs) {
+          echo"<h3>$phase</h3>
+          <div class=\"conteneurRencontres\">";
+          foreach ($matchs as $match => $joueurs) {
             echo "
             <div class=\"rencontre\">
-            <table>
-            <tr class=\"joueur\">
-            <td class=\"nom\">$nomJoueur</td>
-            <td class=\"prenom\">$prenomJoueur</td>
-            <td class=\"nation\">$natJoueur<td>
-            <td class=\"set\">$set</td>";
-
-          } elseif ($idMatch == $value['id_Match'] && $idJoueur != $value['id_joueur']) {
-              $idJoueur = $value['id_joueur'];
-              $nomJoueur = $value['Nom_joueur'];
-              $prenomJoueur = $value['Prenom_joueur'];
-              $natJoueur = $value['Nationalite_joueur'];
-              $set = $value['Nb_jeu_simple'];
-
-              echo"</tr>
-                    <tr class=\"joueur\">
-                      <td class=\"nom\">$nomJoueur</td>
-                      <td class=\"prenom\">$prenomJoueur</td>
-                      <td class=\"nation\">$natJoueur<td>
-                      <td class=\"set\">$set</td>";
-          }elseif ($idMatch == $value['id_Match'] && $idJoueur == $value['id_joueur']) {
-            $set = $value['Nb_jeu_simple'];
-            echo"<td class=\"set\">$set</td>";
+            <table>";
+            foreach ($joueurs as $key => $infos) {
+              echo"<tr class=\"joueur\">
+               <td class=\"nom\">$infos[0]</td>
+               <td class=\"prenom\">$infos[1]</td>
+               <td class=\"nation\">$infos[2]<td>";
+               for ($i=3; $i < sizeof($infos) ; $i++) {
+                echo" <td class=\"set\">$infos[$i]</td>";
+               }
+            }
+            echo"</tr>
+            </table>
+            </div>";
           }
+          echo"</div>";
         }
-        echo"</tr>
-        </table>
-      </div>
-    </div>";
-
 
         ?>
 
