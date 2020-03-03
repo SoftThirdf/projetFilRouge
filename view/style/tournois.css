@@ -1,13 +1,13 @@
-#conteneurTournois {
-  display: flex;
-  justify-content: space-between;
-}
-
 .tournoi {
   width: 20%;
   padding: 1% 0%;
   border: 2px solid #e1e1e1;
   border-radius: 5%;
+}
+
+#conteneurTournois {
+  display: flex;
+  justify-content: space-between;
 }
 
 #conteneurBody {
@@ -22,5 +22,17 @@ table, tr, .set {
 
 .conteneurRencontres {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
+
+.h3Tournois {
+  margin-bottom: 0.5%;
+}
+
+.rencontre {
+  width: 25%;
+  margin-bottom: 1.5%;
+}
+
+#conteneurArbre {}

@@ -20,7 +20,7 @@
       <nav id="navigation">
         <ol id="navigationOl">
           <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="tournoisSimQua.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
           <li><a href="#" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -139,7 +139,7 @@
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="tournoisSimQua.php" class="linkWhite">Tableau du tournoi</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQua.php" class="linkWhite">Tableau du tournoi</a></li>
       <li><a href="#" class="linkWhite">VIP</a></li>
 
     </ol>

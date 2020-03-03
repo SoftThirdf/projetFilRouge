@@ -16,10 +16,15 @@ h1, h2, h3 {
 }
 
 .sousH2 {
-  margin: 0;
-  margin-bottom: 2%;
+  margin: 0 0 2% 0;
   border: 1px solid var(--orange-logo);
   width: 5%;
+}
+
+.sousH3 {
+  margin: 0 0 2% 0;
+  border: 1px solid var(--rouge-logo);
+  width: 2%;
 }
 
 /* ========================= HEADER ============================ */

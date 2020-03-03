@@ -2,7 +2,7 @@ CREATE TABLE court(
   id_Court CHAR(4) PRIMARY KEY,
   libelle_court VARCHAR(15) NOT NULL,
   type_court VARCHAR(12) NOT NULL,
-  libre ENUM('Libre', 'Occupé') NOT NULL
+  libre ENUM('Libre', 'Occupé')
 );
 
 CREATE TABLE horaire(
