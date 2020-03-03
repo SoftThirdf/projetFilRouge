@@ -1,38 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans');
 
 :root {
   --rouge-logo: #ce062d;
   --orange-logo: #e87f0b;
 }
 
-html {
-  font-family: 'Open Sans', sans-serif;
-}
-
 body {
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: bold;
 }
 
 .sousH2 {
-  margin: 0;
-  margin-bottom: 2%;
+  margin: 0 0 2% 0;
   border: 1px solid var(--orange-logo);
   width: 5%;
+}
+
+.sousH3 {
+  margin: 0 0 2% 0;
+  border: 1px solid var(--rouge-logo);
+  width: 2%;
 }
 
 /* ========================= HEADER ============================ */
 header {
   display: flex;
   align-items: center;
-  background-color: #F2F2F2;
 }
 
 .linkBlack {
+  text-decoration: none;
+  color: black;
+}
+
+.linkBlackOrange {
+  text-decoration: none;
+  color: black;
+}
+
+.linkBlackRouge {
   text-decoration: none;
   color: black;
 }
@@ -42,9 +53,9 @@ header {
 }
 
 .btn {
-  border: solid black;
-  padding: 3%;
+  border: 2px solid black;
   border-radius: 7%;
+  padding: 3%;
 }
 
 .btn:hover {
@@ -55,8 +66,10 @@ header {
 #conteneurNavigation {
   display: flex;
   align-items: center;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #conteneurLogoMenu {
@@ -65,13 +78,13 @@ header {
 
 #conteneurConnexionMenu {
   display: flex;
-  justify-content: space-around;
-  width: 20%;
   text-align: center;
+  width: 20%;
+  justify-content: space-evenly;
 }
 
 #navigation {
-  width: 80%;
+  width: 60%;
 }
 
 #navigationOl {
@@ -79,10 +92,20 @@ header {
   justify-content: space-around;
   list-style: none;
   margin: 0;
+  width: 100%;
+  padding: 0;
+  font-size: 115%;
+  font-weight: bold;
 }
 
-#navigationOl li a:hover {
+.linkBlackOrange:hover {
   color: var(--orange-logo);
+  text-decoration: none;
+}
+
+.linkBlackRouge:hover {
+  color: var(--rouge-logo);
+  text-decoration: none;
 }
 
 #loginLogo {
@@ -96,7 +119,7 @@ header {
 
 /* ================ MiddlePage =================== */
 .conteneurPage {
-  width: 95%;
+  width: 80%;
   margin: auto;
 }
 
