@@ -17,8 +17,8 @@
       </div>
       <nav id="navigation">
         <ol id="navigationOl">
-          <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="tournoisSimQua.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li> <a href="../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
+          <li><a href="tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
           <li><a href="#" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -41,7 +41,7 @@
     <hr class="sousH2">
     <div id="conteneurTournois">
       <div class="tournoi">
-        <a href="tournoisSimQua" class="s100 linkBlackOrange linkTournoi"> Tournoi simple qualificatif &emsp; >></a>
+        <a href="tournoisSimQuaControler.php" class="s100 linkBlackOrange linkTournoi"> Tournoi simple qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
         <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
@@ -74,7 +74,11 @@
                <td class=\"prenom\">$infos[1]</td>
                <td class=\"nation\">$infos[2]<td>";
                for ($i=3; $i < sizeof($infos) ; $i++) {
-                echo" <td class=\"set\">$infos[$i]</td>";
+                 if ($infos[$i] == 6 || $infos[$i] == 7) {
+                   echo" <td class=\"set setWin\">$infos[$i]</td>";
+                 }else{
+                   echo" <td class=\"set\">$infos[$i]</td>";
+                 }
                }
             }
             echo"</tr>

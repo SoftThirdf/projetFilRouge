@@ -35,4 +35,9 @@ table, tr, .set {
   margin-bottom: 1.5%;
 }
 
+.setWin {
+  background-color: orange;
+  font-weight: bold;
+}
+
 #conteneurArbre {}
