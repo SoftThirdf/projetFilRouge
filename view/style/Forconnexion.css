@@ -1,0 +1,17 @@
+.body{
+  background-color: white;
+  font-family: sans-serif;
+}
+
+.conteneur{
+
+  background-image: url("../img/Connexion.jpg");
+  background-size: 50%;
+  height: 100%;
+  margin: auto;
+  background-repeat: no-repeat;
+
+}
+.essai{
+  width: 50%;
+}
