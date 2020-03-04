@@ -2,8 +2,7 @@
 
   include_once("../model/DAO.class.php");
   $typeTournoi = 'Officiel';
-  $categorieTournoi = 'Simple';
-  $tab = $dao->getInfoTypeMatchTournoi($typeTournoi, $categorieTournoi);
+  $tab = $dao->getInfoTypeMatchTournoiSimple($typeTournoi);
 
   // Mise en forme du résultat de la requête pour avoir un tableau propre, du style :
   // Phase =>
