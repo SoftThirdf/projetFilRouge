@@ -44,13 +44,13 @@
         <a href="tournoisSimQuaControler.php" class="s100 linkBlackOrange linkTournoi"> Tournoi simple qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
+        <a href="tournoisDouQuaControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
         <a href="tournoisSimFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi simple final &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
+        <a href="tournoisDouFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
       </div>
     </div>
 

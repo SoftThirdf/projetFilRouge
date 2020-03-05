@@ -1,7 +1,7 @@
 <?php
 
   include_once("../model/DAO.class.php");
-  $typeTournoi = 'Eliminatoire';
+  $typeTournoi = 'Officiel';
   $tab = $dao->getInfoTypeMatchTournoiDouble($typeTournoi);
 
   // Mise en forme du résultat de la requête pour avoir un tableau propre, du style :
@@ -53,5 +53,5 @@
   // }
 
   //var_dump($tabFinal['1/8']['SQ022']);
-  include("../view/tournoisDouQua.php")
+  include("../view/tournoisDouFin.php")
  ?>

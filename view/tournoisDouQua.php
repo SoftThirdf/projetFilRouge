@@ -44,56 +44,22 @@
         <a href="tournoisSimQuaControler.php" class="s100 linkBlackOrange linkTournoi"> Tournoi simple qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
+        <a href="tournoisDouQuaControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
         <a href="tournoisSimFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi simple final &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
+        <a href="tournoisDouFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
       </div>
     </div>
 
     <div id="conteneurArbre">
       <div class="phaseTournoi">
-
-        <h3 class="h3Tournois">1/8</h3>
-        <div class="conteneurRencontres">
-          <div class="rencontre">
-            <table>
-              <tr class="equipe">
-                <tr>
-                  <td class="nom">Dupont</td>
-                  <td class="prenom">Paul</td>
-                  <td class="nation">FR</td>
-                  <td class="set" rowspan="2">0</td>
-                </tr>
-                <tr>
-                  <td class="nom">Dupont</td>
-                  <td class="prenom">Paul</td>
-                  <td class="nation">FR</td>
-                </tr>
-              </tr>
-              <tr class="equipe">
-                <tr>
-                  <td class="nom">Dupont</td>
-                  <td class="prenom">Paul</td>
-                  <td class="nation">FR</td>
-                  <td class="set" rowspan="2">0</td>
-                </tr>
-                <tr>
-                  <td class="nom">Dupont</td>
-                  <td class="prenom">Paul</td>
-                  <td class="nation">FR</td>
-                </tr>
-              </tr>
-            </table>
-          </div>
-        </div>
         <?php
 
         global $tabFinal;
-        
+
         if ($tabFinal == null) {
           echo "Désolé, il n'y a pas de match en cours";
         }else{
@@ -107,20 +73,44 @@
               <table>";
               foreach ($equipes as $key => $joueurs) {
                 echo "<tr class=\"equipe\">";
+                // On créé un tableau de score pour chaque équipe
+                $tabScore;
+                // Pour pouvoir initialiser les valeurs à éro de ce tableau, il faut connaitre la taille du  nombre total de set qu'il y a dans le match
+                foreach ($joueurs as $key => $a) {
+                  //Ce sera donc $a
+                }
+                // On initialise les vlauers du tableau à zéro. Pour chaque set, les vlauers sont au départ à zéro.
+                $l = 0;
+                for ($i=3; $i < sizeof($a) ; $i++) {
+                  $tabScore[$l] = 0;
+                  $l++;
+                }
+                // Ensuite, on additionne pour chaque joueurs les points marqué des sets, pour avoir un total de set marqué
                 foreach ($joueurs as $key => $infos) {
+                  $j = 0;
+                  for ($i=3; $i < sizeof($infos) ; $i++) {
+                    $tabScore[$j] = $tabScore[$j] + $infos[$i];
+                    $j++;
+                  }
+                }
+                //  Puis, on les affiches
+                $nbJ = 0;
+                foreach ($joueurs as $key => $infos) {
+                  $nbJ++;
                   echo"<tr class=\"joueur\">
                   <td class=\"nom\">$infos[0]</td>
                   <td class=\"prenom\">$infos[1]</td>
                   <td class=\"nation\">$infos[2]<td>";
-                  // for ($i=3; $i < sizeof($infos) ; $i++) {
-                  //   if ($infos[$i] == 6 || $infos[$i] == 7) {
-                  //     echo" <td class=\"set setWin\">$infos[$i]</td>";
-                  //   }else{
-                  //     echo" <td class=\"set\">$infos[$i]</td>";
-                  //   }
-                  // }
-
-
+                  // Si c'est le premier joueur, alors on affiche le socre dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
+                  if ($nbJ == 1) {
+                    for ($k=0; $k < sizeof($tabScore) ; $k++) {
+                      if ($tabScore[$k] == 6 || $tabScore[$k] == 7) {
+                        echo" <td class=\"set setWin\" rowspan=2>$tabScore[$k]</td>";
+                      }else{
+                        echo" <td class=\"set\" rowspan=2>$tabScore[$k]</td>";
+                      }
+                    }
+                  }
                 }
               }
               echo"</tr>
