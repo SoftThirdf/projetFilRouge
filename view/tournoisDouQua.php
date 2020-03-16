@@ -37,7 +37,7 @@
   </header>
 
   <div id="conteneurBody">
-    <h2>Tableau du tournoi simple qualificatif</h2>
+    <h2>Tableau du tournoi double qualificatif</h2>
     <hr class="sousH2">
     <div id="conteneurTournois">
       <div class="tournoi">
@@ -67,24 +67,54 @@
             echo"<h3 class=\"h3Tournois\">$phase</h3>
             <hr class=\"sousH3\">
             <div class=\"conteneurRencontres\">";
-            foreach ($matchs as $match => $joueurs) {
+            foreach ($matchs as $match => $equipes) {
               echo "
               <div class=\"rencontre\">
               <table>";
-              foreach ($joueurs as $key => $infos) {
-                echo"<tr class=\"joueur\">
-                <td class=\"nom\">$infos[0]</td>
-                <td class=\"prenom\">$infos[1]</td>
-                <td class=\"nation\">$infos[2]<td>";
-                for ($i=3; $i < sizeof($infos) ; $i++) {
-                  if ($infos[$i] == 6 || $infos[$i] == 7) {
-                    echo" <td class=\"set setWin\">$infos[$i]</td>";
-                  }else{
-                    echo" <td class=\"set\">$infos[$i]</td>";
+              foreach ($equipes as $key => $joueurs) {
+                echo "<tr class=\"equipe\">";
+                // On créé un tableau de score pour chaque équipe
+                $tabScore;
+                // Pour pouvoir initialiser les valeurs à éro de ce tableau, il faut connaitre la taille du  nombre total de set qu'il y a dans le match
+                foreach ($joueurs as $key => $a) {
+                  //Ce sera donc $a
+                }
+                // On initialise les vlauers du tableau à zéro. Pour chaque set, les vlauers sont au départ à zéro.
+                $l = 0;
+                for ($i=3; $i < sizeof($a) ; $i++) {
+                  $tabScore[$l] = 0;
+                  $l++;
+                }
+                // Ensuite, on additionne pour chaque joueurs les points marqué des sets, pour avoir un total de set marqué
+                foreach ($joueurs as $key => $infos) {
+                  $j = 0;
+                  for ($i=3; $i < sizeof($infos) ; $i++) {
+                    $tabScore[$j] = $tabScore[$j] + $infos[$i];
+                    $j++;
+                  }
+                }
+                //  Puis, on les affiches
+                $nbJ = 0;
+                foreach ($joueurs as $key => $infos) {
+                  $nbJ++;
+                  echo"<tr class=\"joueur\">
+                  <td class=\"nom\">$infos[0]</td>
+                  <td class=\"prenom\">$infos[1]</td>
+                  <td class=\"nation\">$infos[2]<td>";
+                  // Si c'est le premier joueur, alors on affiche le socre dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
+                  if ($nbJ == 1) {
+                    for ($k=0; $k < sizeof($tabScore) ; $k++) {
+                      if ($tabScore[$k] == 6 || $tabScore[$k] == 7) {
+                        echo" <td class=\"set setWin\" rowspan=2>$tabScore[$k]</td>";
+                      }else{
+                        echo" <td class=\"set\" rowspan=2>$tabScore[$k]</td>";
+                      }
+                    }
                   }
                 }
               }
               echo"</tr>
+              </tr>
               </table>
               </div>";
             }

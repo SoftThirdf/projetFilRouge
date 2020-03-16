@@ -1,7 +1,7 @@
 <?php
 
   include_once("../model/DAO.class.php");
-  $typeTournoi = 'Eliminatoire';
+  $typeTournoi = 'Officiel';
   $tab = $dao->getInfoTypeMatchTournoiSimple($typeTournoi);
 
   // Mise en forme du résultat de la requête pour avoir un tableau propre, du style :
@@ -37,9 +37,7 @@
         array_push($tabFinal[$phase][$idMatch][$idJoueur], $tab[$i]['Nb_jeu_simple']);
       }
     }
-  }
-  include("../view/tournoisSimQua.php")
+}
 
-
-
+  include("../view/tournoisSimFin.php")
  ?>

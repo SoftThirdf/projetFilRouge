@@ -37,7 +37,7 @@
   </header>
 
   <div id="conteneurBody">
-    <h2>Tableau du tournoi simple qualificatif</h2>
+    <h2>Tableau du tournoi simple officiel</h2>
     <hr class="sousH2">
     <div id="conteneurTournois">
       <div class="tournoi">
@@ -91,7 +91,6 @@
             echo"</div>";
           }
         }
-
 
         ?>
 
