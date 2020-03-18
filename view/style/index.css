@@ -27,6 +27,10 @@ h1, h2, h3 {
   width: 2%;
 }
 
+.marginTop5 {
+  margin-top: 5%;
+}
+
 /* ========================= HEADER ============================ */
 header {
   display: flex;
