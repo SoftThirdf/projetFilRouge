@@ -18,7 +18,7 @@
       <nav id="navigation">
         <ol id="navigationOl">
           <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="tournoisSimQua.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
           <li><a href="#" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
