@@ -61,7 +61,9 @@
         global $tabFinal;
 
         if ($tabFinal == null) {
-          echo "Désolé, il n'y a pas de match en cours";
+          echo "<div style=\"height:30vh;\">
+          <h3 style=\"margin-top:5em;\">Désolé, il n'y a pas de match en cours</h3>
+          </div>";
         }else{
           foreach ($tabFinal as $phase => $matchs) {
             echo"<h3 class=\"h3Tournois\">$phase</h3>
