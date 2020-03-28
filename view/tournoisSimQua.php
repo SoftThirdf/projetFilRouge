@@ -74,10 +74,12 @@
               <div class=\"rencontre\">
               <table>";
               foreach ($joueurs as $key => $infos) {
+                $nomPays=strtolower($infos[2]);
+                $lienDrap = "\"../view/img/pays/$nomPays.png\"";
                 echo"<tr class=\"joueur\">
                 <td class=\"nom\">$infos[0]</td>
                 <td class=\"prenom\">$infos[1]</td>
-                <td class=\"nation\">$infos[2]<td>";
+                <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
                 for ($i=3; $i < sizeof($infos) ; $i++) {
                   if ($infos[$i] == 6 || $infos[$i] == 7) {
                     echo" <td class=\"set setWin\">$infos[$i]</td>";

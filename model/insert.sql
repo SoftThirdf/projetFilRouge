@@ -140,7 +140,7 @@ INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_e
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Petrović','Rajko ','HR','20','ES010','petraj','petraj');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('David S.','Dahl','SI','21','ES011','davdah','davdah');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Paloranta','Esa-Pekka','FI','22','ES012','palesa','palesa');
-INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Knudsen','Isak','GL','30','ES013','knuisa','knuisa');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Knudsen','Isak','DE','30','ES013','knuisa','knuisa');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Paredes','Jacinto','UY','24','ES014','parjac','parjac');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Keled','Szatmáry','HU','20','ES015','kelsza','kelsza');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Valgeirsson','Örlygur','IE','23','ES016','valorl','valorl');

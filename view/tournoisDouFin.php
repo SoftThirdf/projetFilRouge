@@ -99,10 +99,12 @@
                 $nbJ = 0;
                 foreach ($joueurs as $key => $infos) {
                   $nbJ++;
+                  $nomPays=strtolower($infos[2]);
+                  $lienDrap = "\"../view/img/pays/$nomPays.png\"";
                   echo"<tr class=\"joueur\">
                   <td class=\"nom\">$infos[0]</td>
                   <td class=\"prenom\">$infos[1]</td>
-                  <td class=\"nation\">$infos[2]<td>";
+                  <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
                   // Si c'est le premier joueur, alors on affiche le socre dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
                   if ($nbJ == 1) {
                     for ($k=0; $k < sizeof($tabScore) ; $k++) {
