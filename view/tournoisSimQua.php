@@ -44,13 +44,13 @@
         <a href="tournoisSimQuaControler.php" class="s100 linkBlackOrange linkTournoi"> Tournoi simple qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="tournoisDouQuaControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
+        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double qualificatif &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="tournoisSimFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi simple final &emsp; >></a>
+        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi simple final &emsp; >></a>
       </div>
       <div class="tournoi">
-        <a href="tournoisDouFinControler.php" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
+        <a href="" class="s100 linkBlackOrange linkTournoi">Tournoi double final &emsp; >></a>
       </div>
     </div>
 
@@ -60,42 +60,33 @@
 
         global $tabFinal;
 
-        if ($tabFinal == null) {
-          echo "<div style=\"height:30vh;\">
-          <h3 style=\"margin-top:5em;\">Désolé, il n'y a pas de match en cours</h3>
-          </div>";
-        }else{
-          foreach ($tabFinal as $phase => $matchs) {
-            echo"<h3 class=\"h3Tournois\">$phase</h3>
-            <hr class=\"sousH3\">
-            <div class=\"conteneurRencontres\">";
-            foreach ($matchs as $match => $joueurs) {
-              echo "
-              <div class=\"rencontre\">
-              <table>";
-              foreach ($joueurs as $key => $infos) {
-                $nomPays=strtolower($infos[2]);
-                $lienDrap = "\"../view/img/pays/$nomPays.png\"";
-                echo"<tr class=\"joueur\">
-                <td class=\"nom\">$infos[0]</td>
-                <td class=\"prenom\">$infos[1]</td>
-                <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
-                for ($i=3; $i < sizeof($infos) ; $i++) {
-                  if ($infos[$i] == 6 || $infos[$i] == 7) {
-                    echo" <td class=\"set setWin\">$infos[$i]</td>";
-                  }else{
-                    echo" <td class=\"set\">$infos[$i]</td>";
-                  }
-                }
-              }
-              echo"</tr>
-              </table>
-              </div>";
+        foreach ($tabFinal as $phase => $matchs) {
+          echo"<h3 class=\"h3Tournois\">$phase</h3>
+          <hr class=\"sousH3\">
+          <div class=\"conteneurRencontres\">";
+          foreach ($matchs as $match => $joueurs) {
+            echo "
+            <div class=\"rencontre\">
+            <table>";
+            foreach ($joueurs as $key => $infos) {
+              echo"<tr class=\"joueur\">
+               <td class=\"nom\">$infos[0]</td>
+               <td class=\"prenom\">$infos[1]</td>
+               <td class=\"nation\">$infos[2]<td>";
+               for ($i=3; $i < sizeof($infos) ; $i++) {
+                 if ($infos[$i] == 6 || $infos[$i] == 7) {
+                   echo" <td class=\"set setWin\">$infos[$i]</td>";
+                 }else{
+                   echo" <td class=\"set\">$infos[$i]</td>";
+                 }
+               }
             }
-            echo"</div>";
+            echo"</tr>
+            </table>
+            </div>";
           }
+          echo"</div>";
         }
-
 
         ?>
 
@@ -117,7 +108,7 @@
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="#" class="linkWhite">Nous contacter</a></li>
       <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
