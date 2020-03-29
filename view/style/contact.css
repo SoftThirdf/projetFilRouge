@@ -1,0 +1,107 @@
+#conteneurBody {
+  width: 80%;
+  margin: auto;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================ Contact Form ============================================ */
+form {
+  margin: 0 auto;
+}
+
+input, textarea {
+  border: 2px solid black;
+}
+
+input[type=submit] {
+  border: 2px solid black;
+  padding: 2% 4% 2% 4%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 110%;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--orange-logo);
+}
+
+.inputBlock {
+  display: block;
+  width: 100%;
+  height: 90%;
+}
+
+#sectionForm {
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+#message {
+  width: 100%;
+  height: 25%;
+  margin-top: 4%;
+  resize: none;
+}
+
+#contenerSubmit {
+  text-align: center;
+  padding: 3%;
+}
+
+#contentInformationContact {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* =================================================================================================================== */
+.contenerInform {
+  text-align: center;
+  width: 40%;
+}
+
+.contenerInform p {
+  font-weight: bold;
+  color: #181818;
+}
+
+.contenerBlock {
+  width: 30%;
+}
+
+.logoContact {
+  width: 40%;
+}
+
+#conteneurMap {
+  height: 60vh;
+}
+
+#conteneurContact {
+  display: flex;
+}
+
+#conteneurForm {
+  width: 65%;
+}
+
+#conteneurCoor {
+  width: 35%
+}
+
+#contenerInformationContact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+#left, #right {
+  width: 50%;
+  text-align: center;
+}
