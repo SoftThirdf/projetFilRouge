@@ -15,4 +15,4 @@ INNER JOIN rencontre R ON B.id_match = R.id_Match
 INNER JOIN joueur J ON B.id_joueur = J.id_joueur
 INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like 'Eliminatoire'
 AND T.categorie_tournoi like 'Double'
-GROUP BY R.id_Match, J.id_joueur
+ORDER BY R.id_Match, J.id_joueur

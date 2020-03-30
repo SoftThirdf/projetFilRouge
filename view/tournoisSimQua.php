@@ -70,10 +70,12 @@
             <hr class=\"sousH3\">
             <div class=\"conteneurRencontres\">";
             foreach ($matchs as $match => $joueurs) {
-              echo "
+              echo"
               <div class=\"rencontre\">
               <table>";
               foreach ($joueurs as $key => $infos) {
+                $next = next($joueurs);
+                $prev = prev($joueurs);
                 $nomPays=strtolower($infos[2]);
                 $lienDrap = "\"../view/img/pays/$nomPays.png\"";
                 echo"<tr class=\"joueur\">
@@ -81,7 +83,7 @@
                 <td class=\"prenom\">$infos[1]</td>
                 <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
                 for ($i=3; $i < sizeof($infos) ; $i++) {
-                  if ($infos[$i] == 6 || $infos[$i] == 7) {
+                  if (($next != null && $next[$i]<$infos[$i]) || ($prev != null && $prev[$i] < $infos[$i])) {
                     echo" <td class=\"set setWin\">$infos[$i]</td>";
                   }else{
                     echo" <td class=\"set\">$infos[$i]</td>";

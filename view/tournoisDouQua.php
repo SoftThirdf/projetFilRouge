@@ -73,15 +73,22 @@
               echo "
               <div class=\"rencontre\">
               <table>";
+              if(isset($tabScore)){
+                unset($tabScore);
+                unset($tabScorePrec);
+              }
               foreach ($equipes as $key => $joueurs) {
+                if(isset($tabScore)){
+                  $tabScorePrec = $tabScore;
+                }
                 echo "<tr class=\"equipe\">";
                 // On créé un tableau de score pour chaque équipe
                 $tabScore;
-                // Pour pouvoir initialiser les valeurs à éro de ce tableau, il faut connaitre la taille du  nombre total de set qu'il y a dans le match
+                // Pour pouvoir initialiser les valeurs à zéro de ce tableau, il faut connaitre la taille du nombre total de set qu'il y a dans le match
                 foreach ($joueurs as $key => $a) {
                   //Ce sera donc $a
                 }
-                // On initialise les vlauers du tableau à zéro. Pour chaque set, les vlauers sont au départ à zéro.
+                // On initialise les valeurs du tableau à zéro. Pour chaque set, les valeurs sont au départ à zéro.
                 $l = 0;
                 for ($i=3; $i < sizeof($a) ; $i++) {
                   $tabScore[$l] = 0;
@@ -95,6 +102,7 @@
                     $j++;
                   }
                 }
+
                 //  Puis, on les affiches
                 $nbJ = 0;
                 foreach ($joueurs as $key => $infos) {
@@ -105,10 +113,10 @@
                   <td class=\"nom\">$infos[0]</td>
                   <td class=\"prenom\">$infos[1]</td>
                   <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
-                  // Si c'est le premier joueur, alors on affiche le socre dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
+                  // Si c'est le premier joueur, alors on affiche le score dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
                   if ($nbJ == 1) {
                     for ($k=0; $k < sizeof($tabScore) ; $k++) {
-                      if ($tabScore[$k] == 6 || $tabScore[$k] == 7) {
+                      if (isset($tabScorePrec) && $tabScorePrec[$k] < $tabScore[$k]) {
                         echo" <td class=\"set setWin\" rowspan=2>$tabScore[$k]</td>";
                       }else{
                         echo" <td class=\"set\" rowspan=2>$tabScore[$k]</td>";

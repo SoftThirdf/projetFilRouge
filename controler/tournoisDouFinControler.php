@@ -30,8 +30,8 @@
       if ($idMatch != $tab[$i]['id_Match']) {
         $idMatch = $tab[$i]['id_Match'];
       }
-      if ($idEquipe != $tab[$i]['id_equipe']) {
-        $idEquipe = $tab[$i]['id_equipe'];
+      if ($idEquipe != $tab[$i]['nom_equipe']) {
+        $idEquipe = $tab[$i]['nom_equipe'];
       }
       if ($idJoueur != $tab[$i]['id_joueur']) {
         $idJoueur = $tab[$i]['id_joueur'];
