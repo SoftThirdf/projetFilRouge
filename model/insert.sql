@@ -1,585 +1,957 @@
--- INSERTION EQUIPE
-INSERT INTO EQUIPE VALUES ('ES001','Team1');
-INSERT INTO EQUIPE VALUES ('ES002','Team2');
-INSERT INTO EQUIPE VALUES ('ES003','Team3');
-INSERT INTO EQUIPE VALUES ('ES004','Team4');
-INSERT INTO EQUIPE VALUES ('ES005','Team5');
-INSERT INTO EQUIPE VALUES ('ES006','Team6');
-INSERT INTO EQUIPE VALUES ('ES007','Team7');
-INSERT INTO EQUIPE VALUES ('ES008','Team8');
-INSERT INTO EQUIPE VALUES ('ES009','Team9');
-INSERT INTO EQUIPE VALUES ('ES010','Team10');
-INSERT INTO EQUIPE VALUES ('ES011','Team11');
-INSERT INTO EQUIPE VALUES ('ES012','Team12');
-INSERT INTO EQUIPE VALUES ('ES013','Team13');
-INSERT INTO EQUIPE VALUES ('ES014','Team14');
-INSERT INTO EQUIPE VALUES ('ES015','Team15');
-INSERT INTO EQUIPE VALUES ('ES016','Team16');
-INSERT INTO EQUIPE VALUES ('ES017','Team17');
-INSERT INTO EQUIPE VALUES ('ES018','Team18');
-INSERT INTO EQUIPE VALUES ('ES019','Team19');
-INSERT INTO EQUIPE VALUES ('ES020','Team20');
-INSERT INTO EQUIPE VALUES ('ES021','Team21');
-INSERT INTO EQUIPE VALUES ('ES022','Team22');
-INSERT INTO EQUIPE VALUES ('ES023','Team23');
-INSERT INTO EQUIPE VALUES ('ES024','Team24');
-INSERT INTO EQUIPE VALUES ('ES025','Team25');
-INSERT INTO EQUIPE VALUES ('ES026','Team26');
-INSERT INTO EQUIPE VALUES ('ES027','Team27');
-INSERT INTO EQUIPE VALUES ('ES028','Team28');
-INSERT INTO EQUIPE VALUES ('ES029','Team29');
-INSERT INTO EQUIPE VALUES ('ES030','Team30');
-INSERT INTO EQUIPE VALUES ('ES031','Team31');
-INSERT INTO EQUIPE VALUES ('ES032','Team32');
+-- INSERTION D'ARBITRES
+--  Arbitres Simple Qualification
+INSERT INTO ARBITRE(type_arbitre,categorie_arbitre,nom_arbitre,prenom_arbitre,nationalite_arbitre,telephone_arbitre) VALUES('Arbitre de chaise','ITT1','Dupont','Jean','FR','06.01.00.00.01');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Gagnon','Quincy','FR','06.01.00.00.02');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Routhier','Vernon','FR','06.01.00.00.03');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Lebel','Pomeroy','FR','06.01.00.00.04');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','De La Ronde','Archard','FR','06.01.00.00.05');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Goddu','Florismart','FR','06.01.00.00.06');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Francoeur','Thibaut','FR','06.01.00.00.07');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Pelchat','Octave','FR','06.01.00.00.08');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Houde','Artus','FR','06.01.00.00.09');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de fillet','JAT2','Bonnet','Gilbert','FR','06.01.00.00.10');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Robertson','Isaac','UK','06.01.00.00.11');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Perry','Charlie','UK','06.01.00.00.12');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Matthews','Louis','UK','06.01.00.00.13');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Morton','Louie','UK','06.01.00.00.14');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Barnett','Rhys','UK','06.01.00.00.15');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Faulkner','Luke','UK','06.01.00.00.16');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Reynolds','Ellis','UK','06.01.00.00.17');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Jordan','Liam','UK','06.01.00.00.18');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','McLean','Nathan','UK','06.01.00.00.19');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de fillet','JAT2','Freeman','Riley','UK','06.01.00.00.20');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Palermo','Bradley','US','06.01.00.00.21');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Greene','Matthew','US','06.01.00.00.22');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Price','Michael','US','06.01.00.00.23');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Kelly','Andrew','US','06.01.00.00.24');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Durbin','George','US','06.01.00.00.25');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Winburn','David','US','06.01.00.00.26');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Fox','John','US','06.01.00.00.27');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Fraser','Earl','US','06.01.00.00.28');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Miller','Justin','US','06.01.00.00.29');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de fillet','JAT2','Pepper','Ralph','US','06.01.00.00.30');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Regalado','Cayo','ES','06.01.00.00.31');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Prado','Sancho','ES','06.01.00.00.32');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Manzanares','Agesislao','ES','06.01.00.00.33');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Rendón','Duncan','ES','06.01.00.00.34');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Pantoja','Vittorio','ES','06.01.00.00.35');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Montez','Gualberto','ES','06.01.00.00.36');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Viera','Cupido','ES','06.01.00.00.37');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Monroy','Delfor','ES','06.01.00.00.38');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Ochoa','Asdrúbal','ES','06.01.00.00.39');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de fillet','JAT2','Raya','Urban','ES','06.01.00.00.40');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Sakulac','Neim','SI','06.01.00.00.41');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Kirsanov','Jordan','SI','06.01.00.00.42');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Pur','Maximilian','SI','06.01.00.00.43');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Sivonjić','Bahrudin','SI','06.01.00.00.44');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Jurekić','Jože','SI','06.01.00.00.45');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Pejaković','Tobija','SI','06.01.00.00.46');
+-- Arbitres Double Qualification
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Ukyou','Yoshino','JP','06.01.00.00.47');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Taketo','Yano','JP','06.01.00.00.48');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Shun','Senda','JP','06.01.00.00.49');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Kiyoteru','Nagata','JP','06.01.00.00.50');
 
-INSERT INTO EQUIPE VALUES ('ED033','Team33');
-INSERT INTO EQUIPE VALUES ('ED034','Team34');
-INSERT INTO EQUIPE VALUES ('ED035','Team35');
-INSERT INTO EQUIPE VALUES ('ED036','Team36');
-INSERT INTO EQUIPE VALUES ('ED037','Team37');
-INSERT INTO EQUIPE VALUES ('ED038','Team38');
-INSERT INTO EQUIPE VALUES ('ED039','Team39');
-INSERT INTO EQUIPE VALUES ('ED040','Team40');
-INSERT INTO EQUIPE VALUES ('ED041','Team41');
-INSERT INTO EQUIPE VALUES ('ED042','Team42');
-INSERT INTO EQUIPE VALUES ('ED043','Team43');
-INSERT INTO EQUIPE VALUES ('ED044','Team44');
-INSERT INTO EQUIPE VALUES ('ED045','Team45');
-INSERT INTO EQUIPE VALUES ('ED046','Team46');
-INSERT INTO EQUIPE VALUES ('ED047','Team47');
-INSERT INTO EQUIPE VALUES ('ED048','Team48');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de filet','JAT2','Magalo','Alberto','PO','06.01.00.00.51');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Capito','Gérard','GB','06.01.00.00.52');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Dragon','Arthur','FR','06.01.00.00.53');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Shift','Lenny','US','06.01.00.00.54');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Carvin','Jules','FR','06.01.00.00.55');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Sorlet','Tiphaine','FR','06.01.00.00.56');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Sarantino','Julia','IT','06.01.00.00.57');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Robert','Sohan','FR','06.01.00.00.58');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Eiffel','Anna','FR','06.01.00.00.59');
 
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de filet','JAT2','Leguen','Maxime','FR','06.01.00.00.60');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Missy','Carla','EN','06.01.00.00.61');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Gea','Sarra','FR','06.01.00.00.62');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Pepin','Clémentine','FR','06.01.00.00.63');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Bordot','Astrid','FR','06.01.00.00.64');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Chelini','Juila','IT','06.01.00.00.65');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Fri','Perine','FJ','06.01.00.00.66');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Primo','Amelie','IT','06.01.00.00.67');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Nothomb','Levi','PL','06.01.00.00.68');
 
--- INSERTION DE JOUEURS
-INSERT INTO JOUEUR VALUES('J001','Cantin','Aubrey','FR','19','ES001');
-INSERT INTO JOUEUR VALUES('J002','Carter','Joshua','US','24','ES002');
-INSERT INTO JOUEUR VALUES('J003','Gibbons','Nicholas','GB','22','ES003');
-INSERT INTO JOUEUR VALUES('J004','Grave','Timothy','AUS','28','ES004');
-INSERT INTO JOUEUR VALUES('J005','Mendoza','Tiago','ES','31','ES005');
-INSERT INTO JOUEUR VALUES('J006','Hegediš','Rrahman','SI','35','ES006');
-INSERT INTO JOUEUR VALUES('J007','Siddiq','Rrahman','TN','23','ES007');
-INSERT INTO JOUEUR VALUES('J008','Sousa','Joao','BR','35','ES008');
-INSERT INTO JOUEUR VALUES('J009','Yü','Lee','CN','28','ES009');
-INSERT INTO JOUEUR VALUES('J010','Petrović','Rajko ','HR','20','ES010');
-INSERT INTO JOUEUR VALUES('J011','David S.','Dahl','SI','21','ES011');
-INSERT INTO JOUEUR VALUES('J012','Paloranta','Esa-Pekka','FI','22','ES012');
-INSERT INTO JOUEUR VALUES('J013','Knudsen','Isak','GL','30','ES013');
-INSERT INTO JOUEUR VALUES('J014','Paredes','Jacinto','UY','24','ES014');
-INSERT INTO JOUEUR VALUES('J015','Keled','Szatmáry','HU','20','ES015');
-INSERT INTO JOUEUR VALUES('J016','Valgeirsson','Örlygur','IE','23','ES016');
-INSERT INTO JOUEUR VALUES('J017','Barese','Angelico','IT','22','ES017');
-INSERT INTO JOUEUR VALUES('J018','Mitani','Naoki','JP','19','ES018');
-INSERT INTO JOUEUR VALUES('J019','Simonsen','Ruben','NO','26','ES019');
-INSERT INTO JOUEUR VALUES('J020','van Haagen','Nuri','NL','24','ES020');
-INSERT INTO JOUEUR VALUES('J021','Symanski','Marik','PL','28','ES021');
-INSERT INTO JOUEUR VALUES('J022','Matveyev','David','RU','25','ES022');
-INSERT INTO JOUEUR VALUES('J023','Štimnikar','Tjaš','SI','25','ES023');
-INSERT INTO JOUEUR VALUES('J024','Olofsson','Mille','SE','33','ES024');
-INSERT INTO JOUEUR VALUES('J025','Novák','Jaroslav','CZ','27','ES025');
-INSERT INTO JOUEUR VALUES('J026','Thi Kế','Trịnh','VN','23','ES026');
-INSERT INTO JOUEUR VALUES('J027','McGregor','Gavin','GB','25','ES027');
-INSERT INTO JOUEUR VALUES('J028','Jones','Alphonse','US','33','ES028');
-INSERT INTO JOUEUR VALUES('J029','Maldonado','Laszlo','VE','19','ES029');
-INSERT INTO JOUEUR VALUES('J030','Bonilla','Prudencio','CO','26','ES030');
-INSERT INTO JOUEUR VALUES('J031','Sexton','Aedan','IE','18','ES031');
-INSERT INTO JOUEUR VALUES('J032','Carron','Chrisitian ','CH','26','ES032');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de filet','JAT2','Moret-Nizet','Josette','FR','06.01.00.00.69');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Sanchez','Damien','ES','06.01.00.00.70');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Mellado', 'Blas', 'ES', '06.03.00.00.71');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Payet', 'Alexandre', 'FR', '06.03.00.00.72');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Corrado', 'Matteo', 'IT', '06.03.00.00.73');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Fenneteau', 'Milan', 'FR', '06.03.00.00.74');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Van Der Voet', 'Wouter', 'NL', '06.03.00.00.75');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Solberg', 'Stian', 'NO', '06.03.00.00.76');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Breckley', 'River', 'US', '06.03.00.00.77');
 
-INSERT INTO JOUEUR VALUES('J033','Herman','Phillipp','DE','18','ED033');
-INSERT INTO JOUEUR VALUES('J034','Zinn','Max','US','26','ED034');
-INSERT INTO JOUEUR VALUES('J035','Taylor','Bailey','GB','20','ED035');
-INSERT INTO JOUEUR VALUES('J036','Moghadam','Musa','SA','21','ED036');
-INSERT INTO JOUEUR VALUES('J037','Keighley','Toby','AU','18','ED037');
-INSERT INTO JOUEUR VALUES('J038','Gomes','André','BR','35','ED038');
-INSERT INTO JOUEUR VALUES('J039','Hung','Chan','CN','27','ED039');
-INSERT INTO JOUEUR VALUES('J040','Cindrić','Zvonimir','HR','24','ED040');
-INSERT INTO JOUEUR VALUES('J041','Bertelsen','Bertram','DK','34','ED041');
-INSERT INTO JOUEUR VALUES('J042','Karhu','Kalervo','FI','22','ED042');
-INSERT INTO JOUEUR VALUES('J043','Béland','Nicholas','FR','26','ED043');
-INSERT INTO JOUEUR VALUES('J044','Rosing','Ludvig','GL','27','ED044');
-INSERT INTO JOUEUR VALUES('J045','Camacho','Raimon','ES','23','ED045');
-INSERT INTO JOUEUR VALUES('J046','Rikard','Sándor','HU','27','ED046');
-INSERT INTO JOUEUR VALUES('J047','Sigurmonsson','Rögnvaldur','IS','31','ED047');
-INSERT INTO JOUEUR VALUES('J048','Barese','Rolando','IT','27','ED048');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de filet', 'JAT2', 'Le Naoures', 'Adrien', 'FR', '06.03.00.00.78');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'De Thoisy', 'Florian', 'FR', '06.03.00.00.79');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Simmons', 'Larry', 'US', '06.03.00.00.80');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Sidorov', 'Mark', 'RU', '06.03.00.00.81');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Hamilton', 'Ruairidh', 'IR', '06.03.00.00.82');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Petterson', 'Alexander', 'AU', '06.03.00.00.83');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Turner', 'Peter', 'UK', '06.03.00.00.84');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Azarov', 'Nahum', 'UA', '06.03.00.00.85');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne', 'JAT2', 'Furnell', 'Harrison', 'US', '06.03.00.00.86');
 
-INSERT INTO JOUEUR VALUES('J050','Aaslund','Theo','NO','33','ED033');
-INSERT INTO JOUEUR VALUES('J051','Heidema','Mikel','NL','27','ED034');
-INSERT INTO JOUEUR VALUES('J052','Zając','Ireneusz','PL','30','ED035');
-INSERT INTO JOUEUR VALUES('J053','Yermakov','Borislav','RU','35','ED036');
-INSERT INTO JOUEUR VALUES('J054','Nassib','Hajzer','SI','35','ED037');
-INSERT INTO JOUEUR VALUES('J055','Lundin','Philip','SE','31','ED038');
-INSERT INTO JOUEUR VALUES('J056','Hurtík','Adam','GE','19','ED039');
-INSERT INTO JOUEUR VALUES('J057','﻿Văn Sau','Chu','VN','28','ED040');
-INSERT INTO JOUEUR VALUES('J058','Miller','Greg','GB','22','ED041');
-INSERT INTO JOUEUR VALUES('J059','O\'Sullivan','Murphy ','IE','22','ED042');
-INSERT INTO JOUEUR VALUES('J060','Futsum','Senay','TR','34','ED043');
-INSERT INTO JOUEUR VALUES('J061','Martok','Kornan','CH','33','ED044');
-INSERT INTO JOUEUR VALUES('J062','de Campos','Jorge','PT','26','ED045');
-INSERT INTO JOUEUR VALUES('J063','Janjić','Radašin','RS','23','ED046');
-INSERT INTO JOUEUR VALUES('J064','Kočić','Aleksa','ME','26','ED047');
-INSERT INTO JOUEUR VALUES('J049','Taue','Haruka','JP','22','ED048');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Repin', 'Murat', 'FR', '06.03.00.00.87');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Hooijer', 'Ashwan', 'NO', '06.03.00.00.88');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Lucciano', 'Mario', 'IT', '06.03.00.00.89');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Gallo', 'Cherubino', 'EC', '06.03.00.00.90');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Atkins', 'Leo', 'UK', '06.03.00.00.91');
+INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise', 'ITT1', 'Bod', 'Gyarmati', 'FR', '06.03.00.00.92');
 
 
+-- INSERTION DE COURT
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Officiel 1','officiel');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 1','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 2','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 3','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 4','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 5','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 6','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 7','Entraînement');
+INSERT INTO COURT (libelle_court, type_court) VALUES ('Entrainement 8','Entraînement');
 
--- INSERTION DE SETS
-INSERT INTO BALLE_SET VALUES('SET001');
-INSERT INTO BALLE_SET VALUES('SET002');
-INSERT INTO BALLE_SET VALUES('SET003');
-INSERT INTO BALLE_SET VALUES('SET004');
-INSERT INTO BALLE_SET VALUES('SET005');
-INSERT INTO BALLE_SET VALUES('SET006');
-INSERT INTO BALLE_SET VALUES('SET007');
-INSERT INTO BALLE_SET VALUES('SET008');
-INSERT INTO BALLE_SET VALUES('SET009');
-INSERT INTO BALLE_SET VALUES('SET010');
-INSERT INTO BALLE_SET VALUES('SET011');
-INSERT INTO BALLE_SET VALUES('SET012');
-INSERT INTO BALLE_SET VALUES('SET013');
-INSERT INTO BALLE_SET VALUES('SET014');
-INSERT INTO BALLE_SET VALUES('SET015');
-INSERT INTO BALLE_SET VALUES('SET016');
-INSERT INTO BALLE_SET VALUES('SET017');
-INSERT INTO BALLE_SET VALUES('SET018');
-INSERT INTO BALLE_SET VALUES('SET019');
-INSERT INTO BALLE_SET VALUES('SET020');
-INSERT INTO BALLE_SET VALUES('SET021');
-INSERT INTO BALLE_SET VALUES('SET022');
-INSERT INTO BALLE_SET VALUES('SET023');
-INSERT INTO BALLE_SET VALUES('SET024');
-INSERT INTO BALLE_SET VALUES('SET025');
-INSERT INTO BALLE_SET VALUES('SET026');
-INSERT INTO BALLE_SET VALUES('SET027');
-INSERT INTO BALLE_SET VALUES('SET028');
-INSERT INTO BALLE_SET VALUES('SET029');
-INSERT INTO BALLE_SET VALUES('SET030');
-INSERT INTO BALLE_SET VALUES('SET031');
-INSERT INTO BALLE_SET VALUES('SET032');
-INSERT INTO BALLE_SET VALUES('SET033');
-INSERT INTO BALLE_SET VALUES('SET034');
-INSERT INTO BALLE_SET VALUES('SET035');
-INSERT INTO BALLE_SET VALUES('SET036');
-INSERT INTO BALLE_SET VALUES('SET037');
-INSERT INTO BALLE_SET VALUES('SET038');
-INSERT INTO BALLE_SET VALUES('SET039');
-INSERT INTO BALLE_SET VALUES('SET040');
-INSERT INTO BALLE_SET VALUES('SET041');
-INSERT INTO BALLE_SET VALUES('SET042');
-INSERT INTO BALLE_SET VALUES('SET043');
-INSERT INTO BALLE_SET VALUES('SET044');
-INSERT INTO BALLE_SET VALUES('SET045');
-INSERT INTO BALLE_SET VALUES('SET046');
-INSERT INTO BALLE_SET VALUES('SET047');
-INSERT INTO BALLE_SET VALUES('SET048');
-INSERT INTO BALLE_SET VALUES('SET049');
-INSERT INTO BALLE_SET VALUES('SET050');
-INSERT INTO BALLE_SET VALUES('SET051');
-INSERT INTO BALLE_SET VALUES('SET052');
-INSERT INTO BALLE_SET VALUES('SET053');
-INSERT INTO BALLE_SET VALUES('SET054');
-INSERT INTO BALLE_SET VALUES('SET055');
-INSERT INTO BALLE_SET VALUES('SET056');
-INSERT INTO BALLE_SET VALUES('SET057');
-INSERT INTO BALLE_SET VALUES('SET058');
-INSERT INTO BALLE_SET VALUES('SET059');
-INSERT INTO BALLE_SET VALUES('SET060');
-INSERT INTO BALLE_SET VALUES('SET061');
-INSERT INTO BALLE_SET VALUES('SET062');
-INSERT INTO BALLE_SET VALUES('SET063');
-INSERT INTO BALLE_SET VALUES('SET064');
-INSERT INTO BALLE_SET VALUES('SET065');
-INSERT INTO BALLE_SET VALUES('SET066');
-INSERT INTO BALLE_SET VALUES('SET067');
-INSERT INTO BALLE_SET VALUES('SET068');
-INSERT INTO BALLE_SET VALUES('SET069');
-INSERT INTO BALLE_SET VALUES('SET070');
-INSERT INTO BALLE_SET VALUES('SET071');
-INSERT INTO BALLE_SET VALUES('SET072');
-INSERT INTO BALLE_SET VALUES('SET073');
-INSERT INTO BALLE_SET VALUES('SET074');
-INSERT INTO BALLE_SET VALUES('SET075');
-INSERT INTO BALLE_SET VALUES('SET076');
-INSERT INTO BALLE_SET VALUES('SET077');
-INSERT INTO BALLE_SET VALUES('SET078');
-INSERT INTO BALLE_SET VALUES('SET079');
-INSERT INTO BALLE_SET VALUES('SET080');
-INSERT INTO BALLE_SET VALUES('SET081');
-INSERT INTO BALLE_SET VALUES('SET082');
-INSERT INTO BALLE_SET VALUES('SET083');
-INSERT INTO BALLE_SET VALUES('SET084');
-INSERT INTO BALLE_SET VALUES('SET085');
-INSERT INTO BALLE_SET VALUES('SET086');
-INSERT INTO BALLE_SET VALUES('SET087');
-INSERT INTO BALLE_SET VALUES('SET088');
-INSERT INTO BALLE_SET VALUES('SET089');
-INSERT INTO BALLE_SET VALUES('SET090');
-INSERT INTO BALLE_SET VALUES('SET091');
-INSERT INTO BALLE_SET VALUES('SET092');
-INSERT INTO BALLE_SET VALUES('SET093');
-INSERT INTO BALLE_SET VALUES('SET094');
-INSERT INTO BALLE_SET VALUES('SET095');
-INSERT INTO BALLE_SET VALUES('SET096');
-INSERT INTO BALLE_SET VALUES('SET097');
-INSERT INTO BALLE_SET VALUES('SET098');
-INSERT INTO BALLE_SET VALUES('SET099');
-INSERT INTO BALLE_SET VALUES('SET100');
-INSERT INTO BALLE_SET VALUES('SET101');
-INSERT INTO BALLE_SET VALUES('SET102');
-INSERT INTO BALLE_SET VALUES('SET103');
-INSERT INTO BALLE_SET VALUES('SET104');
-INSERT INTO BALLE_SET VALUES('SET105');
-INSERT INTO BALLE_SET VALUES('SET106');
-INSERT INTO BALLE_SET VALUES('SET107');
-INSERT INTO BALLE_SET VALUES('SET108');
-INSERT INTO BALLE_SET VALUES('SET109');
-INSERT INTO BALLE_SET VALUES('SET110');
-INSERT INTO BALLE_SET VALUES('SET111');
-INSERT INTO BALLE_SET VALUES('SET112');
-INSERT INTO BALLE_SET VALUES('SET113');
-INSERT INTO BALLE_SET VALUES('SET114');
-INSERT INTO BALLE_SET VALUES('SET115');
-INSERT INTO BALLE_SET VALUES('SET116');
-INSERT INTO BALLE_SET VALUES('SET117');
-INSERT INTO BALLE_SET VALUES('SET118');
-INSERT INTO BALLE_SET VALUES('SET119');
-INSERT INTO BALLE_SET VALUES('SET120');
-INSERT INTO BALLE_SET VALUES('SET121');
-INSERT INTO BALLE_SET VALUES('SET122');
-INSERT INTO BALLE_SET VALUES('SET123');
-INSERT INTO BALLE_SET VALUES('SET124');
-INSERT INTO BALLE_SET VALUES('SET125');
-INSERT INTO BALLE_SET VALUES('SET126');
-INSERT INTO BALLE_SET VALUES('SET127');
-INSERT INTO BALLE_SET VALUES('SET128');
-INSERT INTO BALLE_SET VALUES('SET129');
-INSERT INTO BALLE_SET VALUES('SET130');
-INSERT INTO BALLE_SET VALUES('SET131');
-INSERT INTO BALLE_SET VALUES('SET132');
-INSERT INTO BALLE_SET VALUES('SET133');
-INSERT INTO BALLE_SET VALUES('SET134');
-INSERT INTO BALLE_SET VALUES('SET135');
-INSERT INTO BALLE_SET VALUES('SET136');
-INSERT INTO BALLE_SET VALUES('SET137');
-INSERT INTO BALLE_SET VALUES('SET138');
-INSERT INTO BALLE_SET VALUES('SET139');
-INSERT INTO BALLE_SET VALUES('SET140');
-INSERT INTO BALLE_SET VALUES('SET141');
-INSERT INTO BALLE_SET VALUES('SET142');
-INSERT INTO BALLE_SET VALUES('SET143');
-INSERT INTO BALLE_SET VALUES('SET144');
-INSERT INTO BALLE_SET VALUES('SET145');
-INSERT INTO BALLE_SET VALUES('SET146');
-INSERT INTO BALLE_SET VALUES('SET147');
-INSERT INTO BALLE_SET VALUES('SET148');
-INSERT INTO BALLE_SET VALUES('SET149');
-INSERT INTO BALLE_SET VALUES('SET150');
-INSERT INTO BALLE_SET VALUES('SET151');
-INSERT INTO BALLE_SET VALUES('SET152');
-INSERT INTO BALLE_SET VALUES('SET153');
-INSERT INTO BALLE_SET VALUES('SET154');
-INSERT INTO BALLE_SET VALUES('SET155');
-INSERT INTO BALLE_SET VALUES('SET156');
-INSERT INTO BALLE_SET VALUES('SET157');
-INSERT INTO BALLE_SET VALUES('SET158');
-INSERT INTO BALLE_SET VALUES('SET159');
-INSERT INTO BALLE_SET VALUES('SET160');
-INSERT INTO BALLE_SET VALUES('SET161');
-INSERT INTO BALLE_SET VALUES('SET162');
-INSERT INTO BALLE_SET VALUES('SET163');
-INSERT INTO BALLE_SET VALUES('SET164');
-INSERT INTO BALLE_SET VALUES('SET165');
-INSERT INTO BALLE_SET VALUES('SET166');
-INSERT INTO BALLE_SET VALUES('SET167');
-INSERT INTO BALLE_SET VALUES('SET168');
-INSERT INTO BALLE_SET VALUES('SET169');
-INSERT INTO BALLE_SET VALUES('SET170');
-INSERT INTO BALLE_SET VALUES('SET171');
-INSERT INTO BALLE_SET VALUES('SET172');
-INSERT INTO BALLE_SET VALUES('SET173');
-INSERT INTO BALLE_SET VALUES('SET174');
-INSERT INTO BALLE_SET VALUES('SET175');
-INSERT INTO BALLE_SET VALUES('SET176');
-INSERT INTO BALLE_SET VALUES('SET177');
-INSERT INTO BALLE_SET VALUES('SET178');
-INSERT INTO BALLE_SET VALUES('SET179');
-INSERT INTO BALLE_SET VALUES('SET180');
-INSERT INTO BALLE_SET VALUES('SET181');
-INSERT INTO BALLE_SET VALUES('SET182');
-INSERT INTO BALLE_SET VALUES('SET183');
-INSERT INTO BALLE_SET VALUES('SET184');
-INSERT INTO BALLE_SET VALUES('SET185');
-INSERT INTO BALLE_SET VALUES('SET186');
-INSERT INTO BALLE_SET VALUES('SET187');
-INSERT INTO BALLE_SET VALUES('SET188');
-INSERT INTO BALLE_SET VALUES('SET189');
-INSERT INTO BALLE_SET VALUES('SET190');
-INSERT INTO BALLE_SET VALUES('SET191');
-INSERT INTO BALLE_SET VALUES('SET192');
-INSERT INTO BALLE_SET VALUES('SET193');
-INSERT INTO BALLE_SET VALUES('SET194');
-INSERT INTO BALLE_SET VALUES('SET195');
-INSERT INTO BALLE_SET VALUES('SET196');
-INSERT INTO BALLE_SET VALUES('SET197');
-INSERT INTO BALLE_SET VALUES('SET198');
-INSERT INTO BALLE_SET VALUES('SET199');
+
+-- INSERTION HORAIRE
+-- Jour 1 Qualification
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('11:30:00','2020-06-13','13:30:00');
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-13','16:00:00');
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-13','18:00:00');
+-- Jour 2 Qualification
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('11:30:00','2020-06-14','13:30:00');
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-14','16:00:00');
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-14','18:00:00');
 
 
 -- INSERTION D'EQUIPES DE RAMASSEURS
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER001','TeamRam1');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER002','TeamRam2');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER003','TeamRam3');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER004','TeamRam4');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER005','TeamRam5');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER006','TeamRam6');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER007','TeamRam7');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER008','TeamRam8');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER009','TeamRam9');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER010','TeamRam10');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER011','TeamRam11');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER012','TeamRam12');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER013','TeamRam13');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER014','TeamRam14');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER015','TeamRam15');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER016','TeamRam16');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER017','TeamRam17');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER018','TeamRam18');
-INSERT INTO EQUIPE_RAMASSEUR VALUES ('ER019','TeamRam19');
-
--- INSERTION DE RAMASSEURS
-INSERT INTO RAMASSEUR VALUES ('R001','Baril','Thibault','06.02.00.00.01','ER001');
-INSERT INTO RAMASSEUR VALUES ('R002','Bousquet','Seymour','06.02.00.00.02','ER001');
-INSERT INTO RAMASSEUR VALUES ('R003','Legget ','Gervais','06.02.00.00.03','ER001');
-INSERT INTO RAMASSEUR VALUES ('R004','Bouvier','Daniel','06.02.00.00.04','ER001');
-INSERT INTO RAMASSEUR VALUES ('R005','Faubert','Tearlach ','06.02.00.00.05','ER001');
-INSERT INTO RAMASSEUR VALUES ('R006','Joseph ','Lazure','06.02.00.00.06','ER001');
-
--- INSERTION D'ARBITRES
-INSERT INTO ARBITRE VALUES ('A001','Arbitre de chaise','ITT1','Dupont','Jean','FR','06.01.00.00.01');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam1');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam2');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam3');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam4');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam5');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam6');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam7');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam8');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam9');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam10');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam11');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam12');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam13');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam14');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam15');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam16');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam17');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam18');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam19');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam20');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam21');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam22');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam23');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam24');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam25');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam26');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam27');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam28');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam29');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam30');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam31');
+INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam32');
 
 -- INSERTION DE TOURNOIS
-INSERT INTO TOURNOI VALUES ('TQ1','Eliminatoire','Simple');
-INSERT INTO TOURNOI VALUES ('TQ2','Eliminatoire','Double');
-INSERT INTO TOURNOI VALUES ('TQ3','Officiel','Simple');
-INSERT INTO TOURNOI VALUES ('TQ4','Officiel','Double');
+INSERT INTO TOURNOI (type_tournoi,categorie_tournoi,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10,id_arbitre11,id_arbitre12,id_arbitre13,id_arbitre14,id_arbitre15,id_arbitre16,id_arbitre17,id_arbitre18,id_arbitre19,id_arbitre20,id_arbitre21,id_arbitre22,id_arbitre23,id_arbitre24,id_arbitre25,id_arbitre26,id_arbitre27,id_arbitre28,id_arbitre29,id_arbitre30,id_arbitre31,id_arbitre32,id_arbitre33,id_arbitre34,id_arbitre35,id_arbitre36,id_arbitre37,id_arbitre38,id_arbitre39,id_arbitre40,id_arbitre41,id_arbitre42,id_arbitre43,id_arbitre44,id_arbitre45,id_arbitre46)
+VALUES ('Eliminatoire','Simple',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46);
+INSERT INTO TOURNOI (type_tournoi,categorie_tournoi,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10,id_arbitre11,id_arbitre12,id_arbitre13,id_arbitre14,id_arbitre15,id_arbitre16,id_arbitre17,id_arbitre18,id_arbitre19,id_arbitre20,id_arbitre21,id_arbitre22,id_arbitre23,id_arbitre24,id_arbitre25,id_arbitre26,id_arbitre27,id_arbitre28,id_arbitre29,id_arbitre30,id_arbitre31,id_arbitre32,id_arbitre33,id_arbitre34,id_arbitre35,id_arbitre36,id_arbitre37,id_arbitre38,id_arbitre39,id_arbitre40,id_arbitre41,id_arbitre42,id_arbitre43,id_arbitre44,id_arbitre45,id_arbitre46)
+VALUES ('Eliminatoire','Double',47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92);
+INSERT INTO TOURNOI(type_tournoi,categorie_tournoi,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10,id_arbitre11,id_arbitre12,id_arbitre13,id_arbitre14,id_arbitre15,id_arbitre16,id_arbitre17,id_arbitre18,id_arbitre19,id_arbitre20,id_arbitre21,id_arbitre22,id_arbitre23,id_arbitre24,id_arbitre25,id_arbitre26,id_arbitre27,id_arbitre28,id_arbitre29,id_arbitre30,id_arbitre31,id_arbitre32,id_arbitre33,id_arbitre34,id_arbitre35,id_arbitre36,id_arbitre37,id_arbitre38,id_arbitre39,id_arbitre40,id_arbitre41,id_arbitre42,id_arbitre43,id_arbitre44,id_arbitre45,id_arbitre46)
+VALUES ('Officiel','Simple',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46);
+INSERT INTO TOURNOI(type_tournoi,categorie_tournoi,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10,id_arbitre11,id_arbitre12,id_arbitre13,id_arbitre14,id_arbitre15,id_arbitre16,id_arbitre17,id_arbitre18,id_arbitre19,id_arbitre20,id_arbitre21,id_arbitre22,id_arbitre23,id_arbitre24,id_arbitre25,id_arbitre26,id_arbitre27,id_arbitre28,id_arbitre29,id_arbitre30,id_arbitre31,id_arbitre32,id_arbitre33,id_arbitre34,id_arbitre35,id_arbitre36,id_arbitre37,id_arbitre38,id_arbitre39,id_arbitre40,id_arbitre41,id_arbitre42,id_arbitre43,id_arbitre44,id_arbitre45,id_arbitre46)
+VALUES ('Officiel','Double',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46);
 
+-- INSERTION DE RAMASSEURS
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Baril','Thibault','06.02.00.00.01',1);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Bousquet','Seymour','06.02.00.00.02',1);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Legget ','Gervais','06.02.00.00.03',1);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Bouvier','Daniel','06.02.00.00.04',1);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Faubert','Tearlach ','06.02.00.00.05',1);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Joseph ','Lazure','06.02.00.00.06',1);
 
--- INSERTION DE COURTS
-INSERT INTO COURT VALUES ('CO01','Officiel 1','officiel',null);
-INSERT INTO COURT VALUES ('CE01','Entrainement 1','Entraînement',null);
-INSERT INTO COURT VALUES ('CE02','Entrainement 2','Entraînement',null);
-INSERT INTO COURT VALUES ('CE03','Entrainement 3','Entraînement',null);
-INSERT INTO COURT VALUES ('CE04','Entrainement 4','Entraînement',null);
-INSERT INTO COURT VALUES ('CE05','Entrainement 5','Entraînement',null);
-INSERT INTO COURT VALUES ('CE06','Entrainement 6','Entraînement',null);
-INSERT INTO COURT VALUES ('CE07','Entrainement 7','Entraînement',null);
-INSERT INTO COURT VALUES ('CE08','Entrainement 8','Entraînement',null);
-INSERT INTO COURT VALUES ('CE09','Entrainement 9','Entraînement',null);
-INSERT INTO COURT VALUES ('CE10','Entrainement 10','Entraînement',null);
-INSERT INTO COURT VALUES ('CE11','Entrainement 11','Entraînement',null);
-INSERT INTO COURT VALUES ('CE12','Entrainement 12','Entraînement',null);
-INSERT INTO COURT VALUES ('CE13','Entrainement 13','Entraînement',null);
-INSERT INTO COURT VALUES ('CE14','Entrainement 14','Entraînement',null);
-INSERT INTO COURT VALUES ('CE15','Entrainement 15','Entraînement',null);
-INSERT INTO COURT VALUES ('CE16','Entrainement 16','Entraînement',null);
-INSERT INTO COURT VALUES ('CE17','Entrainement 17','Entraînement',null);
-INSERT INTO COURT VALUES ('CE18','Entrainement 18','Entraînement',null);
-INSERT INTO COURT VALUES ('CE19','Entrainement 19','Entraînement',null);
-INSERT INTO COURT VALUES ('CE20','Entrainement 20','Entraînement',null);
-INSERT INTO COURT VALUES ('CE21','Entrainement 21','Entraînement',null);
-INSERT INTO COURT VALUES ('CE22','Entrainement 22','Entraînement',null);
-INSERT INTO COURT VALUES ('CE23','Entrainement 23','Entraînement',null);
-INSERT INTO COURT VALUES ('CE24','Entrainement 24','Entraînement',null);
-INSERT INTO COURT VALUES ('CE25','Entrainement 25','Entraînement',null);
-INSERT INTO COURT VALUES ('CE26','Entrainement 26','Entraînement',null);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Moquin','Adrien','06.02.00.00.07',2);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Édouard','Marcel','06.02.00.00.08',2);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Gareau','Aloin','06.02.00.00.09',2);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Ouellet','Neville','06.02.00.00.10',2);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Gervais','Bartlett','06.02.00.00.11',2);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Sabourin','Medoro','06.02.00.00.12',2);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Cressac','Charles','06.02.00.00.13',3);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Flamand','Thomas','06.02.00.00.14',3);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Desnoyers','Roland','06.02.00.00.15',3);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Crête','Théodore','06.02.00.00.16',3);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Massé','Leroy','06.02.00.00.17',3);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Laforge','Algernon','06.02.00.00.18',3);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Dufour','Stéphane','06.02.00.00.19',4);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Bonenfant','Soren','06.02.00.00.20',4);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Huard','Forrest','06.02.00.00.21',4);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Guay','Geoffrey','06.02.00.00.22',4);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Paquette','Archaimbau','06.02.00.00.23',4);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur) VALUES ('Beauchamp','Porter','06.02.00.00.24',4);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Caubet','Arnaud','06.02.00.00.25',5);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Stackhouse','Jason','06.02.00.00.26',5);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Lafayette','Jean','06.02.00.00.27',5);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Moriarty','Jimmy','06.02.00.00.28',5);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Perron','Henri','06.02.00.00.29',5);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Marseau','Emmanuel','06.02.00.00.30',5);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Geller','Fernand','06.02.00.00.31',6);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Sisoko','Omar','06.02.00.00.32',6);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Green','Charli','06.02.00.00.33',6);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Dumont','Francis','06.02.00.00.34',6);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Alberola','Humberto','06.02.00.00.35',6);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Salvatore','Jamie','06.02.00.00.36',6);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Diallo','Seydou','06.02.00.00.37',7);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Marcello','Antonio','06.02.00.00.38',7);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Laffont','Gabriel','06.02.00.00.39',7);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Blezzo','Didier','06.02.00.00.40',7);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Bourgeois','Yann','06.02.00.00.41',7);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Lombard','Alain','06.02.00.00.42',7);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Brunet','Pierre','06.02.00.00.43',8);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Salles','Raoult','06.02.00.00.44',8);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Guarino','Thierry','06.02.00.00.45',8);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Amprimoze','Sylvain','06.02.00.00.46',8);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Devillier','Ambroise','06.02.00.00.47',8);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Carbone','Norbert','06.02.00.00.48',8);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Klein','Olivier','06.02.00.00.49',9);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Fournier','Thomas','06.02.00.00.50',9);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Perret','Georges','06.02.00.00.51',9);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Ogoula','Serge','06.02.00.00.52',9);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Moussa','Alioun','06.02.00.00.53',9);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Brunet','Pierre','06.02.00.00.54',9);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Bansset','Paul','06.02.00.00.55',10);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Farcis','André','06.02.00.00.56',10);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Fofana','Djibril','06.02.00.00.57',10);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Larson','Edwin','06.02.00.00.58',10);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Poaty','Eric','06.02.00.00.59',10);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Maissan','Lilian','06.02.00.00.60',10);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Maisonneuf','Gilbert','06.02.00.00.61',11);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Tchango','Adrien','06.02.00.00.62',11);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Ballay','Lionel','06.02.00.00.63',11);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Garcia','José','06.02.00.00.64',11);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Terrieur','Alain','06.02.00.00.65',11);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Terrieur','Alex','06.02.00.00.66',11);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Canettofrais','Jessie','06.02.00.00.67',12);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Dubois','Pascal','06.02.00.00.68',12);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Touille','Sacha','06.02.00.00.69',12);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Magellan','Morgan','06.02.00.00.70',12);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Duvert','Théo','06.02.00.00.71',12);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Oli','Tristan','06.02.00.00.72',12);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Glick','Camille','06.02.00.00.73',13);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Stark','Aurélien','06.02.00.00.74',13);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Pépin','Clément','06.02.00.00.75',13);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Combier','Jacque','06.02.00.00.76',13);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Bob','Steve','06.02.00.00.77',13);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Berger','Dylan','06.02.00.00.78',13);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Ragea','Mikail','06.02.00.00.79',14);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Ette','Aurélien','06.02.00.00.80',14);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Nie','Stéphane','06.02.00.00.81',14);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Bect','Albert','06.02.00.00.82',14);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Fernandes','Jimmy','06.02.00.00.83',14);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Escobar','Guillaume','06.02.00.00.84',14);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Scie','Ryles','06.02.00.00.85',15);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Magand','Pierre','06.02.00.00.86',15);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Patté','Anthony','06.02.00.00.87',15);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('André','Jéremy','06.02.00.00.88',15);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Nguyen','Carlos','06.02.00.00.89',15);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Bonnet','Alexi','06.02.00.00.90',15);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Buisson','Louis','06.02.00.00.91',16);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Demarque','Connor','06.02.00.00.92',16);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Sansoe','Markus','06.02.00.00.93',16);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Evans','Titouan','06.02.00.00.94',16);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Dupuis','Arno','06.02.00.00.95',16);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Abran','Emrys','06.02.00.00.96',16);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Loreto','Xavier','06.02.00.00.97',17);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Alarcon','Michel','06.02.00.00.98',17);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Loreto','Xavier','06.02.00.00.99',17);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Brossaud','Arnold','06.02.00.01.00',17);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Armoros','Quentin','06.02.00.01.01',17);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Gongalves','Victor','06.02.00.01.02',17);
+
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Hank','Thibault','06.02.00.01.03',18);
+INSERT INTO RAMASSEUR (nom_ramasseur,prenom_ramasseur,telephone_ramasseur,id_equipe_ramasseur)VALUES ('Mas','Henry','06.02.00.01.04',18);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Vincenti', 'Marius', '06.02.00.01.05', 18);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Mabboux', 'Ambroise', '06.02.00.01.06', 18);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Auverny', 'Clément', '06.02.00.01.07', 18);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Cherpe', 'Samuel', '06.02.00.01.08', 18);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Dolan', 'Martin', '06.02.00.01.09', 19);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Torrance', 'John', '06.02.00.01.10', 19);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Darmon', 'Paul', '06.02.00.01.11', 19);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Barraud', 'Benjamin', '06.02.00.01.12', 19);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Perrin', 'Lazare', '06.02.00.01.13', 19);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Toareinui', 'Manoa', '06.02.00.01.14', 19);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Henry', 'Romain', '06.02.00.01.15', 20);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Sanchis', 'Charles', '06.02.00.01.16', 20);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Menis', 'Lou', '06.02.00.01.17', 20);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Mellal', 'Fares', '06.02.00.01.18', 20);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Vial', 'Jean', '06.02.00.01.19', 20);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Navajas', 'Thomas', '06.02.00.01.20', 20);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Valette', 'Emilien', '06.02.00.01.21', 21);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Gardet', 'Guillaume', '06.02.00.01.22', 21);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Humbert', 'Pierre', '06.02.00.01.23', 21);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Desprez', 'Lancelot', '06.02.00.01.24', 21);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Badin', 'Augustin', '06.02.00.01.25', 21);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Robin', 'Sébastien', '06.02.00.01.26', 21);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Houley', 'Jules', '06.02.00.01.27', 22);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Bertin', 'Théophile', '06.02.00.01.28', 22);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Cornier', 'Melchior', '06.02.00.01.29', 22);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Thiollier', 'Léandre', '06.02.00.01.30', 22);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Arthod', 'Alexis', '06.02.00.01.31', 22);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Macé', 'Lysandre', '06.02.00.01.32', 22);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Krief', 'Maxime', '06.02.00.01.33', 23);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Lambert', 'Antoine', '06.02.00.01.34', 23);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Colombat', 'Corentin', '06.02.00.01.35', 23);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Jaillet', 'Drystan', '06.02.00.01.36', 23);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Peyrard', 'Paul', '06.02.00.01.37', 23);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Banchet', 'Aurélien', '06.02.00.01.38', 23);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Theret', 'Dimitri', '06.02.00.01.39', 24);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Simon', 'Timothée', '06.02.00.01.40', 24);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Chanut', 'Nils', '06.02.00.01.41', 24);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Sucrot', 'Felix', '06.02.00.01.42', 24);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Novel', 'Arthur', '06.02.00.01.43', 24);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Geller', 'Jordan', '06.02.00.01.44', 24);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Marleau', 'Pomeroy', '06.02.00.01.45', 25);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Auberjonois', 'Bernard', '06.02.00.01.46', 25);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Bérubé', 'Vernon', '06.02.00.01.47', 25);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Béland', 'Percy', '06.02.00.01.48', 25);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Cotuand', 'Gilbert', '06.02.00.01.49', 25);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Binet', 'Maslin', '06.02.00.01.50', 25);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Brasseur', 'Bruce', '06.02.00.01.51', 26);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Piedalue', 'Gradasso', '06.02.00.01.52', 26);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Saucier', 'Yvon', '06.02.00.01.53', 26);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Abril', 'Curtis', '06.02.00.01.54', 26);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Laberge', 'Barry', '06.02.00.01.55', 26);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Mouet', 'Jeoffroi', '06.02.00.01.56', 26);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Thibault', 'Clovis', '06.02.00.01.57', 27);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Foucault', 'Dreux', '06.02.00.01.58', 27);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Auclair', 'Gérard', '06.02.00.01.59', 27);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Lemieux', 'Olivier', '06.02.00.01.60', 27);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Drouin', 'Bernard', '06.02.00.01.61', 27);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Morneau', 'Arnou', '06.02.00.01.62', 27);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Gervais', 'Bruno', '06.02.00.01.63', 28);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Bler', 'Donatien', '06.02.00.01.64', 28);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Longpré', 'Landers', '06.02.00.01.65', 28);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Caron', 'Lucas', '06.02.00.01.66', 28);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Martineau', 'William', '06.02.00.01.67', 28);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Leroux', 'Chandler', '06.02.00.01.68', 28);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Sciverit', 'Kerman', '06.02.00.01.69', 29);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Vaillancourt', 'Thibaut', '06.02.00.01.70', 29);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Tessier', 'Lothair', '06.02.00.01.71', 29);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Ailleboust', 'Medoro', '06.02.00.01.72', 29);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Rocheleau', 'Eliot', '06.02.00.01.73', 29);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Carignan', 'Lyle', '06.02.00.01.74', 29);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Cloutier', 'D\'Arcy', '06.02.00.01.75', 30);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Dumont', 'Senior', '06.02.00.01.76', 30);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Ruel', 'Royden', '06.02.00.01.77', 30);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Rocher', 'Russell', '06.02.00.01.78', 30);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Laderoute', 'Byron', '06.02.00.01.79', 30);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Vadnais', 'Byron', '06.02.00.01.80', 30);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Charette', 'Franck', '06.02.00.01.81', 31);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Patenaude', 'Grégoire', '06.02.00.01.82', 31);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Berthiaume', 'Verney', '06.02.00.01.83', 31);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Desruisseaux', 'Bartlett', '06.02.00.01.84', 31);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Huot', 'Fitz', '06.02.00.01.85', 31);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Gamelin', 'Harcourt', '06.02.00.01.86', 31);
+
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Thibault', 'Jesper', '06.02.00.01.87', 32);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Austin', 'Gradasso', '06.02.00.01.88', 32);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Duffet', 'Saber', '06.02.00.01.89', 32);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Lanteigne', 'Karel', '06.02.00.01.90', 32);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Potvin', 'Antoine', '06.02.00.01.91', 32);
+INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Veronneau', 'Robert', '06.02.00.01.92', 32);
+
+-- INSERTION DE JOUEURS
+-- Joueurs en Simple
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Cantin','Aubrey','FR','19','ES001','canaub','canaub');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carter','Joshua','US','24','ES002','carjos','carjos');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gibbons','Nicholas','GB','22','ES003','gibnic','gibnic');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Grave','Timothy','AU','28','ES004','gratim','gratim');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Mendoza','Tiago','ES','31','ES005','mentia','mentia');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hegediš','Rrahman','SI','35','ES006','hegrra','heggra');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Siddiq','Arber','TN','23','ES007','sidarb','sidarb');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Sousa','Joao','BR','35','ES008','soujoa','soujoa');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Yü','Lee','CN','28','ES009','yulee','yulee');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Petrović','Rajko ','HR','20','ES010','petraj','petraj');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('David S.','Dahl','SI','21','ES011','davdah','davdah');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Paloranta','Esa-Pekka','FI','22','ES012','palesa','palesa');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Knudsen','Isak','DE','30','ES013','knuisa','knuisa');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Paredes','Jacinto','UY','24','ES014','parjac','parjac');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Keled','Szatmáry','HU','20','ES015','kelsza','kelsza');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Valgeirsson','Örlygur','IE','23','ES016','valorl','valorl');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Barese','Angelico','IT','22','ES017','barang','barang');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Mitani','Naoki','JP','19','ES018','mitnao','mitnao');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Simonsen','Ruben','NO','26','ES019','simrub','simrub');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('van Haagen','Nuri','NL','24','ES020','vannur','vannur');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Symanski','Marik','PL','28','ES021','symmari','symmari');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Matveyev','David','RU','25','ES022','matdav','matdav');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Štimnikar','Tjaš','SI','25','ES023','stitja','stitja');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Olofsson','Mille','SE','33','ES024','olomil','olomil');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Novák','Jaroslav','CZ','27','ES025','novjar','novjar');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Thi Kế','Trịnh','VN','23','ES026','thitri','thitri');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('McGregor','Gavin','GB','25','ES027','mcggav','mcggav');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Jones','Alphonse','US','33','ES028','jonalp','jonalp');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Maldonado','Laszlo','VE','19','ES029','mallas','mallas');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Bonilla','Prudencio','CO','26','ES030','bonpru','bonpru');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Sexton','Aedan','IE','18','ES031','sexaed','sexaed');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carron','Chrisitian ','CH','26','ES032','carchr','carchr');
+
+-- Joueurs en double
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Herman','Phillipp','DE','18','ED001','harphi','harphi');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Aaslund','Theo','NO','33','ED001','aasthe','aasthe');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Zinn','Max','US','26','ED002','zinmax','zinmax');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Heidema','Mikel','NL','27','ED002','heimik','heimik');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Taylor','Bailey','GB','20','ED003','taybai','taybai');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Zając','Ireneusz','PL','30','ED003','zajire','zajire');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Moghadam','Musa','SA','21','ED004','mogmus','mogmus');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Yermakov','Borislav','RU','35','ED004','yerbor','yerbor');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Keighley','Toby','AU','18','ED005','keitob','keitob');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Nassib','Hajzer','SI','35','ED005','nashaj','nashaj');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gomes','André','BR','35','ED006','gomand','gomand');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Lundin','Philip','SE','31','ED006','lunphi','lunphi');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hung','Chan','CN','27','ED007','huncha','huncha');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hurtík','Adam','GE','19','ED007','hurada','hurada');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Cindrić','Zvonimir','HR','24','ED008','cinzvo','cinzvo');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('﻿Văn Sau','Chu','VN','28','ED008','vanchu','vanchu');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Bertelsen','Bertram','DK','34','ED009','berber','berber');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Miller','Greg','GB','22','ED009','milgre','milgre');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Rosing','Ludvig','DK','27','ED010','roslud','roslud');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Martok','Kornan','CH','33','ED010','markor','markor');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Camacho','Raimon','ES','23','ED011','camrai','camrai');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('de Campos','Jorge','PT','26','ED011','decjor','decjor');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Rikard','Sándor','HU','27','ED012','riksan','riksan');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Janjić','Radašin','RS','23','ED012','janrad','janrad');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Sigurmonsson','Rögnvaldur','IS','31','ED013','sigrog','sigrog');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Kočić','Aleksa','ME','26','ED013','kocale','kocale');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Barese','Rolando','IT','27','ED014','barrol','barrol');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Taue','Haruka','JP','22','ED014','tauhar','tauhar');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Yedinak','David','US','26','ED015','yeddav','yeddav');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Green','Tyler','UK','27','ED015','gretyl','gretyl');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Raja','Issam','AF','23','ED016','rajiss','rajiss');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Scherf','Cameron','AU','18','ED016','schcam','schcam');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Correia','Julian','BR','27','ED017','corjul','corjul');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hsueh','Bo','CN','30','ED017','hsubo','hsubo');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Antunović','Ratimir','HR','19','ED018','antrat','antrat');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Johansen','Michael','DK','22','ED018','johmic','johmic');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Petelius','Onni','FI','31','ED019','petonn','petonn');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Chabot','Franck','FR','22','ED019','chapra','chapra');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Rosas','Valdemar','ES','22','ED020','rosval','rosval');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Márkó','Szölôsy','HU','23','ED020','marszo','marszo');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gústafsson','Kjartan','IS','26','ED021','guskja','guskja');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Angelo','Candido','IT','20','ED021','angcan','angcan');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Goto','Atsuo','JP','23','ED022','gotats','gotats');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hole','Oscar','NO','33','ED022','holosc','holosc');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Béland','Nicholas','FR','26','ED023','belnic','belnic');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Futsum','Senay','TR','34','ED023','futsen','futsen');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Karhu','Kalervo','FI','22','ED024','karkal','karkal');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('O\'Sullivan','Murphy','IE','22','ED024','osumur','osumur');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gabriel','Greg','US','27','ED025','gabgre','gabgre');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Kay','Harley','US','18','ED025','kayhar','kayhar');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Fitzpatrick','Harry ','AU','33','ED026','fithar','fithar');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Arian','Tawhid','TR','23','ED026','aritaw','aritaw');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Pinto Rocha','Enzo  ','BR','23','ED027','pinenz','pinenz');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Teng','Wang','CN','33','ED027','tenwan','tenwan');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Kovač','Ivan','HR','18','ED028','koviva','koviva');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('O.Jakobsen','Johan','DK','27','ED028','ojajoh','ojajoh');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Piili','Jaakko','FI','25','ED029','piijaa','piijaa');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Racine','Fabrice','FR','22','ED029','racfab','racfab');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Hjálmarsson','Viðar','IS','29','ED030','hjavio','hjavio');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Bonilla','Aleksander','UY','25','ED030','bonale','bonale');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Csenger','Bernáth','HU','24','ED031','cseber','cseber');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Lorenzo','Fortunato','IT','35','ED031','lorfor','lorfor');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Nelis','Joel','NL','23','ED032','neljoe','neljoe');
+INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Rutkowski','Tadeusz','PL','32','ED032','ruttad','ruttad');
 
 -- INSERTION DE RENCONTRES
-INSERT INTO RENCONTRE VALUES ('SQ001','Tournoi',null,'1/8','CO01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ002','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ003','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ004','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ005','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ006','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ007','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ008','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ009','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ010','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ011','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ012','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ013','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ014','Tournoi',null,'1/8','CO01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ015','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ016','Tournoi',null,'1/8','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ017','Tournoi',null,'1/4','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ018','Tournoi',null,'1/4','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ019','Tournoi',null,'1/4','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ020','Tournoi',null,'1/4','CE01','TQ1','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ021','Tournoi',null,'1/4','CE01','TQ1','A001','ER001');
+-- 1/16 Jour 1 matin
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES001','1/16',1,1,1,32,null,null,1,2,1,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES016','1/16',2,1,16,17,null,null,3,4,11,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES008','1/16',3,1,8,25,null,null,5,6,21,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES024','1/16',4,1,9,24,null,null,7,8,31,32,33,34,35,36,37,38,39,40);
 
-INSERT INTO RENCONTRE VALUES ('SQ022','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ023','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ024','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ025','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ026','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ027','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ028','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ029','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ030','Tournoi',null,'1/8','CE02','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ031','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ032','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ033','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ034','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ035','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ036','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
-INSERT INTO RENCONTRE VALUES ('SQ037','Tournoi',null,'1/8','CE01','TQ2','A001','ER001');
+-- 1/16 Jour 1 midi
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES004','1/16',1,1,4,29,null,null,9,10,41,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES020','1/16',2,1,13,20,null,null,11,12,42,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES005','1/16',3,1,5,28,null,null,13,14,43,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES021','1/16',4,1,12,21,null,null,15,16,44,32,33,34,35,36,37,38,39,40);
+
+-- 1/16 Jour 1 soirée
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES002','1/16',1,1,2,31,null,null,1,2,45,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES015','1/16',2,1,15,18,null,null,3,4,46,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES026','1/16',3,1,7,26,null,null,5,6,1,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES023','1/16',4,1,10,23,null,null,7,8,11,32,33,34,35,36,37,38,39,40);
+
+-- 1/16 Jour 2 matin
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES003','1/16',1,1,3,30,null,null,9,10,21,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES019','1/16',2,1,14,19,null,null,11,12,31,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES006','1/16',3,1,6,27,null,null,13,14,41,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES022','1/16',4,1,11,22,null,null,15,16,42,32,33,34,35,36,37,38,39,40);
+
+-- 1/8 Jour 2 midi
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES001','1/8',1,1,1,16,null,null,1,2,43,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES024','1/8',2,1,8,24,null,null,3,4,44,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES004','1/8',3,1,4,20,null,null,5,6,45,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES005','1/8',4,1,5,21,null,null,7,8,46,32,33,34,35,36,37,38,39,40);
+
+-- 1/8 Jour 2 soirée
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES015','1/8',1,1,2,15,null,null,9,10,47,2,3,4,5,6,7,8,9,10);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES023','1/8',2,1,26,23,null,null,11,12,48,12,13,14,15,16,17,18,19,20);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES003','1/8',3,1,3,19,null,null,13,14,49,22,23,24,25,26,27,28,29,30);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ES022','1/8',4,1,6,22,null,null,15,16,50,32,33,34,35,36,37,38,39,40);
+
+-- 1/16 Double Jour 1 matin
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED007','1/16',5,2,45,46,95,96,17,18,47,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED006','1/16',6,2,43,44,37,38,19,20,48,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED025','1/16',7,2,81,82,77,78,21,22,49,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED012','1/16',8,2,55,56,49,50,23,24,50,78,79,80,81,82,83,84,85,86);
+-- 1/16 Double Jour 1 midi
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED018','1/16',5,2,67,68,47,48,25,26,87,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED001','1/16',6,2,75,76,33,34,27,28,88,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED016','1/16',7,2,63,64,71,72,29,30,89,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED019','1/16',8,2,39,40,69,70,31,32,90,78,79,80,81,82,83,84,85,86);
+-- 1/16 Double Jour 1 soirée
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED029','1/16',5,2,89,90,65,66,17,18,91,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED010','1/16',6,2,51,52,91,92,19,20,92,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED002','1/16',7,2,53,54,35,36,21,22,47,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED027','1/16',8,2,85,86,83,84,23,24,48,78,79,80,81,82,83,84,85,86);
+-- 1/16 Double Jour 2 matin
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED015','1/16',5,2,73,74,61,62,25,26,49,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED014','1/16',6,2,41,42,59,60,27,28,50,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED024','1/16',7,2,79,80,93,94,29,30,87,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi','ED013','1/16',8,2,87,88,57,58,31,32,88,78,79,80,81,82,83,84,85,86);
+-- 1/8 Double Jour 2 midi
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',5,2,45,46,43,44,17,18,89,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',6,2,85,86,55,56,19,20,90,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',7,2,67,68,33,34,21,22,91,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',8,2,63,64,69,70,23,24,92,78,79,80,81,82,83,84,85,86);
+-- 1/8 Double Jour 2 soirée
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',5,2,89,90,51,52,25,26,47,51,52,53,54,55,56,57,58,59);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',6,2,35,36,85,86,27,28,48,60,61,62,63,64,65,66,67,68);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',7,2,61,62,59,60,29,30,49,69,70,71,72,73,74,75,76,77);
+INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10) VALUES ('Tournoi',null,'1/8',8,2,79,80,57,58,31,32,50,78,79,80,81,82,83,84,85,86);
 
 
+-- INSERTION DE SETS
+-- SETS 1/16 Qualification Simple
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,1,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,1,32);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,1,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,1,32);
 
--- INSERTION DE MARQUE
-INSERT INTO MARQUE VALUES ('SQ001','SET001','J001','6');
-INSERT INTO MARQUE VALUES ('SQ001','SET002','J002','4');
-INSERT INTO MARQUE VALUES ('SQ001','SET003','J001','3');
-INSERT INTO MARQUE VALUES ('SQ001','SET004','J002','6');
-INSERT INTO MARQUE VALUES ('SQ001','SET005','J001','7');
-INSERT INTO MARQUE VALUES ('SQ001','SET006','J002','5');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,2,16);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,2,17);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,2,16);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,2,17);
 
-INSERT INTO MARQUE VALUES ('SQ002','SET007','J003','2');
-INSERT INTO MARQUE VALUES ('SQ002','SET008','J004','6');
-INSERT INTO MARQUE VALUES ('SQ002','SET009','J003','6');
-INSERT INTO MARQUE VALUES ('SQ002','SET010','J004','2');
-INSERT INTO MARQUE VALUES ('SQ002','SET011','J004','5');
-INSERT INTO MARQUE VALUES ('SQ002','SET012','J003','6');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,3,8);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,3,25);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,3,8);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,3,25);
 
-INSERT INTO MARQUE VALUES ('SQ003','SET015','J005','6');
-INSERT INTO MARQUE VALUES ('SQ003','SET016','J006','2');
-INSERT INTO MARQUE VALUES ('SQ003','SET017','J005','6');
-INSERT INTO MARQUE VALUES ('SQ003','SET018','J006','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,4,9);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,4,24);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,4,9);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,4,24);
 
-INSERT INTO MARQUE VALUES ('SQ004','SET019','J007','6');
-INSERT INTO MARQUE VALUES ('SQ004','SET020','J008','2');
-INSERT INTO MARQUE VALUES ('SQ004','SET021','J007','6');
-INSERT INTO MARQUE VALUES ('SQ004','SET022','J008','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,5,4);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,5,29);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,5,4);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,5,29);
 
-INSERT INTO MARQUE VALUES ('SQ005','SET023','J009','6');
-INSERT INTO MARQUE VALUES ('SQ005','SET024','J010','2');
-INSERT INTO MARQUE VALUES ('SQ005','SET025','J009','6');
-INSERT INTO MARQUE VALUES ('SQ005','SET026','J010','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,6,13);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,6,20);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,6,13);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,6,20);
 
-INSERT INTO MARQUE VALUES ('SQ006','SET027','J011','6');
-INSERT INTO MARQUE VALUES ('SQ006','SET028','J012','2');
-INSERT INTO MARQUE VALUES ('SQ006','SET029','J011','6');
-INSERT INTO MARQUE VALUES ('SQ006','SET030','J012','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,7,5);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,7,28);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,7,5);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,7,28);
 
-INSERT INTO MARQUE VALUES ('SQ007','SET031','J014','6');
-INSERT INTO MARQUE VALUES ('SQ007','SET032','J013','2');
-INSERT INTO MARQUE VALUES ('SQ007','SET033','J014','6');
-INSERT INTO MARQUE VALUES ('SQ007','SET034','J013','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,8,12);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,8,21);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,8,12);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,8,21);
 
-INSERT INTO MARQUE VALUES ('SQ008','SET035','J016','6');
-INSERT INTO MARQUE VALUES ('SQ008','SET036','J015','2');
-INSERT INTO MARQUE VALUES ('SQ008','SET037','J016','6');
-INSERT INTO MARQUE VALUES ('SQ008','SET038','J015','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,9,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(5,30,9,31);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,9,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,9,31);
 
-INSERT INTO MARQUE VALUES ('SQ009','SET039','J018','6');
-INSERT INTO MARQUE VALUES ('SQ009','SET040','J017','2');
-INSERT INTO MARQUE VALUES ('SQ009','SET041','J018','6');
-INSERT INTO MARQUE VALUES ('SQ009','SET042','J017','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,10,15);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,10,18);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,10,15);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,10,18);
 
-INSERT INTO MARQUE VALUES ('SQ010','SET043','J020','6');
-INSERT INTO MARQUE VALUES ('SQ010','SET044','J019','2');
-INSERT INTO MARQUE VALUES ('SQ010','SET045','J020','6');
-INSERT INTO MARQUE VALUES ('SQ010','SET046','J019','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,11,7);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,11,26);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,11,7);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,11,26);
 
-INSERT INTO MARQUE VALUES ('SQ011','SET047','J022','6');
-INSERT INTO MARQUE VALUES ('SQ011','SET048','J021','2');
-INSERT INTO MARQUE VALUES ('SQ011','SET049','J022','6');
-INSERT INTO MARQUE VALUES ('SQ011','SET050','J021','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,12,10);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,12,23);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,12,10);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,12,23);
 
-INSERT INTO MARQUE VALUES ('SQ012','SET051','J024','6');
-INSERT INTO MARQUE VALUES ('SQ012','SET052','J023','2');
-INSERT INTO MARQUE VALUES ('SQ012','SET053','J024','6');
-INSERT INTO MARQUE VALUES ('SQ012','SET054','J023','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,13,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,13,30);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,13,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,13,30);
 
-INSERT INTO MARQUE VALUES ('SQ013','SET055','J026','6');
-INSERT INTO MARQUE VALUES ('SQ013','SET056','J025','2');
-INSERT INTO MARQUE VALUES ('SQ013','SET057','J026','6');
-INSERT INTO MARQUE VALUES ('SQ013','SET058','J025','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,14,14);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,14,19);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,14,14);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,14,19);
 
-INSERT INTO MARQUE VALUES ('SQ014','SET059','J028','6');
-INSERT INTO MARQUE VALUES ('SQ014','SET060','J027','2');
-INSERT INTO MARQUE VALUES ('SQ014','SET061','J028','6');
-INSERT INTO MARQUE VALUES ('SQ014','SET062','J027','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,15,6);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,15,27);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,15,6);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,15,27);
 
-INSERT INTO MARQUE VALUES ('SQ015','SET063','J030','6');
-INSERT INTO MARQUE VALUES ('SQ015','SET064','J029','2');
-INSERT INTO MARQUE VALUES ('SQ015','SET065','J030','6');
-INSERT INTO MARQUE VALUES ('SQ015','SET066','J029','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,16,11);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,16,22);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,16,11);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,16,22);
 
-INSERT INTO MARQUE VALUES ('SQ016','SET067','J032','6');
-INSERT INTO MARQUE VALUES ('SQ016','SET068','J031','2');
-INSERT INTO MARQUE VALUES ('SQ016','SET069','J032','6');
-INSERT INTO MARQUE VALUES ('SQ016','SET070','J031','2');
+-- SETS 1/8 Qualification Simple
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,17,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,17,16);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,17,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,17,16);
 
-INSERT INTO MARQUE VALUES ('SQ017','SET071','J001','6');
-INSERT INTO MARQUE VALUES ('SQ017','SET072','J003','2');
-INSERT INTO MARQUE VALUES ('SQ017','SET071','J001','6');
-INSERT INTO MARQUE VALUES ('SQ017','SET072','J003','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,18,8);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,18,24);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,18,8);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,18,24);
 
-INSERT INTO MARQUE VALUES ('SQ018','SET073','J005','6');
-INSERT INTO MARQUE VALUES ('SQ018','SET074','J007','2');
-INSERT INTO MARQUE VALUES ('SQ018','SET073','J005','6');
-INSERT INTO MARQUE VALUES ('SQ018','SET074','J007','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,19,4);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,19,20);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,19,4);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,19,20);
 
-INSERT INTO MARQUE VALUES ('SQ019','SET075','J009','6');
-INSERT INTO MARQUE VALUES ('SQ019','SET076','J011','2');
-INSERT INTO MARQUE VALUES ('SQ019','SET075','J009','6');
-INSERT INTO MARQUE VALUES ('SQ019','SET076','J011','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,20,5);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(5,30,20,21);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,20,5);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,20,21);
 
-INSERT INTO MARQUE VALUES ('SQ020','SET077','J014','6');
-INSERT INTO MARQUE VALUES ('SQ020','SET078','J016','2');
-INSERT INTO MARQUE VALUES ('SQ020','SET077','J014','6');
-INSERT INTO MARQUE VALUES ('SQ020','SET078','J016','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,21,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,21,15);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,21,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,21,15);
 
-INSERT INTO MARQUE VALUES ('SQ021','SET079','J018','6');
-INSERT INTO MARQUE VALUES ('SQ021','SET080','J020','2');
-INSERT INTO MARQUE VALUES ('SQ021','SET079','J018','6');
-INSERT INTO MARQUE VALUES ('SQ021','SET080','J020','2');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,22,26);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,22,23);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,22,26);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,22,23);
 
---MATCHS DOUBLE ELIMINATOIRE
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,23,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,23,19);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,23,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,23,19);
 
-INSERT INTO MARQUE VALUES ('SQ022','SET081','J033','0');
-INSERT INTO MARQUE VALUES ('SQ022','SET113','J050','0');
-INSERT INTO MARQUE VALUES ('SQ022','SET082','J034','0');
-INSERT INTO MARQUE VALUES ('SQ022','SET114','J051','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,24,6);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,24,22);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,24,6);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,24,22);
 
-INSERT INTO MARQUE VALUES ('SQ023','SET083','J035','0');
-INSERT INTO MARQUE VALUES ('SQ023','SET115','J052','0');
-INSERT INTO MARQUE VALUES ('SQ023','SET083','J036','0');
-INSERT INTO MARQUE VALUES ('SQ023','SET116','J053','0');
 
-INSERT INTO MARQUE VALUES ('SQ024','SET085','J037','0');
-INSERT INTO MARQUE VALUES ('SQ024','SET117','J054','0');
-INSERT INTO MARQUE VALUES ('SQ024','SET086','J038','0');
-INSERT INTO MARQUE VALUES ('SQ024','SET118','J055','0');
+-- SETS 1/16 Qualification Double
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,25,45);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,46);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,95);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,96);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,25,45);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,25,46);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,25,95);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,96);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,45);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,46);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,25,95);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,96);
 
-INSERT INTO MARQUE VALUES ('SQ025','SET087','J039','0');
-INSERT INTO MARQUE VALUES ('SQ025','SET119','J056','0');
-INSERT INTO MARQUE VALUES ('SQ025','SET088','J040','0');
-INSERT INTO MARQUE VALUES ('SQ025','SET120','J057','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,26,43);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,44);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,37);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,38);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,26,43);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,26,44);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,26,37);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,38);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,43);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,44);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,26,37);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,38);
 
-INSERT INTO MARQUE VALUES ('SQ026','SET089','J041','0');
-INSERT INTO MARQUE VALUES ('SQ026','SET121','J058','0');
-INSERT INTO MARQUE VALUES ('SQ026','SET090','J042','0');
-INSERT INTO MARQUE VALUES ('SQ026','SET122','J059','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,27,81);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,82);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,77);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,78);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,27,81);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,27,82);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,27,77);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,78);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,81);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,82);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,27,77);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,78);
 
-INSERT INTO MARQUE VALUES ('SQ027','SET091','J043','0');
-INSERT INTO MARQUE VALUES ('SQ027','SET123','J060','0');
-INSERT INTO MARQUE VALUES ('SQ027','SET092','J044','0');
-INSERT INTO MARQUE VALUES ('SQ027','SET124','J061','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,28,55);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,56);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,49);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,50);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,28,55);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,28,56);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,28,49);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,50);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,55);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,56);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,28,49);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,50);
 
-INSERT INTO MARQUE VALUES ('SQ028','SET093','J045','0');
-INSERT INTO MARQUE VALUES ('SQ028','SET125','J062','0');
-INSERT INTO MARQUE VALUES ('SQ028','SET094','J046','0');
-INSERT INTO MARQUE VALUES ('SQ028','SET126','J063','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,29,67);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,68);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,47);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,48);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,29,67);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,29,68);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,29,47);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,48);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,67);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,68);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,29,47);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,48);
 
-INSERT INTO MARQUE VALUES ('SQ029','SET095','J047','0');
-INSERT INTO MARQUE VALUES ('SQ029','SET127','J064','0');
-INSERT INTO MARQUE VALUES ('SQ029','SET096','J048','0');
-INSERT INTO MARQUE VALUES ('SQ029','SET128','J049','0');
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,75);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,76);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,30,33);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,30,34);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,75);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,76);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,33);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,34);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,30,75);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,76);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,30,33);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,34);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,31,63);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,64);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,71);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,72);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,31,63);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,31,64);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,31,71);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,72);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,63);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,64);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,31,71);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,72);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,39);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,40);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,32,69);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,32,70);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,39);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,40);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,69);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,70);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,32,39);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,40);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,32,69);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,70);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,33,89);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,90);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,65);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,66);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,33,89);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,33,90);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,33,65);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,66);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,89);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,90);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,33,65);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,66);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,34,51);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,52);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,91);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,92);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,34,51);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,34,52);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,34,91);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,92);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,51);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,52);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,34,91);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,92);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,53);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,54);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,35,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,35,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,53);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,54);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,35,53);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,54);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,35,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,36);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,36,85);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,86);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,36,85);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,36,86);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,36,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,85);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,86);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,36,35);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,36);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,73);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,74);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,37,61);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,37,62);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,73);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,74);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,61);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,62);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,37,73);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,74);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,37,61);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,62);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,41);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,42);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,38,59);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,38,60);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,41);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,42);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,59);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,60);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,38,41);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,42);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,38,59);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,60);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,39,79);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,80);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,93);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,94);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,39,79);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,39,80);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,39,93);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,94);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,79);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,80);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,39,93);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,94);
+
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,87);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,88);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,40,57);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,40,58);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,87);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,88);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,57);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,58);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,40,87);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,88);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,40,57);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,58);
+
+-- INSERTION DE SE_DEROULE2
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(1,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(2,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(3,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(4,1,'Matin');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(25,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(26,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(27,1,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(28,1,'Matin');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(5,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(6,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(7,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(8,2,'Midi');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(29,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(30,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(31,2,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(32,2,'Midi');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(9,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(10,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(11,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(12,3,'Soirée');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(33,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(34,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(35,3,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(36,3,'Soirée');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(13,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(14,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(15,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(16,4,'Matin');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(37,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(38,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(39,4,'Matin');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(40,4,'Matin');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(17,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(18,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(19,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(20,5,'Midi');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(41,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(42,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(43,5,'Midi');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(44,5,'Midi');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(21,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(22,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(23,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(24,6,'Soirée');
+
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(45,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(46,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(47,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(48,6,'Soirée');

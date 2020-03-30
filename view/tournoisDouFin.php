@@ -61,7 +61,9 @@
         global $tabFinal;
 
         if ($tabFinal == null) {
-          echo "Désolé, il n'y a pas de match en cours";
+          echo "<div style=\"height:30vh;\">
+          <h3 style=\"margin-top:5em;\">Désolé, il n'y a pas de match en cours</h3>
+          </div>";
         }else{
           foreach ($tabFinal as $phase => $matchs) {
             echo"<h3 class=\"h3Tournois\">$phase</h3>
@@ -97,10 +99,12 @@
                 $nbJ = 0;
                 foreach ($joueurs as $key => $infos) {
                   $nbJ++;
+                  $nomPays=strtolower($infos[2]);
+                  $lienDrap = "\"../view/img/pays/$nomPays.png\"";
                   echo"<tr class=\"joueur\">
                   <td class=\"nom\">$infos[0]</td>
                   <td class=\"prenom\">$infos[1]</td>
-                  <td class=\"nation\">$infos[2]<td>";
+                  <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
                   // Si c'est le premier joueur, alors on affiche le socre dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
                   if ($nbJ == 1) {
                     for ($k=0; $k < sizeof($tabScore) ; $k++) {
@@ -143,7 +147,7 @@
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="#" class="linkWhite">Nous contacter</a></li>
+      <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
       <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 

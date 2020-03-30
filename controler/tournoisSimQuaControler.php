@@ -31,10 +31,10 @@
       }
       if ($idJoueur != $tab[$i]['id_joueur']) {
         $idJoueur = $tab[$i]['id_joueur'];
-        $ah = array($tab[$i]['Nom_joueur'],$tab[$i]['Prenom_joueur'],$tab[$i]['Nationalite_joueur'], $tab[$i]['Nb_jeu_simple']);
+        $ah = array($tab[$i]['Nom_joueur'],$tab[$i]['Prenom_joueur'],$tab[$i]['Nationalite_joueur'], $tab[$i]['Nb_jeu']);
         $tabFinal[$phase][$idMatch][$idJoueur]= $ah;
       }else{
-        array_push($tabFinal[$phase][$idMatch][$idJoueur], $tab[$i]['Nb_jeu_simple']);
+        array_push($tabFinal[$phase][$idMatch][$idJoueur], $tab[$i]['Nb_jeu']);
       }
     }
   }
