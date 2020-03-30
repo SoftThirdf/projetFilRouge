@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -145,6 +144,7 @@
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="reseaux.html" class="linkWhite">Nos réseaux sociaux</a></li>
       <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
