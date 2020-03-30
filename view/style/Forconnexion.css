@@ -1,19 +1,27 @@
-.body{
-  background-color: white;
-  font-family: sans-serif;
-}
-
 .conteneur{
-
-  background-image: url("../img/Connexion.jpg");
-  background-size: 50%;
-  height: 100%;
+  background-color:#F2F2F2;
+  text-align:center;
+  display: flex;
+  padding-right: 15%;
+  padding-left: 15%;
   margin: auto;
-  background-repeat: no-repeat;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.center{
+  display: flex;
+  margin: auto;
+  align-items: center;
+
 
 }
-.essai{
-  width: 50%;
+
+#conteneurBody {
+  display: flex;
+  background-image: url("../img/Connexion.jpg");
+  margin: auto;
+  background-position: center;
 }
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans');

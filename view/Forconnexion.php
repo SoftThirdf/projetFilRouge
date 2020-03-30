@@ -34,17 +34,16 @@
       <div id="conteneurBody">
 
     <div class="conteneur">
-      <div class="img">
+
         <div align="center">
-        <img src="../view/img/Connexion.jpg" class="essai">
        <form action="Moncompte.php" method="post">
        <tr>
-       <td>Adresse mail</td>
+       <td><h4>Login</h4></td>
        <td><input type="text" name="login"></br>
        </td>
        </tr>
        <tr>
-       <td>Mot de passe</td>
+       <td><h4>Mot de passe</h4></td>
        <td><input type="password" name="mdp"></br>
        </td>
        </tr>
@@ -56,6 +55,7 @@
        </div>
 
      </div>
+   </div>
 
    </body>
 
