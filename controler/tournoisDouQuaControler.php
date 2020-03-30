@@ -14,6 +14,16 @@
   //                          Nom,Prenom,Nationalité
   //                      jeu1,jeu2,jeu3.....jeuN
 
+  // array (size=8)
+  //   'id_Match' => string '25' (length=2)
+  //   'nom_equipe' => string 'ED007' (length=5)
+  //   'id_joueur' => string '45' (length=2)
+  //   'nom_joueur' => string 'Hung' (length=4)
+  //   'prenom_joueur' => string 'Chan' (length=4)
+  //   'Nationalite_joueur' => string 'CN' (length=2)
+  //   'libelle_match' => string '1/16' (length=4)
+  //   'Nb_jeu' => string '4' (length=1)
+
   if (empty($tab)) {
     $tabFinal = null;
   }else{
@@ -30,8 +40,8 @@
       if ($idMatch != $tab[$i]['id_Match']) {
         $idMatch = $tab[$i]['id_Match'];
       }
-      if ($idEquipe != $tab[$i]['id_equipe']) {
-        $idEquipe = $tab[$i]['id_equipe'];
+      if ($idEquipe != $tab[$i]['nom_equipe']) {
+        $idEquipe = $tab[$i]['nom_equipe'];
       }
       if ($idJoueur != $tab[$i]['id_joueur']) {
         $idJoueur = $tab[$i]['id_joueur'];
