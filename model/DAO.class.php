@@ -50,6 +50,34 @@
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
+
+       function getTournois() {
+         $req = "SELECT T.id_Tournoi, T.type_tournoi, T.categorie_tournoi FROM Tournoi T";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getCourts() {
+         $req = "SELECT id_Court, libelle_court FROM Court";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getJoueurs() {
+         $req = "SELECT id_joueur, nom_joueur, prenom_joueur FROM Joueur";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getJoueursExcept($idJoueur){
+         $req = "SELECT id_joueur, nom_joueur, prenom_joueur FROM Joueur WHERE id_joueur NOT IN(SELECT id_joueur FROM Joueur WHERE id_joueur = $idJoueur)";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
     }
 
     ?>
