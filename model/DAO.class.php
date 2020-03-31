@@ -58,7 +58,6 @@
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
-
     }
 
     ?>
