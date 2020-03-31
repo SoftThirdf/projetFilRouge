@@ -14,7 +14,7 @@
         // Constructeur chargé d'ouvrir la BD
         function __construct() {
           try {
-            $this->db = new PDO('mysql:host=localhost;port=8889;dbname=testdb;charset=utf8', 'root', 'root');
+            $this->db = new PDO('mysql:host=localhost;port=3308;dbname=testdb;charset=utf8', 'root', '');
           } catch (Exception $e) {
             die ("Erreur création PDO : ".$e->getMessage());
           }
@@ -46,6 +46,14 @@
        //Elle retourne un tableau associatif avec les noms et prénoms des joueurs ainsi que les sets mis ordonné par les numéro de matchs
        function getInfoTypeMatchTournoiDouble($typeTournoi) {
          $req = "SELECT R.id_Match, J.nom_equipe, J.id_joueur, J.nom_joueur, J.prenom_joueur, J.Nationalite_joueur, R.libelle_match, B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi' AND T.categorie_tournoi like 'Double' ORDER BY R.id_Match, J.id_joueur";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       //Méthode qui renvoie l'utilisateur correspondant aux login et mdp renseignés
+       function getUtilisateur($Login, $Mdp){
+         $req= "SELECT j.id_joueur FROM joueur j WHERE j.login= \"$Login\" AND j.mdp= \"$Mdp\"";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;

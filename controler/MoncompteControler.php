@@ -1,13 +1,23 @@
+<?php
 
-      <?php
-       if (isset($_POST['mdp'])&&isset($_POST['login']))
-       {
-         if($_POST['login']=="filrouge@iae.fr"&&$_POST['mdp']=="filrouge")
-         {
-         include('Moncompte.php');
-         } else  {echo "Identifiant ou mot de passe incorrect";
-                 }
-       else {
-         echo "Echec de connexion";
-       }
-       ?>
+  include_once("../model/DAO.class.php");
+
+  if (isset($_POST['login']) && isset($_POST['mdp']))
+  {
+    $Login=$_POST['login'];
+    $Mdp=$_POST['mdp'];
+    $tab = $dao->getUtilisateur($Login, $Mdp);
+
+    if(!empty($tab))
+    {
+      include('../view/Moncompte.php');
+    }else
+    {
+      $echec = "Echec de la connexion, veuillez réessayer";
+      include('../view/Forconnexion.php');
+    }
+  }else{
+    include('../view/Forconnexion.php');
+  }
+
+?>
