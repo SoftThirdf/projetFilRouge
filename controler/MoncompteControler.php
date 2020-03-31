@@ -1,13 +1,23 @@
 
-      <?php
-       if (isset($_POST['mdp'])&&isset($_POST['login']))
-       {
-         if($_POST['login']=="filrouge@iae.fr"&&$_POST['mdp']=="filrouge")
-         {
-         include('Moncompte.php');
-         } else  {echo "Identifiant ou mot de passe incorrect";
-                 }
-       else {
-         echo "Echec de connexion";
-       }
+<?php
+include_once("../model/DAO.class.php");
+$Login=$_POST['login'];
+$Mdp=$_POST['Mdp'];
+var_dump($Login);
+var_dump($Mdp);
+//if (isset($Login)&&isset($Mdp))
+  //{
+    $tab = $dao->getUtilisateur('canaub', 'canaub');
+   //if(!empty($Login) AND !empty($Mdp))
+  //  {
+    //if($res=null)
+    // {
+    //  echo " Echec de connexion"
+    // }
+  //  }
+//  }
+    //else {
+     //include('Moncompte.php');
+    //}
+
        ?>

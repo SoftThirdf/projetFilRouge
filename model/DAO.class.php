@@ -50,6 +50,15 @@
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
+
+       //Méthode qui renvoie l'utilisateur correspondant aux login et mdp renseignés
+       function getUtilisateur($Login, $Mdp){
+         $req= "SELECT j.id_joueur FROM joueur j WHERE j.login= \"$Login\" AND j.mdp= \"$Mdp\"";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
     }
 
     ?>

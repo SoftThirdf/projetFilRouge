@@ -32,11 +32,10 @@
       </header>
 
       <div id="conteneurBody">
-
     <div class="conteneur">
 
         <div align="center">
-       <form action="Moncompte.php" method="post">
+       <form action="../controler/MoncompteControler.php" method="post">
        <tr>
        <td><h4>Login</h4></td>
        <td><input type="text" name="login"></br>
