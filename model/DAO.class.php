@@ -72,12 +72,86 @@
          return $res;
        }
 
+       function getArbitres() {
+         $req = "SELECT id_arbitre, nom_arbitre, prenom_arbitre FROM Arbitre";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getErbs() {
+         $req = "Select * FROM equipe_ramasseur";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getErbsExcept1($idErb) {
+         $req = "Select * FROM equipe_ramasseur WHERE id_equipe_ramasseur NOT IN(SELECT id_equipe_ramasseur FROM equipe_ramasseur WHERE id_equipe_ramasseur = $idErb)";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
        function getJoueursExcept($idJoueur){
          $req = "SELECT id_joueur, nom_joueur, prenom_joueur FROM Joueur WHERE id_joueur NOT IN(SELECT id_joueur FROM Joueur WHERE id_joueur = $idJoueur)";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
+
+       function getJoueursExcept2($idJoueur1, $idJoueur2){
+         $req = "SELECT id_joueur, nom_joueur, prenom_joueur FROM Joueur WHERE id_joueur NOT IN(SELECT id_joueur FROM Joueur WHERE id_joueur = $idJoueur1 OR id_joueur = $idJoueur2)";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function getJoueursExcept3($idJoueur1, $idJoueur2, $idJoueur3){
+         $req = "SELECT id_joueur, nom_joueur, prenom_joueur FROM Joueur WHERE id_joueur NOT IN(SELECT id_joueur FROM Joueur WHERE id_joueur = $idJoueur1 OR id_joueur = $idJoueur2 OR id_joueur = $idJoueur3)";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       function insertRencontre($typeMatch,$nomGagnant, $libelle_match, $idCourt, $id_Tournoi, $idJoueur1, $idJoueur2, $idJoueur3, $idJoueur4, $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch){
+         $req = $this->db->prepare("INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10)
+         VALUES (:type_match,:nomGagnant,:libelle_match,:idCourt,:id_Tournoi,:idJoueur1,:idJoueur2,:idJoueur3,:idJoueur4,:idErb1,:idErb2,:idArbitre1,:idArbitre2,:idArbitre3,:idArbitre4,:idArbitre5,:idArbitre6,:idArbitre7,:idArbitre8,:idArbitre9,:idArbitre10)");
+
+         $req->bindValue(':type_match',$typeMatch, PDO::PARAM_STR);
+         $req->bindValue(':nomGagnant',$nomGagnant, PDO::PARAM_STR);
+         $req->bindValue(':libelle_match',$libelle_match, PDO::PARAM_STR);
+         $req->bindValue(':idCourt',$idCourt, PDO::PARAM_INT);
+         $req->bindValue(':id_Tournoi',$id_Tournoi, PDO::PARAM_INT);
+         $req->bindValue(':idJoueur1',$idJoueur1, PDO::PARAM_INT);
+         $req->bindValue(':idJoueur2',$idJoueur2, PDO::PARAM_INT);
+
+         if ($categorieMatch=="simple") {
+           $req->bindValue(':idJoueur3',$idJoueur3, PDO::PARAM_NULL);
+           $req->bindValue(':idJoueur4',$idJoueur4, PDO::PARAM_NULL);
+         }else{
+           $req->bindValue(':idJoueur3',$idJoueur3, PDO::PARAM_INT);
+           $req->bindValue(':idJoueur4',$idJoueur4, PDO::PARAM_INT);
+         }
+
+         $req->bindValue(':idErb1',$idErb1, PDO::PARAM_INT);
+         $req->bindValue(':idErb2',$idErb2, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre1',$idArbitre1, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre2',$idArbitre2, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre3',$idArbitre3, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre4',$idArbitre4, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre5',$idArbitre5, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre6',$idArbitre6, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre7',$idArbitre7, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre8',$idArbitre8, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre9',$idArbitre9, PDO::PARAM_INT);
+         $req->bindValue(':idArbitre10',$idArbitre10, PDO::PARAM_INT);
+
+         $res=$req->execute();
+         
+         return $res;
+       }
+
     }
 
     ?>

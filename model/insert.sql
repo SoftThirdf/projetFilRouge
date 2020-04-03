@@ -1,5 +1,5 @@
 -- INSERTION D'ARBITRES
---  Arbitres Simple Qualification
+--  Insertions d'Arbitres arbitrant pour le tournoi Simple Qualification
 INSERT INTO ARBITRE(type_arbitre,categorie_arbitre,nom_arbitre,prenom_arbitre,nationalite_arbitre,telephone_arbitre) VALUES('Arbitre de chaise','ITT1','Dupont','Jean','FR','06.01.00.00.01');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Gagnon','Quincy','FR','06.01.00.00.02');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Routhier','Vernon','FR','06.01.00.00.03');
@@ -46,7 +46,8 @@ INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitr
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Sivonjić','Bahrudin','SI','06.01.00.00.44');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Jurekić','Jože','SI','06.01.00.00.45');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Pejaković','Tobija','SI','06.01.00.00.46');
--- Arbitres Double Qualification
+
+-- Arbitres d'arbitre pour le tournoi Double Qualification
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Ukyou','Yoshino','JP','06.01.00.00.47');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Taketo','Yano','JP','06.01.00.00.48');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Shun','Senda','JP','06.01.00.00.49');
@@ -393,7 +394,7 @@ INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_
 INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Veronneau', 'Robert', '06.02.00.01.92', 32);
 
 -- INSERTION DE JOUEURS
--- Joueurs en Simple
+-- Joueurs en Simple Qualification
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Cantin','Aubrey','FR','19','ES001','canaub','canaub');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carter','Joshua','US','24','ES002','carjos','carjos');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gibbons','Nicholas','GB','22','ES003','gibnic','gibnic');
@@ -427,7 +428,7 @@ INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_e
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Sexton','Aedan','IE','18','ES031','sexaed','sexaed');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carron','Chrisitian ','CH','26','ES032','carchr','carchr');
 
--- Joueurs en double
+-- Joueurs en double Qualification
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Herman','Phillipp','DE','18','ED001','harphi','harphi');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Aaslund','Theo','NO','33','ED001','aasthe','aasthe');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Zinn','Max','US','26','ED002','zinmax','zinmax');
