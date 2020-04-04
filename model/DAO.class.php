@@ -148,7 +148,36 @@
          $req->bindValue(':idArbitre10',$idArbitre10, PDO::PARAM_INT);
 
          $res=$req->execute();
-         
+
+         return $res;
+       }
+
+       function insertArbitre($typeArbitre,$categorieArbitre,$nomArbitre,$prenomArbitre,$nationaliteArbitre,$telephoneArbitre){
+         $req = $this->db->prepare("INSERT INTO ARBITRE(type_arbitre,categorie_arbitre,nom_arbitre,prenom_arbitre,nationalite_arbitre,telephone_arbitre) VALUES(:type_arbitre,:categorie_arbitre,:nom_arbitre,:prenom_arbitre,:nationalite_arbitre,:telephone_arbitre)");
+         $req->bindValue(':type_arbitre',$typeArbitre, PDO::PARAM_STR);
+         $req->bindValue(':categorie_arbitre',$categorieArbitre, PDO::PARAM_STR);
+         $req->bindValue(':nom_arbitre',$nomArbitre, PDO::PARAM_STR);
+         $req->bindValue(':prenom_arbitre',$prenomArbitre, PDO::PARAM_STR);
+         $req->bindValue(':nationalite_arbitre',$nationaliteArbitre, PDO::PARAM_STR);
+         $req->bindValue(':telephone_arbitre',$telephoneArbitre, PDO::PARAM_STR);
+
+         $res=$req->execute();
+
+         return $res;
+       }
+
+       function insertJoueur($nomJoueur,$prenomJoueur,$nationaliteJoueur,$ageJoueur,$nomEquipe,$login,$mdp){
+         $req = $this->db->prepare("INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES(:nom_joueur,:prenom_joueur,:nationalite_joueur,:age_joueur,:nom_equipe,:login,:mdp)");
+         $req->bindValue(':nom_joueur',$nomJoueur, PDO::PARAM_STR);
+         $req->bindValue(':prenom_joueur',$prenomJoueur, PDO::PARAM_STR);
+         $req->bindValue(':nationalite_joueur',$nationaliteJoueur, PDO::PARAM_STR);
+         $req->bindValue(':age_joueur',$ageJoueur, PDO::PARAM_INT);
+         $req->bindValue(':nom_equipe',$nomEquipe, PDO::PARAM_STR);
+         $req->bindValue(':login',$login, PDO::PARAM_STR);
+         $req->bindValue(':mdp',$mdp, PDO::PARAM_STR);
+
+         $res=$req->execute();
+
          return $res;
        }
 

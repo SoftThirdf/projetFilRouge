@@ -11,7 +11,7 @@
   <script type="text/javascript">
     function erb1(e) {
       $.ajax({
-        url: "../controler/adminControler.php",
+        url: "../controler/adminCreerMatchControler.php",
         type: "POST",
         data: "id_erb=" + e.value,
         dataType: "json",
@@ -35,7 +35,7 @@
 
     function joueur1(e) {
       $.ajax({
-        url: "../controler/adminControler.php",
+        url: "../controler/adminCreerMatchControleradminCreerMatchControler.php",
         type: "POST",
         data: "id_joueur1=" + e.value,
         dataType: "json",
@@ -59,7 +59,7 @@
 
     function joueur2(e) {
       $.ajax({
-        url: "../controler/adminControler.php",
+        url: "../controler/adminCreerMatchControler.php",
         type: "POST",
         data: 'id_joueur1=' + $("#j1").val() + '&id_joueur2=' + e.value,
         dataType: "json",
@@ -84,7 +84,7 @@
 
     function joueur3(e) {
       $.ajax({
-        url: "../controler/adminControler.php",
+        url: "../controler/adminCreerMatchControler.php",
         type: "POST",
         data: 'id_joueur1=' + $("#j1").val() + '&id_joueur2=' + $("#j2").val() + '&id_joueur3=' + e.value,
         dataType: "json",
@@ -139,13 +139,15 @@
     <h2>Bienvenue sur la page Administrateur</h2>
     <hr class="sousH2">
     <p>C'est à partir de celle-ci que vous pourrez insérer, modifier, supprimer des éléments de la base de données.</p>
+    <p>Vous pouvez désormais : <a href="adminCreerMatchControler.php">Créer un match</a>, <a href="adminCreerJoueurControler.php">Créer un joueur</a>, <a href="adminCreerArbitreControler.php">Créer un arbitre</a>, <a href="">Mettre à jour les résultats d'un match en cours</a>.</p>
+
 
     <div class="conteneurFormulaire">
 
       <h3>Création de match</h3>
       <hr class="sousH3">
 
-      <form class="formulaireAdmin" action="adminControler.php" method="post">
+      <form class="formulaireAdmin" action="adminCreerMatchControler.php" method="post">
 
         <div id="conteneurTypeMatch">
           <label for="type_match">Type de match</label>
@@ -308,15 +310,6 @@
 
       </form>
     </div>
-
-    <h3>Création de joueur</h3>
-    <hr class="sousH3">
-
-    <h3>Création d'arbitre</h3>
-    <hr class="sousH3">
-
-    <h3>Mise à jour des résultats d'un match en cours</h3>
-    <hr class="sousH3">
 
   </div>
 

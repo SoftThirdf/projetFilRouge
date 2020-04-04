@@ -46,7 +46,7 @@ include_once("../model/DAO.class.php");
     ";
     }
 
-    include("../view/admin.php");
+    include("../view/adminCreerMatch.php");
 
 
   }elseif (isset($_POST['id_erb'])) {
@@ -80,7 +80,7 @@ include_once("../model/DAO.class.php");
     $tabErbs = $dao->getErbs();
     $tabArbitres = $dao->getArbitres();
 
-    include("../view/admin.php");
+    include("../view/adminCreerMatch.php");
   }
 
  ?>
