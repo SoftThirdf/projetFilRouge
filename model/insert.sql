@@ -123,6 +123,9 @@ INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('11:30:00','2020-06-14'
 INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-14','16:00:00');
 INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-14','18:00:00');
 
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-14', null);
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-14', null);
+
 
 -- INSERTION D'EQUIPES DE RAMASSEURS
 INSERT INTO EQUIPE_RAMASSEUR (nom_equipe_ramasseur) VALUES ('TeamRam1');
@@ -947,12 +950,12 @@ INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(42,5,'Midi')
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(43,5,'Midi');
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(44,5,'Midi');
 
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(21,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(22,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(23,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(24,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(21,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(22,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(23,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(24,7,'Soirée');
 
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(45,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(46,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(47,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(48,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(45,8,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(46,8,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(47,8,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(48,8,'Soirée');

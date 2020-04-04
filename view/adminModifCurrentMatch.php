@@ -39,64 +39,16 @@
     <h2>Bienvenue sur la page Administrateur</h2>
     <hr class="sousH2">
     <p>C'est à partir de celle-ci que vous pourrez insérer, modifier, supprimer des éléments de la base de données.</p>
-    <p>Vous pouvez désormais : <a href="adminCreerMatchControler.php">Créer un match</a>, <a href="adminCreerJoueurControler.php">Créer un joueur</a>, <a href="adminCreerArbitreControler.php">Créer un arbitre</a>, <a href="adminModifCurrentMatchControler.php">Mettre à jour les
-        résultats d'un match en cours</a>.</p>
+    <p>Vous pouvez désormais : <a href="adminCreerMatchControler.php">Créer un match</a>, <a href="adminCreerJoueurControler.php">Créer un joueur</a>, <a href="adminCreerArbitreControler.php">Créer un arbitre</a>, <a href="adminModifCurrentMatchControler.php">Mettre à jour les résultats d'un match en cours</a>.</p>
 
 
     <div class="conteneurFormulaire">
 
-      <h3>Création de joueur</h3>
+      <h3>Modification des matchs en cours</h3>
       <hr class="sousH3">
 
-      <form class="formulaireAdmin" action="adminCreerJoueurControler.php" method="post">
+      
 
-        <div class="" id="conteneurNomJoueur">
-          <label for="nom_joueur">Nom du joueur</label>
-          <input type="text" name="nom_joueur" required>
-        </div>
-
-        <div class="" id="conteneurPrenomJoueur">
-          <label for="prenom_joueur">Prénom du joueur</label>
-          <input type="text" name="prenom_joueur" required>
-        </div>
-
-        <div class="" id="conteneurNationaliteJoueur">
-          <label for="nationalite_joueur">Nationalité du joueur</label>
-          <select class="" name="nationalite_joueur" required>
-            <?php
-            global $tabNationalite;
-            foreach ($tabNationalite as $key => $pays) {
-              $nomPays = strtoupper($pays);
-              echo"<option value=\"$nomPays\">$nomPays</option>";
-            }
-             ?>
-            <option value="1"></option>
-          </select>
-        </div>
-
-        <div class="" id="conteneurAgeJoueur">
-          <label for="age_joueur">Age du joueur</label>
-          <input type="number" name="age_joueur" min="16" required>
-        </div>
-
-        <div class="" id="conteneurNeJoueur">
-          <label for="nom_equipe">Nom de l'équipe du joueur</label>
-          <input type="text" name="nom_equipe" required>
-        </div>
-
-        <div class="" id="conteneurLoginJoueur">
-          <label for="login">Login du joueur</label>
-          <input type="text" name="login" required>
-        </div>
-
-        <div class="" id="conteneurMdpJoueur">
-          <label for="mdp">Mot de passe du joueur</label>
-          <input type="text" name="mdp" required>
-        </div>
-
-        <input type="submit" value="Enregistrer">
-
-      </form>
     </div>
 
   </div>
