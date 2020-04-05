@@ -14,7 +14,7 @@
         // Constructeur chargé d'ouvrir la BD
         function __construct() {
           try {
-            $this->db = new PDO('mysql:host=localhost;port=8888;dbname=testdb;charset=utf8', 'root', 'root');
+            $this->db = new PDO('mysql:host=localhost;port=8889;dbname=testdb;charset=utf8', 'root', 'root');
           } catch (Exception $e) {
             die ("Erreur création PDO : ".$e->getMessage());
           }
@@ -51,24 +51,13 @@
          return $res;
        }
 
-       function getInfoListeVIP($idVIP) {
-         $req = "SELECT V.nom_VIP, V.prenom_VIP, P.popularite_VIP
-                  FROM vip V, popularite P
-                  WHERE V.id_Popularite = P.id_Popularite";
+       //Méthode qui renvoie l'utilisateur correspondant aux login et mdp renseignés
+       function getUtilisateur($Login, $Mdp){
+         $req= "SELECT j.id_joueur FROM joueur j WHERE j.login= \"$Login\" AND j.mdp= \"$Mdp\"";
          $sth = $this->db->query($req);
-         $res = $sth->fetch();
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
-
-       function getInfoProfilVIP($idVIP) {
-         $req = "SELECT V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
-                  FROM vip V, popularite P
-                  WHERE V.id_Popularite = P.id_Popularite";
-         $sth = $this->db->query($req);
-         $res = $sth->fetch();
-         return $res;
-       }
-
     }
 
     ?>
