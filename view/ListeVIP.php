@@ -86,24 +86,27 @@ $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 ?>
 
 </body>
-
+<div>
 <footer>
   <div id="conteneurNavigationFooter">
-    <a href="index.php" class="s100"><img src="img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
+    <a href="index.php" class="s100"><img src="../view/img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
   </div>
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQua.php" class="linkWhite">Tableau du tournoi</a></li>
+      <li><a href="PresentationVIP.html" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="contact.php" class="linkWhite">Nous contacter</a></li>
-      <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
   </nav>
   </div>
+
+
 </footer>
+</div>
