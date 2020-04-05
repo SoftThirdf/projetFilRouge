@@ -24,11 +24,6 @@ session_start();
           <li><a href="#" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
-      <div id="conteneurConnexionMenu">
-        <a href="MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-      </div>
     </div>
   </header>
 
@@ -37,32 +32,26 @@ session_start();
     <div class="conteneur">
 
       <div align="center">
-        <?php
-          global $echec;
-          if (isset($echec)) {
-            echo"<p> $echec </p>";
-          }
-         ?>
-        <form action="MoncompteControler.php" method="post">
-          <tr>
-            <td>
-              <h4>Login</h4>
-            </td>
-            <td><input type="text" name="login"></br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h4>Mot de passe</h4>
-            </td>
-            <td><input type="password" name="mdp"></br>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="submit" value="Connexion">
-            </td>
-          </tr>
-        </form>
+         <form action="../controler/mdpcontroler.php" method="post">
+           <tr>
+             <td>
+               <h4>Nouveau mot de passe</h4>
+             </td>
+             <td><input type="password" name="nouveaumdp"></br>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <h4>Confirmez le mot de passe</h4>
+             </td>
+             <td><input type="password" name="nouveaumdp2"></br>
+             </td>
+           </tr>
+           <tr>
+             <td><input type="submit" value="Valider">
+             </td>
+           </tr>
+         </form>
       </div>
 
     </div>
