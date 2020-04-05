@@ -53,11 +53,19 @@
 
        //Méthode qui renvoie l'utilisateur correspondant aux login et mdp renseignés
        function getUtilisateur($Login, $Mdp){
-         $req= "SELECT j.id_joueur FROM joueur j WHERE j.login= \"$Login\" AND j.mdp= \"$Mdp\"";
+         $req= "SELECT j.nom_joueur, j.prenom_joueur, j.id_joueur,j.nom_equipe,j.nationalite_joueur, j.login, j.mdp FROM joueur j WHERE j.login= \"$Login\" AND j.mdp= \"$Mdp\"";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
+       //Méthode qui modifie le mot de passe
+       function setMdp($Login, $nouveaumdp){
+         $req= "UPDATE joueur j SET j.mdp = \"$nouveaumdp\" WHERE j.login like \"$Login\"";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
     }
 
     ?>

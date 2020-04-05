@@ -56,6 +56,11 @@ header {
   width: 100%;
 }
 
+.liste{
+ outline: none;
+ appearance: none;
+}
+
 .btn {
   border: 2px solid black;
   border-radius: 7%;
@@ -120,6 +125,30 @@ header {
 .marginBotConteneur3 {
   margin-bottom: 3%;
 }
+.conteneur{
+  display: flex;
+  margin: auto;
+
+}
+
+.roundedImage{
+    width:100%;
+    justify-content: space-between;
+   display: flex;
+
+}
+
+.lienImage{
+  width: 100% ;
+
+}
+#conteneurBody{
+  display: flex;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 
 /* ================ MiddlePage =================== */
 .conteneurPage {

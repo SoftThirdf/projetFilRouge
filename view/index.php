@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -12,32 +15,15 @@
 </head>
 
 <body>
-  <header class="s100" id="haut">
-    <div id="conteneurNavigation">
-      <div id="conteneurLogoMenu">
-        <a href="index.php" class="s100"><img src="img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
-      </div>
-      <nav id="navigation">
-        <ol id="navigationOl">
-          <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-          <li><a href="#" class="linkBlackRouge">VIP</a></li>
-        </ol>
-      </nav>
-      <div id="conteneurConnexionMenu">
-
-        <a href="../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-
-        <a href="#" class="linkBlack btn" id="btnInscription">
-          <div>S'inscrire </div>
-        </a>
-
-      </div>
-    </div>
-  </header>
-
+  <?php
+if (isset($_SESSION['id']))
+{
+  include_once('../view/headerlog.php');
+}
+else {
+  include_once('../view/headernotlog.php');
+}
+  ?>
   <div id="conteneurBody">
     <div id="carousel" class="carousel slide marginBotConteneur3" data-ride="carousel" data-interval="10000">
       <!-- Indicateurs -->
@@ -51,19 +37,19 @@
       <!-- Ce que l'on met dans les slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/imgCarousel/imgCarousel1.jpg" alt="">
+          <img src="../view/img/imgCarousel/imgCarousel1.jpg" alt="">
         </div>
 
         <div class="item">
-          <img src="img/imgCarousel/imgCarousel2.jpg" alt="">
+          <img src="../view/img/imgCarousel/imgCarousel2.jpg" alt="">
         </div>
 
         <div class="item">
-          <img src="img/imgCarousel/imgCarousel3.jpg" alt="">
+          <img src="../view/img/imgCarousel/imgCarousel3.jpg" alt="">
         </div>
 
         <div class="item">
-          <img src="img/imgCarousel/imgCarousel4.jpg" alt="">
+          <img src="../view/img/imgCarousel/imgCarousel4.jpg" alt="">
         </div>
       </div>
 
@@ -83,21 +69,21 @@
       <hr class="sousH2">
       <div id="ConteneurArticles">
         <div class="conteneurMiddleArticle">
-          <img src="img/imgArticle/article1.jpg" alt="stand" class="imgArticle">
+          <img src="../view/img/imgArticle/article1.jpg" alt="stand" class="imgArticle">
           <h3>Partager</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis
             aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="conteneurMiddleArticle">
-          <img src="img/imgArticle/article2.jpg" alt="jouer" class="imgArticle">
+          <img src="../view/img/imgArticle/article2.jpg" alt="jouer" class="imgArticle">
           <h3>Jouer</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis
             aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="conteneurMiddleArticle">
-          <img src="img/imgArticle/article3.jpg" alt="supporter" class="imgArticle">
+          <img src="../view/img/imgArticle/article3.jpg" alt="supporter" class="imgArticle">
           <h3>Supporter</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis
@@ -111,19 +97,19 @@
       <hr class="sousH2">
       <div id="conteneurImagesSponsor">
         <div class="sponsor">
-          <a href="https://www.orange.fr/" target="_blank" class="s100"><img src="img/logoSponsor/logoOrange.png" alt="logoOrange" class="s100"></a>
+          <a href="https://www.orange.fr/" target="_blank" class="s100"><img src="../view/img/logoSponsor/logoOrange.png" alt="logoOrange" class="s100"></a>
         </div>
         <div class="sponsor">
-          <a href="https://www.soprasteria.com/" target="_blank" class="s100"><img src="img/logoSponsor/logoSopra.png" alt="logoSopra" class="s100"></a>
+          <a href="https://www.soprasteria.com/" target="_blank" class="s100"><img src="../view/img/logoSponsor/logoSopra.png" alt="logoSopra" class="s100"></a>
         </div>
         <div class="sponsor">
-          <a href="https://www.head.com/" target="_blank" class="s100"><img src="img/logoSponsor/logoHead.svg" alt="logoHead" class="s100"></a>
+          <a href="https://www.head.com/" target="_blank" class="s100"><img src="../view/img/logoSponsor/logoHead.svg" alt="logoHead" class="s100"></a>
         </div>
         <div class="sponsor">
-          <a href="https://www.univ-lyon3.fr/" target="_blank" class="s100"><img src="img/logoSponsor/logoUnivLyon3.png" alt="logoUnivLyon3" class="s100"></a>
+          <a href="https://www.univ-lyon3.fr/" target="_blank" class="s100"><img src="../view/img/logoSponsor/logoUnivLyon3.png" alt="logoUnivLyon3" class="s100"></a>
         </div>
         <div class="sponsor">
-          <a href="https://www.wilson.com/" target="_blank" class="s100"><img src="img/logoSponsor/logoWilson.png" alt="logoWilson" class="s100"></a>
+          <a href="https://www.wilson.com/" target="_blank" class="s100"><img src="../view/img/logoSponsor/logoWilson.png" alt="logoWilson" class="s100"></a>
         </div>
       </div>
     </div>
@@ -134,7 +120,7 @@
 
 <footer>
   <div id="conteneurNavigationFooter">
-    <a href="index.php" class="s100"><img src="img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
+    <a href="index.php" class="s100"><img src="../view/img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
   </div>
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
@@ -145,7 +131,7 @@
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
