@@ -112,7 +112,7 @@ $lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
       <li><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>

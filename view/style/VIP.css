@@ -239,28 +239,3 @@ footer {
   margin-left: 1%;
   border: 1px solid #000000;
 }
-
-/* ======== Liste =========== */
-
-#presentlistevip {
-  margin-left: 7.5%;
-  width: 100%;
-}
-
-.listevip {
-  float: left;
-  text-align: center;
-  width: 15%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
-  border: 1px solid #e1e1e1;
-  background-color: #F2F2F2;
-}
-
-.listevip:hover {
-  text-decoration: none;
-  width: 15%;
-  background-color: #e1e1e1;
-}

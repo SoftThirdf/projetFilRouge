@@ -14,7 +14,8 @@ $reponse = $bdd->query('SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_V
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style/VIP.css">
+  <link rel="stylesheet" href="style/ListeVIP.css">
+  <link rel="stylesheet" href="style/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title> VIP </title>
@@ -67,16 +68,20 @@ $prenom_vip = $donnees['prenom_VIP'];
 $popularite = $donnees['popularite_VIP'];
 $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 
+
 ?>
 
 	<div id="presentlistevip">
+
 	<a href="$lienVIP" class="linkBlackOrange">
 			<div class="listevip">
 				<?php
+
 						echo "<a href='$lienVIP' class='linkBlackOrange'> $prenom_vip $nom_vip <br> $popularite </a>";
 				?>
 			</div>
 		</a>
+
 </div>
 
 
@@ -86,7 +91,7 @@ $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 ?>
 
 </body>
-<div>
+
 <footer>
   <div id="conteneurNavigationFooter">
     <a href="index.php" class="s100"><img src="../view/img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
@@ -105,8 +110,7 @@ $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 
     </ol>
   </nav>
-  </div>
+  <!-- </div> -->
 
 
 </footer>
-</div>

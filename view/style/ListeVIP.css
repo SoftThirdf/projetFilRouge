@@ -1,0 +1,61 @@
+/* ========================= VIP ============================ */
+
+/* ======== Menu =========== */
+
+#menuvip {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#navigationvip {
+  width: 80%;
+}
+
+#navigationvipol {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: auto;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+#navigationvipol li a:hover {
+  color: var(--rouge-logo);
+  text-decoration: none;
+}
+
+
+/* ======== Liste =========== */
+
+#presentlistevip {
+  /* display: flex;
+  flex-direction:row; */
+
+  margin-left: 7.5%;
+  width: 100%;
+}
+
+.listevip {
+  float: left;
+  display:inline-bloc;
+  text-align: center;
+  width: 15%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 1px solid #e1e1e1;
+  background-color: #F2F2F2;
+}
+
+.listevip:hover {
+  text-decoration: none;
+  /* width: 17%; */
+  background-color: #e1e1e1;
+}
