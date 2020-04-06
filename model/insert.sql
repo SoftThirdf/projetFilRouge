@@ -958,7 +958,7 @@ INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(48,6,'Soiré
 
 
 -- INSERTION POPULARITE
-INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Unknow', '0', '4999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Unknown', '0', '4999');
 INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Novice', '5000', '19999');
 INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Rookie', '20000', '49999');
 INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Hasbeen', '50000', '99999');
@@ -981,6 +981,7 @@ INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chele
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Luis', 'Sanchis', 'Entraineur', 'ES', 0, 0, 0, 2);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Laetitia', 'Vittoz', 'Entraineur', 'FR', 0, 0, 0, 2);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alexandre', 'Duchene', 'Journaliste', 'FR', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Pierre", "Manhès", "Entraineur", "FR", 0, 0, 0, 2);
 
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alba', 'Fuentes', 'Entraineur', 'ES', 0, 0, 0, 3);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Josep', 'Pascual', 'Entraineur', 'ES', 0, 0, 0, 3);
@@ -999,18 +1000,21 @@ INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chele
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Francesco', 'Di Sabato', 'Joueur', 'IT', 0, 0, 0, 5);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Aurélie', 'Ponsen', 'Influenceur', 'FR', 0, 0, 0, 5);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Romain', 'Nicolay', 'Photographe', 'FR', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Akira", "Yamaguchi", "Joueur", "JP", 0, 0, 0, 5);
 
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('George', 'Warner', 'Journaliste', 'GB', 0, 0, 0, 6);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Gabin', 'Cabrita', 'Journaliste', 'FR', 0, 0, 0, 6);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Charlotte', 'Janvier', 'Photographe', 'FR', 0, 0, 0, 6);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Aydin', 'Taşkent', 'Joueur', 'TR', 0, 0, 0, 6);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Maeva', 'Pellouin', 'Influenceur', 'FR', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Arthur", "Abernathy", "Journaliste", "US", 0, 0, 0, 6);
 
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Özge', 'Gökdere', 'Journaliste', 'TR', 0, 0, 0, 7);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Mads', 'Jensen', 'Ancien joueur', 'DK', '1', 0, 0, 7);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Jochen', 'Greisle', 'Joueur', 'DE', '1', 0, 0, 7);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Marie', 'Moine', 'Présentateur', 'FR', 0, 0, 0, 7);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Laurent', 'Chavane', 'Présentateur', 'FR', 0, 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Baptiste", "Pétolas", "Joueur", "FR", 0, 0, 0, 7);
 
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Luke', 'Tremblay', 'Journaliste', 'CA', 0, 0, 0, 8);
 INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alistair', 'McCrea', 'Ancien joueur', 'GB', '2', 0, 0, 8);
