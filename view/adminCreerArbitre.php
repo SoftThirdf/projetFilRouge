@@ -49,7 +49,7 @@
 
       <form class="formulaireAdmin" action="adminCreerArbitreControler.php" method="post">
 
-        <div class="" id="conteneurTypeArbitre">
+        <div class="conteneurForm" id="conteneurTypeArbitre">
           <label for="">Type de l'arbitre</label>
           <select class="" name="type_arbitre" required>
             <option value="Arbitre de chaise">Arbitre de chaise</option>
@@ -59,22 +59,22 @@
           </select>
         </div>
 
-        <div class="" id="conteneurCategorieArbitre">
+        <div class="conteneurForm" id="conteneurCategorieArbitre">
           <label for="categorie_arbitre">Catégorie de l'arbitre</label>
           <input type="text" name="categorie_arbitre" placeholder="ex: ITT1" required>
         </div>
 
-        <div class="" id="conteneurNomArbitre">
+        <div class="conteneurForm" id="conteneurNomArbitre">
           <label for="nom_arbitre">Nom de l'arbitre</label>
           <input type="text" name="nom_arbitre" required>
         </div>
 
-        <div class="" id="conteneurPrenomArbitre">
+        <div class="conteneurForm" id="conteneurPrenomArbitre">
           <label for="prenom_arbitre">Prénom de l'arbitre</label>
           <input type="text" name="prenom_arbitre" required>
         </div>
 
-        <div class="" id="conteneurNationaliteArbitre">
+        <div class="conteneurForm" id="conteneurNationaliteArbitre">
           <label for="nationalite_arbitre">Nationalité de l'arbitre</label>
           <select class="" name="nationalite_arbitre" required>
             <?php
@@ -88,7 +88,7 @@
           </select>
         </div>
 
-        <div class="" id="conteneurTelArbitre">
+        <div class="conteneurForm" id="conteneurTelArbitre">
           <label for="telephone_arbitre">Numéro de téléphone de l'arbitre</label>
           <input type="tel" name="telephone_arbitre"  placeholder="ex: 04.01.02.03.04" required>
         </div>

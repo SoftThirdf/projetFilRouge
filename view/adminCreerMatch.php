@@ -35,7 +35,7 @@
 
     function joueur1(e) {
       $.ajax({
-        url: "../controler/adminCreerMatchControleradminCreerMatchControler.php",
+        url: "../controler/adminCreerMatchControler.php",
         type: "POST",
         data: "id_joueur1=" + e.value,
         dataType: "json",
@@ -149,7 +149,7 @@
 
       <form class="formulaireAdmin" action="adminCreerMatchControler.php" method="post">
 
-        <div id="conteneurTypeMatch">
+        <div id="conteneurTypeMatch" class="conteneurForm">
           <label for="type_match">Type de match</label>
           <select class="" name="type_match" required>
             <option value="tournoi">Tournoi</option>
@@ -157,7 +157,7 @@
           </select>
         </div>
 
-        <div id="conteneurLibelleMatch">
+        <div id="conteneurLibelleMatch" class="conteneurForm">
           <label for="libelle_match">Libellé du match</label>
           <select class="" name="libelle_match" required>
             <option value="1/16">1/16</option>
@@ -168,7 +168,7 @@
           </select>
         </div>
 
-        <div id="conteneurCourt">
+        <div id="conteneurCourt" class="conteneurForm">
           <label for="id_court">Court où ce passe le match</label>
           <select class="" name="id_court" required>
             <option value="" DEFAULT>--Choisissez un court--</option>
@@ -186,7 +186,7 @@
           </select>
         </div>
 
-        <div id="conteneurCategorieTournoi">
+        <div id="conteneurCategorieTournoi" class="conteneurForm">
           <label for="id_Tournoi">Tournoi du match</label>
           <select class="" name="id_Tournoi" required>
             <option value="" DEFAULT>--Choisissez un tournoi--</option>
@@ -204,32 +204,31 @@
           </select>
         </div>
 
-        <div id="conteneurTypeMatch">
-          <input type="radio" class="categorieMatch" name="categorieMatch" value="simple" DEFAULT >
+        <div id="conteneurTypeMatch" class="conteneurForm">
+          <input type="radio" class="categorieMatch" name="categorieMatch" value="simple">
           <label for="categorieMatch">Simple</label>
           <input type="radio" class="categorieMatch" name="categorieMatch" value="double">
           <label for="categorieMatch">Double</label>
         </div>
 
-        <div class="joueurs" id="conteneurJ1">
-          <label for="id_joueur1">Joueur 1</label>
-          <select id="j1" class="" name="id_joueur1" onchange="joueur1(this)" required>
-            <option value="" DEFAULT>--Choisissez un joueur--</option>
+        <div id="conteneurJoueurs" class="conteneurForm">
+          <div class="joueurs" id="conteneurJ1">
+            <label for="id_joueur1">Joueur 1</label>
+            <select id="j1" class="" name="id_joueur1" onchange="joueur1(this)" required>
+              <option value="" DEFAULT>--Choisissez un joueur--</option>
 
-            <?php
-              global $tabJoueurs;
-              foreach ($tabJoueurs as $key => $joueurs) {
-              $idJoueur = $joueurs['id_joueur'];
-              $nomJoueur = $joueurs['nom_joueur'] . ' ' . $joueurs['prenom_joueur'];
-              echo "
-                <option value=\"$idJoueur\">$nomJoueur</option>
-              ";
-              }
-            ?>
-          </select>
-        </div>
-
-        <div id="conteneurJoueurs">
+              <?php
+                global $tabJoueurs;
+                foreach ($tabJoueurs as $key => $joueurs) {
+                $idJoueur = $joueurs['id_joueur'];
+                $nomJoueur = $joueurs['nom_joueur'] . ' ' . $joueurs['prenom_joueur'];
+                echo "
+                  <option value=\"$idJoueur\">$nomJoueur</option>
+                ";
+                }
+              ?>
+            </select>
+          </div>
 
           <div class="joueurs" id="conteneurJ2">
             <label for="id_joueur2">Joueur 2</label>
@@ -253,7 +252,7 @@
           </div>
         </div>
 
-        <div id="conteneursErb">
+        <div id="conteneursErb" class="conteneurForm">
           <div class="erb" id="conteneurErb1">
             <label for="id_erb1">Equipe ramasseur de balle n°1</label>
             <select id="id_erb1" class="" name="id_erb1" onchange="erb1(this)" required>
@@ -278,7 +277,7 @@
           </div>
         </div>
 
-        <div id=conteneurAbitres>
+        <div id=conteneurAbitres class="conteneurForm">
 
           <?php
             for ($i=1; $i <= 10 ; $i++) {

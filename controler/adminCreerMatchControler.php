@@ -45,7 +45,11 @@ include_once("../model/DAO.class.php");
         </script>
     ";
     }
-
+    $tabTournois = $dao->getTournois();
+    $tabCourts = $dao->getCourts();
+    $tabJoueurs = $dao->getJoueurs();
+    $tabErbs = $dao->getErbs();
+    $tabArbitres = $dao->getArbitres();
     include("../view/adminCreerMatch.php");
 
 
@@ -68,7 +72,6 @@ include_once("../model/DAO.class.php");
     echo json_encode($tabJoueursRestant);
 
   }elseif(isset($_POST['id_joueur1'])){
-
     $idJoueur1 = $_POST['id_joueur1'] ;
     $tabJoueursRestant = $dao->getJoueursExcept($idJoueur1);
     echo json_encode($tabJoueursRestant);

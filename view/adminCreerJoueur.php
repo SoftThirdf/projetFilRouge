@@ -50,17 +50,17 @@
 
       <form class="formulaireAdmin" action="adminCreerJoueurControler.php" method="post">
 
-        <div class="" id="conteneurNomJoueur">
+        <div class="conteneurForm" id="conteneurNomJoueur">
           <label for="nom_joueur">Nom du joueur</label>
           <input type="text" name="nom_joueur" required>
         </div>
 
-        <div class="" id="conteneurPrenomJoueur">
+        <div class="conteneurForm" id="conteneurPrenomJoueur">
           <label for="prenom_joueur">Prénom du joueur</label>
           <input type="text" name="prenom_joueur" required>
         </div>
 
-        <div class="" id="conteneurNationaliteJoueur">
+        <div class="conteneurForm" id="conteneurNationaliteJoueur">
           <label for="nationalite_joueur">Nationalité du joueur</label>
           <select class="" name="nationalite_joueur" required>
             <?php
@@ -74,22 +74,22 @@
           </select>
         </div>
 
-        <div class="" id="conteneurAgeJoueur">
+        <div class="conteneurForm" id="conteneurAgeJoueur">
           <label for="age_joueur">Age du joueur</label>
           <input type="number" name="age_joueur" min="16" required>
         </div>
 
-        <div class="" id="conteneurNeJoueur">
+        <div class="conteneurForm" id="conteneurNeJoueur">
           <label for="nom_equipe">Nom de l'équipe du joueur</label>
           <input type="text" name="nom_equipe" required>
         </div>
 
-        <div class="" id="conteneurLoginJoueur">
+        <div class="conteneurForm" id="conteneurLoginJoueur">
           <label for="login">Login du joueur</label>
           <input type="text" name="login" required>
         </div>
 
-        <div class="" id="conteneurMdpJoueur">
+        <div class="conteneurForm" id="conteneurMdpJoueur">
           <label for="mdp">Mot de passe du joueur</label>
           <input type="text" name="mdp" required>
         </div>
