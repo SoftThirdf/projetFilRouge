@@ -1,0 +1,40 @@
+#info {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#conteneurplanning {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.equipe1 {
+  font-weight: bold;
+  width: 40%;
+  border: 1px solid #e1e1e1;
+}
+
+.equipe2 {
+  font-weight: bold;
+  width: 40%;
+  border: 1px solid #e1e1e1;
+}
+
+.infostournoi {
+  width: 25%;
+  border: 1px solid #e1e1e1;
+}
+
+.infoscourt {
+  width: 25%;
+  border: 1px solid #e1e1e1;
+}
+
+.infosheure {
+  width: 25%;
+  border: 1px solid #e1e1e1;
+}
