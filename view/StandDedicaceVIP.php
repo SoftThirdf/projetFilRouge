@@ -37,7 +37,7 @@ $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularit
       </nav>
       <div id="conteneurConnexionMenu">
 
-        <a href="MonCompteControler.php" class="linkBlack btn" id="btnConnexion">
+        <a href="../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
           <div>Connexion</div>
         </a>
 
@@ -121,7 +121,7 @@ $lienphoto = "img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="MonCompteControler.php" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
