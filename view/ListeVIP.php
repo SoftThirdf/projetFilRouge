@@ -37,7 +37,7 @@ $reponse = $bdd->query('SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_V
       </nav>
       <div id="conteneurConnexionMenu">
 
-        <a href="#" class="linkBlack btn" id="btnConnexion">
+        <a href="../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
           <div>Connexion</div>
         </a>
 

@@ -49,32 +49,37 @@ $reponse = $bdd -> query ("SELECT DISTINCT R.id_Match, R.type_match, R.libelle_m
     </div>
 </header>
 
+<div id="info">
+<h2> Tournoi simple qualificatif - 1/8 </h2>
+<hr class="sousH2">
+
+<h3> 2020-06-14 </h3>
+<hr class="sousH3">
+</div>
+
 <?php
 
 while ($donnees = $reponse -> fetch()) {
 
 ?>
 
-<div id="info">
-  <h2> <?php echo $donnees['libelle_match']; ?> </h2>
+<!-- <div id="info">
+  <h2> <?php //echo "Tournoi simple qualificatif - " . $donnees['libelle_match']; ?> </h2>
   <hr class="sousH2">
 </div>
 
  <div id="info">
-   <h3> <?php echo $donnees['date_']; ?> </h3>
+   <h3> <?php //echo $donnees['date_']; ?> </h3>
    <hr class="sousH3">
- </div>
+ </div> -->
+
 
  <div id="conteneurplanning">
    <div class="equipe1">
      <?php echo $donnees['nom_joueur1'] . " " . $donnees['prenom_joueur1'] . " " . $donnees['nom_equipe1']; ?>
    </div>
 
-   <!-- <div class="infostournoi">
-     Tournoi :
-
-   </div> -->
-   <div class="infoscourt">
+   <div class="infostournoi">
      <?php echo "Match n°" . $donnees['id_Match'] . "<br>"; ?>
 
      Court :

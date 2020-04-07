@@ -31,13 +31,14 @@ while ($donnees = $reponse -> fetch()) {
       <nav id="navigation">
         <ol id="navigationOl">
           <li> <a href="../index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li><a href="../../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
+          <li><a href="../StandMenu.html" class="linkBlackRouge">STAND DU TOURNOI</a></li>
           <li><a href="../ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
       <div id="conteneurConnexionMenu">
 
-        <a href="#" class="linkBlack btn" id="btnConnexion">
+        <a href="../../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
           <div>Connexion</div>
         </a>
 
@@ -113,14 +114,15 @@ $lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
+      <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
+      <li class="marginBottom10"><a href="../StandMenu.html" class="linkWhite">Stand tu tournoi</a></li>
       <li><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="../contact.php" class="linkWhite">Nous contacter</a></li>
-      <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
-      <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
+      <li class="marginBottom10"><a href="../contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="../../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
   </nav>

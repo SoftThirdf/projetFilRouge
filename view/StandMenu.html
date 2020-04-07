@@ -25,7 +25,7 @@
 .container {
   margin-top: 20px;
   overflow: hidden;
-} 
+}
 
 /* Style the buttons */
 .btn {
@@ -34,17 +34,17 @@
   padding: 12px 16px;
   background-color: #f1f1f1;
   cursor: pointer;
-} 
+}
 
 .btn:hover {
   background-color: #ddd;
-} 
+}
 
 .btn.active {
   background-color: #666;
   color: white;
-} 
-</style> 
+}
+</style>
 <body>
   <header class="s100" id="haut">
     <div id="conteneurNavigation">
@@ -84,18 +84,18 @@
   <button class="btn" onclick="filterSelection('food')"> Nourriture</button>
 </div>
 
-<div class="container"> 
+<div class="container">
 
   <div class="filterDiv AS"> <a href="StandSquash.html">Squash </a> </div>
   <div class="filterDiv VR"><a href="StandMatchVR.html">Match VR </a></div>
   <div class="filterDiv food"><a href="StandRestaurant.html">Restaurant </a></div>
   <div class="filterDiv VR"><a href="StandSpectatorVR.html">SpectatorVR </a></div>
-  <div class="filterDiv food"><a href="StandFastFood.html">FastFood </a></div> 
-  <div class="filterDiv VIP"><a href="StandDedicasseVIP.html">DedicasseVIP </a></div>
+  <div class="filterDiv food"><a href="StandFastFood.html">FastFood </a></div>
+  <div class="filterDiv VIP"><a href="StandDedicaceVIP.php">DedicasseVIP </a></div>
   <div class="filterDiv food AS"><a href="StandNutrisensBar.html">NutrisensBar </a></div>
   <div class="filterDiv food VIP"><a href="StandCocktail.html">Cocktail </a></div>
   <div class="filterDiv AS"><a href="StandLearnTennis.html">LearnTennis </a></div>
- 
+
 </div>
 <br> <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -154,7 +154,7 @@ function w3RemoveClass(element, name) {
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
     while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
     }
   }
   element.className = arr1.join(" ");
