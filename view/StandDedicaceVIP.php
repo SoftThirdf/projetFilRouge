@@ -100,7 +100,7 @@ $lienphoto = "img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
  <h3>Dédicaces</h3>
  <hr class="sousH3">
  <p>Maxime François tenant du titre de l’Open Sopra Steria, sa compagne Emeline Michel demi-finaliste du grand chelem de Roland Garos sont venus en tant que grands invités à l’Open Sopra Steria !
-   Accompagnés par l’excentrique Ozge Gokdere, journaliste talentueuse aussi bien connue pour ses qualités d’investigation que son caractère surprenant, qui mène un reportage sur la vie des stars féminines de l’Open !
+   Accompagnés par l’excentrique Özge Gökdere, journaliste talentueuse aussi bien connue pour ses qualités d’investigation que son caractère surprenant, qui mène un reportage sur la vie des stars féminines de l’Open !
    Ces trois invités prestigieux offriront aux fans une session de dédicace chaque matin de 10h à 12h afin de pouvoir côtoyer leurs fans !
    C’est un moment unique de passer un moment spécial avec ces célébrités, ne ratez pas cette occasion ! </p>
 </div>
