@@ -32,7 +32,7 @@ else {
           <a href="#"><img src="../view/img/Reserver.jpg" class="lienImage"></a>
         </div>
         <div class="roundedImage">
-          <a href="#"><img src="../view/img/VIP.jpg" class="lienImage"></a>
+          <a href="ListeVIP.php"><img src="../view/img/VIP.jpg" class="lienImage"></a>
         </div>
        </div>
   </div>
@@ -47,7 +47,7 @@ else {
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li><a href="#" class="linkWhite">VIP</a></li>
+      <li><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

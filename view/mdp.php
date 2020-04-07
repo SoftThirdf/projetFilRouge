@@ -21,7 +21,7 @@ session_start();
         <ol id="navigationOl">
           <li> <a href="../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-          <li><a href="#" class="linkBlackRouge">VIP</a></li>
+          <li><a href="ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
     </div>
@@ -67,7 +67,7 @@ session_start();
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li><a href="#" class="linkWhite">VIP</a></li>
+      <li><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

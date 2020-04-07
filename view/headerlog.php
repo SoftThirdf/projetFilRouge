@@ -9,7 +9,7 @@
       <ol id="navigationOl">
         <li> <a href="../view/index.php" class="linkBlack">Accueil</a></li>
         <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlack">Tableau du tournoi</a></li>
-        <li><a href="#" class="linkBlack">VIP</a></li>
+        <li><a href="ListeVIP.php" class="linkBlack">VIP</a></li>
       </ol>
     </nav>
     <div id="conteneurConnexionMenu">
