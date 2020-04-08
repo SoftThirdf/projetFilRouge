@@ -139,7 +139,7 @@
          VALUES (:type_match,:nomGagnant,:libelle_match,:idCourt,:id_Tournoi,:idJoueur1,:idJoueur2,:idJoueur3,:idJoueur4,:idErb1,:idErb2,:idArbitre1,:idArbitre2,:idArbitre3,:idArbitre4,:idArbitre5,:idArbitre6,:idArbitre7,:idArbitre8,:idArbitre9,:idArbitre10)");
 
          $req->bindValue(':type_match',$typeMatch, PDO::PARAM_STR);
-         $req->bindValue(':nomGagnant',$nomGagnant, PDO::PARAM_STR);
+         $req->bindValue(':nomGagnant',$nomGagnant, PDO::PARAM_NULL);
          $req->bindValue(':libelle_match',$libelle_match, PDO::PARAM_STR);
          $req->bindValue(':idCourt',$idCourt, PDO::PARAM_INT);
          $req->bindValue(':id_Tournoi',$id_Tournoi, PDO::PARAM_INT);
@@ -254,11 +254,11 @@
        //Méthode qui renvoi tout les sets d'un match en cours passé en paramètre
        //Elle retourne un tableau associatif retournant des balle_set
        function getBalleSetMatch($idMatch){
-         $req = "SELECT j.nom_joueur, j.prenom_joueur, b.nb_jeu
-         FROM balle_set b
-         INNER JOIN joueur j ON j.id_joueur = b.id_joueur
-         WHERE b.id_match = $idMatch";
-
+         $req = "SELECT b.num_set,j.nom_equipe, j.nom_joueur, j.prenom_joueur, b.nb_jeu
+          FROM balle_set b
+          INNER JOIN joueur j ON j.id_joueur = b.id_joueur
+          WHERE b.id_match = $idMatch
+          ORDER BY b.num_set, j.nom_equipe";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
@@ -266,33 +266,116 @@
 
        //Méthode qui insère ou met à jour dans la base de donnée un set marqué par un joueur
        //Elle retourne un boolean pour savoir si l'insertion ou l'update a bien été mise à jour
-       function insertBalleSet($id_joueur,$id_match,$duree){
-
-         $req = "SELECT b.id_set, j.nom_joueur, j.prenom_joueur, b.nb_jeu
-         FROM balle_set b
-         INNER JOIN joueur j ON j.id_joueur = b.id_joueur
-         WHERE b.id_match = $id_match
-         AND j.id_joueur = $id_joueur
-         ORDER BY b.id_set DESC
-         LIMIT 1";
+       function insertJeu($id_joueur,$id_match,$duree){
+         $req = "SELECT b.id_set, b.nb_jeu, b.num_set
+           FROM balle_set b
+           INNER JOIN joueur j ON j.id_joueur = b.id_joueur
+           WHERE b.id_match = $id_match
+           AND j.id_joueur = $id_joueur
+           ORDER BY b.id_set DESC
+           LIMIT 1";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-         if (sizeof($res)==0 || $res['nb_jeu']>=6) {
-           $req2 = $this->db->prepare("INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(:jeu,:duree,:id_match,:id_joueur)");
-           $req2->bindValue(':jeu',1, PDO::PARAM_INT);
-           $req2->bindValue(':id_match',$id_match, PDO::PARAM_INT);
-           $req2->bindValue(':id_joueur',$id_joueur, PDO::PARAM_INT);
-           $req2->bindValue(':duree',$duree, PDO::PARAM_INT);
+         $id_set = $res[0]['id_set'];
+         $nb_jeu = $res[0]['nb_jeu']+1;
+         $num_set=$res[0]['num_set'];
+         $req2 = $this->db->prepare("UPDATE BALLE_SET SET nb_jeu=:jeu WHERE id_Match=:id_match AND id_joueur=:id_joueur AND id_set=:idset AND num_set=:num_set");
+         $req2->bindValue(':jeu',$nb_jeu, PDO::PARAM_INT);
+         $req2->bindValue(':id_match',$id_match, PDO::PARAM_INT);
+         $req2->bindValue(':id_joueur',$id_joueur, PDO::PARAM_INT);
+         $req2->bindValue(':idset',$id_set, PDO::PARAM_INT);
+         $req2->bindValue(':num_set',$num_set, PDO::PARAM_INT);
+
+         $res2 = $req2->execute();
+         return $res2;
+       }
+
+       function insertSet($id_match){
+         $req = "SELECT r.id_Match, r.id_joueur1, r.id_joueur2, r.id_joueur3, r.id_joueur4, b.num_set
+          FROM rencontre r
+          LEFT OUTER JOIN balle_set b ON b.id_Match = r.id_Match
+          WHERE r.id_match = $id_match
+          ORDER BY b.num_set DESC
+          LIMIT 1";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+         if ($res[0]['num_set']==null) {
+           $num_set = 1;
          }else{
-           $nb = $res[0]['nb_jeu']+1;
-           $idset=$res[0]['id_set'];
-           $req2 = $this->db->prepare("UPDATE BALLE_SET SET nb_jeu=:jeu WHERE id_Match=:id_match AND id_joueur=:id_joueur AND id_set=:idset");
-           $req2->bindValue(':jeu',$nb, PDO::PARAM_INT);
-           $req2->bindValue(':id_match',$id_match, PDO::PARAM_INT);
-           $req2->bindValue(':id_joueur',$id_joueur, PDO::PARAM_INT);
-           $req2->bindValue(':idset',$idset, PDO::PARAM_INT);
+           $num_set = $res[0]['num_set'] + 1;
          }
+
+         if ($res[0]['id_joueur3']==null && $res[0]['id_joueur4']==null) {
+           $req2 = $this->db->prepare("
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur1,:num_set);
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur2,:num_set);
+           ");
+         }else{
+           $id_joueur3 = $res[0]['id_joueur3'];
+           $id_joueur4 = $res[0]['id_joueur4'];
+           $req2 = $this->db->prepare("
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur1,:num_set);
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur2,:num_set);
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur3,:num_set);
+           INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(:jeu,:duree,:id_match,:id_joueur4,:num_set);
+           ");
+           $req2->bindValue(':id_joueur3',$id_joueur3, PDO::PARAM_INT);
+           $req2->bindValue(':id_joueur4',$id_joueur4, PDO::PARAM_INT);
+         }
+
+         $id_joueur1 = $res[0]['id_joueur1'];
+         $id_joueur2 = $res[0]['id_joueur2'];
+
+         $req2->bindValue(':jeu',0, PDO::PARAM_INT);
+         $req2->bindValue(':id_joueur1',$id_joueur1, PDO::PARAM_INT);
+         $req2->bindValue(':id_joueur2',$id_joueur2, PDO::PARAM_INT);
+         $req2->bindValue(':id_match',$id_match, PDO::PARAM_INT);
+         $req2->bindValue(':duree',30, PDO::PARAM_INT);
+         $req2->bindValue(':num_set',$num_set, PDO::PARAM_INT);
+
+         $res2 = $req2->execute();
+         return $res2;
+       }
+
+       function termineMatch($id_match){
+         $req = "SELECT b.num_set,j.nom_equipe, SUM(b.nb_jeu) as 'nb_jeu'
+          FROM balle_set b
+          INNER JOIN joueur j ON j.id_joueur = b.id_joueur
+          WHERE b.id_Match = $id_match
+          GROUP BY b.num_set,j.nom_equipe";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+        $setWinE1= 0;
+        $setWinE2 = 0;
+        $E1 = $res[0]['nom_equipe'];
+        $E2= $res[1]['nom_equipe'];
+
+        $numSetCourant=0;
+
+          for ($i=0; $i < sizeof($res) ; $i++) {
+              if ($res[$i]['num_set'] != $numSetCourant) {
+                $numSetCourant = $res[$i]['num_set'];
+                if ($res[$i]['nb_jeu'] > $res[$i+1]['nb_jeu'])  {
+                  $setWinE1++;
+                }elseif ($res[$i]['nb_jeu'] < $res[$i+1]['nb_jeu']) {
+                  $setWinE2++;
+                }
+              }
+          }
+
+          if ($setWinE1 > $setWinE2) {
+            $gagnant=$E1;
+          }else{
+            $gagnant=$E2;
+          }
+
+         $req2 = $this->db->prepare("UPDATE RENCONTRE SET nom_equipe_gagnant=:nom_equipe_gagnant WHERE id_Match=:id_match");
+         $req2->bindValue(':id_match',$id_match, PDO::PARAM_INT);
+         $req2->bindValue(':nom_equipe_gagnant',$gagnant, PDO::PARAM_STR);
+
          $res2 = $req2->execute();
          return $res2;
        }

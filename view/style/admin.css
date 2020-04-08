@@ -7,6 +7,18 @@
   display: none;
 }
 
+.conteneurScore {
+  display: flex;
+}
+
+.conteneurMatch {
+  margin-bottom: 3%;
+}
+
+.conteneurSet {
+  margin-right: 1%;
+}
+
 .conteneurForm {
   margin-bottom: 1%;
 }
@@ -42,6 +54,10 @@ input[type=submit], input[type=button] {
 
 input[type=button] {
   margin-right: 0.5%;
+}
+
+.btnSet {
+  margin-top: 0.5%;
 }
 
 label {
