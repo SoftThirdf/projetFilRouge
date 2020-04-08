@@ -337,8 +337,8 @@
   <script type="text/javascript">
     $(".categorieMatch").on("change", function() {
       if ($(".categorieMatch:checked").val() == 'simple') {
-        unset($_POST['id_joueur3']);
-        unset($_POST['id_joueur4']);
+        // unset($_POST['id_joueur3']);
+        // unset($_POST['id_joueur4']);
         $("#j3").find('option').remove();
         $("#j4").find('option').remove();
         $('#conteneurJ3').hide();
