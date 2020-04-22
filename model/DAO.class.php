@@ -39,9 +39,8 @@
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
-
-
        }
+
        //Méthode qui renvoies les informlations lors d'un tournoi et d'une catégorie donnée en paramètre
        //Elle retourne un tableau associatif avec les noms et prénoms des joueurs ainsi que les sets mis ordonné par les numéro de matchs
        function getInfoTypeMatchTournoiDouble($typeTournoi) {
