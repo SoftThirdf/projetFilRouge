@@ -35,7 +35,7 @@
        //Méthode qui renvoies les informlations lors d'un tournoi et d'une catégorie donnée en paramètre
        //Elle retourne un tableau associatif avec les noms et prénoms des joueurs ainsi que les sets mis ordonné par les numéro de matchs
        function getInfoTypeMatchTournoiSimple($typeTournoi) {
-         $req = "SELECT R.id_Match, J.id_joueur, R.libelle_match, J.Nom_joueur, J.Prenom_joueur, J.Nationalite_joueur, B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi' AND T.categorie_tournoi like 'Simple' ORDER BY R.id_Match, J.id_joueur";
+         $req = "SELECT R.id_Match, J.id_joueur, R.libelle_match, J.Nom_joueur, J.Prenom_joueur, J.Nationalite_joueur B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi' AND T.categorie_tournoi like 'Simple' ORDER BY R.id_Match, J.id_joueur";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
@@ -45,7 +45,7 @@
        //Méthode qui renvoies les informlations lors d'un tournoi et d'une catégorie donnée en paramètre
        //Elle retourne un tableau associatif avec les noms et prénoms des joueurs ainsi que les sets mis ordonné par les numéro de matchs
        function getInfoTypeMatchTournoiDouble($typeTournoi) {
-         $req = "SELECT R.id_Match, J.nom_equipe, J.id_joueur, J.nom_joueur, J.prenom_joueur, J.Nationalite_joueur, R.libelle_match, B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi' AND T.categorie_tournoi like 'Double' ORDER BY R.id_Match, J.id_joueur";
+         $req = "SELECT R.id_Match, J.nom_equipe, J.id_joueur, J.nom_joueur, J.prenom_joueur, J.Nationalite_joueur, R.libelle_match, B.num_set, B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi' AND T.categorie_tournoi like 'Double' ORDER BY R.id_Match, J.id_joueur";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
@@ -264,8 +264,8 @@
          return $res;
        }
 
-       //Méthode qui insère ou met à jour dans la base de donnée un set marqué par un joueur
-       //Elle retourne un boolean pour savoir si l'insertion ou l'update a bien été mise à jour
+       //Méthode qui met à jour dans la base de donnée un set marqué par un joueur
+       //Elle retourne un boolean pour savoir si l'update a bien été mise à jour
        function insertJeu($id_joueur,$id_match,$duree){
          $req = "SELECT b.id_set, b.nb_jeu, b.num_set
            FROM balle_set b
@@ -291,6 +291,9 @@
          return $res2;
        }
 
+
+       //Méthode qui insère dans la base de donnée les set pourchaque joueurs
+       //Elle retourne un boolean pour savoir si l'insertion a bien été faite
        function insertSet($id_match){
          $req = "SELECT r.id_Match, r.id_joueur1, r.id_joueur2, r.id_joueur3, r.id_joueur4, b.num_set
           FROM rencontre r
@@ -339,6 +342,8 @@
          return $res2;
        }
 
+       //Méthode qui met à jour et calcule le gagnt d'un match
+       //Elle retourne un boolean pour savoir si la mise à jour a bien été faite
        function termineMatch($id_match){
          $req = "SELECT b.num_set,j.nom_equipe, SUM(b.nb_jeu) as 'nb_jeu'
           FROM balle_set b
