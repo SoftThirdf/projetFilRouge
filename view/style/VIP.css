@@ -1,19 +1,21 @@
 /* ========================= VIP ============================ */
+#conteneurPage {
+  width: 80%;
+  margin: 0 auto;
+}
 
 /* ======== Menu =========== */
-
 #menuvip {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
   border-bottom: 1px solid #e1e1e1;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #navigationvip {
-  width: 80%;
+  width: 100%;
 }
 
 #navigationvipol {
@@ -31,7 +33,6 @@
 }
 
 /* ======== Echelle =========== */
-
 .echelle {
   width: 80%;
   margin: auto;
@@ -51,9 +52,7 @@
   width: 120%;
 }
 
-
 /* ======== Profil =========== */
-
 .photoVIP {
   float: left;
   width: 20%;
@@ -82,45 +81,37 @@
   margin: 0.3%;
 }
 
-.imgDrap{
+.imgDrap {
   width: 40.5px;
   height: 27px;
   margin-left: 1%;
   border: 1px solid #000000;
 }
 
-
 /* ======== Liste =========== */
+#conteneurDivVIP {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2%;
+}
 
 #presentlistevip {
-  /* display: flex;
-  flex-direction:row; */
-  /* display: flex; */
-  margin-left: 7.5%;
-  width: 100%;
+  width: 20%;
 }
 
 .listevip {
-  float: left;
   text-align: center;
-  width: 15%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin: 1%;
   border: 1px solid #e1e1e1;
   background-color: #F2F2F2;
 }
 
 .listevip:hover {
   text-decoration: none;
-  /* width: 17%; */
   background-color: #e1e1e1;
 }
 
-
 /* ======== DYLAN =========== */
-
 #boxvip {
   display: flex;
   margin: auto;

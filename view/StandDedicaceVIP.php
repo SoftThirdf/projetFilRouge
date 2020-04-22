@@ -13,11 +13,8 @@ $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularit
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/VIP.css">
   <link rel="stylesheet" href="style/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title> Dédicaces </title>
 </head>
 

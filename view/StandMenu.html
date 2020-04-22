@@ -8,43 +8,45 @@
   <title>StandMenu</title>
 </head>
 <style>
-.filterDiv {
-  float: left;
-  background-color: #e1e1e1;
-  color: #000000;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-  display: none;
-}
-.show {
-  display: block;
-}
+  .filterDiv {
+    float: left;
+    background-color: #e1e1e1;
+    color: #000000;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+  }
 
-.container {
-  margin-top: 20px;
-  overflow: hidden;
-}
+  .show {
+    display: block;
+  }
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+  }
 
-.btn:hover {
-  background-color: #ddd;
-}
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
 
-.btn.active {
-  background-color: #666;
-  color: white;
-}
+  .btn:hover {
+    background-color: #ddd;
+  }
+
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
 </style>
+
 <body>
   <header class="s100" id="haut">
     <div id="conteneurNavigation">
@@ -55,7 +57,7 @@
         <ol id="navigationOl">
           <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-		  <li><a href="StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
+          <li><a href="StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
           <li><a href="ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -73,35 +75,36 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-<div id="conteneurMiddlePage" class="conteneurPage marginBotConteneur3">
-	  <h2>Les différents atelier de l'Open Sopra Steria !</h2>
+    <div id="conteneurMiddlePage" class="conteneurPage marginBotConteneur3">
+      <h2>Les différents atelier de l'Open Sopra Steria !</h2>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Toutes les activité</button>
-  <button class="btn" onclick="filterSelection('AS')"> Activité sportive</button>
-  <button class="btn" onclick="filterSelection('VR')"> Réalité virtuelle</button>
-  <button class="btn" onclick="filterSelection('VIP')"> VIP</button>
-  <button class="btn" onclick="filterSelection('food')"> Nourriture</button>
-</div>
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Toutes les activité</button>
+        <button class="btn" onclick="filterSelection('AS')"> Activité sportive</button>
+        <button class="btn" onclick="filterSelection('VR')"> Réalité virtuelle</button>
+        <button class="btn" onclick="filterSelection('VIP')"> VIP</button>
+        <button class="btn" onclick="filterSelection('food')"> Nourriture</button>
+      </div>
 
-<div class="container">
+      <div class="container">
 
-  <div class="filterDiv AS"> <a href="StandSquash.html">Squash </a> </div>
-  <div class="filterDiv VR"><a href="StandMatchVR.html">Match VR </a></div>
-  <div class="filterDiv food"><a href="StandRestaurant.html">Restaurant </a></div>
-  <div class="filterDiv VR"><a href="StandSpectatorVR.html">SpectatorVR </a></div>
-  <div class="filterDiv food"><a href="StandFastFood.html">FastFood </a></div>
-  <div class="filterDiv VIP"><a href="StandDedicaceVIP.php">DedicasseVIP </a></div>
-  <div class="filterDiv food AS"><a href="StandNutrisensBar.html">NutrisensBar </a></div>
-  <div class="filterDiv food VIP"><a href="StandCocktail.html">Cocktail </a></div>
-  <div class="filterDiv AS"><a href="StandLearnTennis.html">LearnTennis </a></div>
+        <div class="filterDiv AS"> <a href="StandSquash.html">Squash </a> </div>
+        <div class="filterDiv VR"><a href="StandMatchVR.html">Match VR </a></div>
+        <div class="filterDiv food"><a href="StandRestaurant.html">Restaurant </a></div>
+        <div class="filterDiv VR"><a href="StandSpectatorVR.html">SpectatorVR </a></div>
+        <div class="filterDiv food"><a href="StandFastFood.html">FastFood </a></div>
+        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php">DedicasseVIP </a></div>
+        <div class="filterDiv food AS"><a href="StandNutrisensBar.html">NutrisensBar </a></div>
+        <div class="filterDiv food VIP"><a href="StandCocktail.html">Cocktail </a></div>
+        <div class="filterDiv AS"><a href="StandLearnTennis.html">LearnTennis </a></div>
 
-</div>
-<br> <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div>
-</div>
+      </div>
+      <br>
+      <center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+    </div>
+  </div>
 </body>
 
 <footer>
@@ -112,7 +115,7 @@
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
@@ -128,47 +131,51 @@
 
 </footer>
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
+  filterSelection("all")
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
     }
   }
-  element.className = arr1.join(" ");
-}
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 </script>
+
 </html>
