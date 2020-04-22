@@ -32,6 +32,7 @@
     $idJoueur = '';
     $idEquipe = '';
     $phase = '';
+    $num_set ='';
 
     for ($i=0; $i <sizeof($tab) ; $i++) {
       if ($phase != $tab[$i]['libelle_match']) {
@@ -43,24 +44,22 @@
       if ($idEquipe != $tab[$i]['nom_equipe']) {
         $idEquipe = $tab[$i]['nom_equipe'];
       }
+      if ($num_set != $tab[$i]['num_set']) {
+        $num_set = $tab[$i]['num_set'];
+      }
       if ($idJoueur != $tab[$i]['id_joueur']) {
         $idJoueur = $tab[$i]['id_joueur'];
         $ah = array($tab[$i]['nom_joueur'],$tab[$i]['prenom_joueur'],$tab[$i]['Nationalite_joueur']);
         $tabFinal[$phase][$idMatch][$idEquipe][$idJoueur]= $ah;
-        array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], $tab[$i]['Nb_jeu']);
+        array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], array($tab[$i]['num_set'],$tab[$i]['Nb_jeu']));
+        //array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], $tab[$i]['Nb_jeu']);
       }else{
-        array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], $tab[$i]['Nb_jeu']);
+        array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], array($tab[$i]['num_set'],$tab[$i]['Nb_jeu']));
+        // array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], $tab[$i]['num_set']);
+        // array_push($tabFinal[$phase][$idMatch][$idEquipe][$idJoueur], $tab[$i]['Nb_jeu']);
       }
     }
 }
-
-  // for($i = 3; $i < sizeof($tabFinal['1/8']['SQ022']['ED033']['J033']); $i++ ) {
-  //   $nb = $tabFinal['1/8']['SQ022']['ED033']['J033'][$i];
-  //   for ($k=3; $k < sizeof($tabFinal['1/8']['SQ022']['ED033']['J050']); $k++) {
-  //     $nb = $nb + $tabFinal['1/8']['SQ022']['ED033']['J050'][$k];
-  //   }
-  //   var_dump($nb);
-  // }
 
   include("../view/tournoisDouQua.php")
  ?>
