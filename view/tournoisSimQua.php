@@ -110,6 +110,7 @@ else {
       <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
       <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
       <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
+      <li class="marginBottom10"><a href="../view/reseaux.html" class="linkWhite">Nos réseaux sociaux</a></li>
 
     </ol>
   </nav>

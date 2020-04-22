@@ -178,6 +178,7 @@ footer {
 
 .linkWhite {
   color: black;
+  text-decoration: underline;
 }
 
 #conteneurNavigationFooter {
