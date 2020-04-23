@@ -16,7 +16,7 @@
       <div id="btnInscription" class="btn">
        <ul>
          <li>
-           <a href="../view/Moncompte.php">
+           <a href="../controler/MoncompteControler.php">
              <?php
               $prenom= $_SESSION['prenom'];
               echo "Bonjour ".$prenom;
