@@ -21,7 +21,7 @@ session_start();
         <ol id="navigationOl">
           <li> <a href="../view/../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-		  <li><a href="../view/StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
+		  <li><a href="../view/stands/StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
           <li><a href="../view/ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -68,7 +68,7 @@ session_start();
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+	  <li class="marginBottom10"><a href="stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>

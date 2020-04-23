@@ -47,7 +47,7 @@ else {
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="../view/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+	  <li class="marginBottom10"><a href="../view/stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>

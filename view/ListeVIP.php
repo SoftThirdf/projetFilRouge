@@ -28,7 +28,7 @@ $reponse = $bdd->query('SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_V
         <ol id="navigationOl">
           <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-		  <li><a href="StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
+		  <li><a href="stands/StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
           <li><a href="ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -97,7 +97,7 @@ $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+	  <li class="marginBottom10"><a href="stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
