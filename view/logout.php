@@ -11,13 +11,13 @@
 
 <body>
   <?php
-  include_once('../view/headerlog.php');
+  include_once('../view/headernotlog.php');
   ?>
 
   <div id="corps">
     <!-- C'est ici que l'on met le corps de la page -->
     <div class="modif">
-      <h1>Votre mot de passe a bien été modifié</h1>
+      <h1>Vous avez bien été déconnecté</h1>
     </div>
   </div>
 

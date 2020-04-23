@@ -32,7 +32,7 @@ while ($donnees = $reponse -> fetch()) {
         <ol id="navigationOl">
           <li> <a href="../index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="../../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-          <li><a href="../stands/StandMenu.html" class="linkBlackRouge">STAND DU TOURNOI</a></li>
+          <li><a href="../stands/StandMenu.php" class="linkBlackRouge">STAND DU TOURNOI</a></li>
           <li><a href="../ListeVIP.php" class="linkBlackRouge">VIP</a></li>
         </ol>
       </nav>
@@ -53,7 +53,7 @@ while ($donnees = $reponse -> fetch()) {
   <nav id="navigationvip">
     <ol id="navigationvipol">
       <li><a href="../ListeVIP.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
-      <li><a href="../EchelleVIP.html" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
+      <li><a href="../EchelleVIP.php" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
     </ol>
   </nav>
 </div>
@@ -115,7 +115,7 @@ $lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li class="marginBottom10"><a href="../stands/StandMenu.html" class="linkWhite">Stand tu tournoi</a></li>
+      <li class="marginBottom10"><a href="../stands/StandMenu.php" class="linkWhite">Stand tu tournoi</a></li>
       <li><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
