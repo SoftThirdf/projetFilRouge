@@ -14,7 +14,7 @@
         // Constructeur chargé d'ouvrir la BD
         function __construct() {
           try {
-            $this->db = new PDO('mysql:host=localhost;port=8889;dbname=testdb;charset=utf8', 'root', 'root');
+            $this->db = new PDO('mysql:host=localhost;port=3308;dbname=testdb;charset=utf8', 'root', '');
           } catch (Exception $e) {
             die ("Erreur création PDO : ".$e->getMessage());
           }

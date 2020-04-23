@@ -25,7 +25,7 @@ session_start();
         </ol>
       </nav>
       <div id="conteneurConnexionMenu">
-        <a href="MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
+        <a href="Forconnexion.php" class="linkBlack btn" id="btnConnexion">
           <div>Connexion</div>
         </a>
       </div>
@@ -43,7 +43,7 @@ session_start();
             echo"<p> $echec </p>";
           }
          ?>
-        <form action="MoncompteControler.php" method="post">
+        <form action="../controler/MoncompteControler.php" method="post">
           <tr>
             <td>
               <h4>Login</h4>

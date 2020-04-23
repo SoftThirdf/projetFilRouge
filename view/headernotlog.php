@@ -13,12 +13,8 @@
     </nav>
     <div id="conteneurConnexionMenu">
 
-      <a href="../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
+      <a href="../view/Forconnexion.php" class="linkBlack btn" id="btnConnexion">
         <div>Connexion</div>
-      </a>
-
-      <a href="#" class="linkBlack btn" id="btnInscription">
-        <div>S'inscrire </div>
       </a>
 
     </div>
