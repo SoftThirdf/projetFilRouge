@@ -315,9 +315,9 @@
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="#" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
       <li class="marginBottom10"><a href="../view/reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
-      <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="../view/stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
