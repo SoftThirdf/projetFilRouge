@@ -1,12 +1,14 @@
 <?php
-try {
-  $bdd = new PDO('mysql:host=localhost;port=3308;dbname=testdb;charset=utf8', 'root', '');
-}
-catch (Exception $e) {
-  die ("Erreur : " . $e -> getMessage());
-}
+  session_start();
 
-$reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 45 UNION SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 43 UNION SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 34");
+  try {
+    $bdd = new PDO('mysql:host=localhost;port=3308;dbname=testdb;charset=utf8', 'root', '');
+  }
+  catch (Exception $e) {
+    die ("Erreur : " . $e -> getMessage());
+  }
+
+  $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 45 UNION SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 43 UNION SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = 34");
 
 ?>
 
@@ -15,37 +17,20 @@ $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularit
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../style/VIP.css">
   <link rel="stylesheet" href="../style/index.css">
-  <link rel="stylesheet" href="style/StandMenu.css">
+  <link rel="stylesheet" href="../style/StandMenu.css">
   <title> Dédicaces </title>
 </head>
 
 <body>
-  <header class="s100" id="haut">
-    <div id="conteneurNavigation">
-      <div id="conteneurLogoMenu">
-        <a href="../../view/index.php" class="s100"><img src="../img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
-      </div>
-      <nav id="navigation">
-        <ol id="navigationOl">
-          <li> <a href="index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="../../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-		  <li><a href="StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
-          <li><a href="../ListeVIP.php" class="linkBlackRouge">VIP</a></li>
-        </ol>
-      </nav>
-      <div id="conteneurConnexionMenu">
-
-        <a href="../../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-
-        <a href="#" class="linkBlack btn" id="btnInscription">
-          <div>S'inscrire </div>
-        </a>
-
-      </div>
-    </div>
-  </header>
+  <?php
+    if (isset($_SESSION['id']))
+    {
+      include_once('../headerlogStand.php');
+    }
+    else {
+      include_once('../headernotlogStand.php');
+    }
+  ?>
 
 
 <div id="actualitevip">
@@ -55,15 +40,15 @@ $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularit
 
 <?php
 
-while ($donnees = $reponse -> fetch()) {
+  while ($donnees = $reponse -> fetch()) {
 
-$nomPays = strtolower($donnees['nationalite_VIP']);
-$lienDrap = "\"img/pays/$nomPays.png\"";
+  $nomPays = strtolower($donnees['nationalite_VIP']);
+  $lienDrap = "\"img/pays/$nomPays.png\"";
 
-$id_vip = $donnees['id_VIP'];
-$nom_vip = $donnees['nom_VIP'];
-$prenom_vip = $donnees['prenom_VIP'];
-$lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
+  $id_vip = $donnees['id_VIP'];
+  $nom_vip = $donnees['nom_VIP'];
+  $prenom_vip = $donnees['prenom_VIP'];
+  $lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
 
  ?>
 
@@ -113,7 +98,7 @@ $lienphoto = "../img/imgVIP/imgProfilVIP/$id_vip-$nom_vip-$prenom_vip.jpg";
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+	  <li class="marginBottom10"><a href="StandMenu.php" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>

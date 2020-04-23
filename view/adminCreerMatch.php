@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -111,29 +114,15 @@
 </head>
 
 <body>
-  <header class="s100" id="haut">
-    <div id="conteneurNavigation">
-      <div id="conteneurLogoMenu">
-        <a href="../view/index.php" class="s100"><img src="../view/img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
-      </div>
-      <nav id="navigation">
-        <ol id="navigationOl">
-          <li> <a href="../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-          <li><a href="#" class="linkBlackRouge">VIP</a></li>
-        </ol>
-      </nav>
-      <div id="conteneurConnexionMenu">
-        <a href="#" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-
-        <a href="#" class="linkBlack btn" id="btnInscription">
-          <div>S'inscrire </div>
-        </a>
-      </div>
-    </div>
-  </header>
+  <?php
+    if (isset($_SESSION['id']))
+    {
+      include_once('../view/headerlog.php');
+    }
+    else {
+      include_once('../view/headernotlog.php');
+    }
+  ?>
 
   <div id="conteneurBody">
     <h2>Bienvenue sur la page Administrateur</h2>
