@@ -228,6 +228,7 @@ CREATE TABLE balle_Set (
   duree_set TINYINT NOT NULL,
   id_Match SMALLINT,
   id_joueur SMALLINT,
+  num_set TINYINT,
   FOREIGN KEY (id_Match) REFERENCES RENCONTRE (id_Match),
   FOREIGN KEY (id_joueur) REFERENCES JOUEUR (id_joueur)
 )ENGINE=InnoDB;

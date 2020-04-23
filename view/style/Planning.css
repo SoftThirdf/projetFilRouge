@@ -1,0 +1,31 @@
+#info {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+#conteneurplanning {
+  width: 60%;
+  display: flex;
+  text-align: center;
+}
+
+.equipe1 {
+  margin-top: 0;
+  font-weight: bold;
+  width: 40%;
+  border: 1px solid #e1e1e1;
+}
+
+.equipe2 {
+  margin-top: 0;
+  font-weight: bold;
+  width: 40%;
+  border: 1px solid #e1e1e1;
+}
+
+.infostournoi {
+  margin-top: 0;
+  width: 40%;
+  border: 1px solid #e1e1e1;
+}

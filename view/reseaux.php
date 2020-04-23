@@ -27,15 +27,15 @@ else {
       <div id="conteneurTwitter" class="rs">
         <h3>Twitter</h3>
         <hr class="sousH3">
-        <a class="twitter-timeline" href="https://twitter.com/opensoprasteria?ref_src=twsrc%5Etfw">Tweets de opensoprasteria</a>
+        <a class="twitter-timeline" href="https://twitter.com/opensoprasteria?ref_src=twsrc%5Etfw" data-width="100%" data-height="700">Tweets de opensoprasteria</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div id="conteneurFacebook" class="rs">
         <h3>Facebook</h3>
         <hr class="sousH3">
         <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0"></script>
-        <div class="fb-page" data-href="https://fr-fr.facebook.com/opensoprasteria" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0&appId=339945483384747&autoLogAppEvents=1"></script>
+        <div class="fb-page" data-href="https://fr-fr.facebook.com/opensoprasteria" data-tabs="timeline" data-width="500" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
           <blockquote cite="https://fr-fr.facebook.com/opensoprasteria" class="fb-xfbml-parse-ignore"><a href="https://fr-fr.facebook.com/opensoprasteria">Open Sopra Steria de Lyon</a></blockquote>
         </div>
       </div>
@@ -106,12 +106,14 @@ else {
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="tournoisSimQua.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li><a href="#" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
+	  <li class="marginBottom10"><a href="stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
       <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 

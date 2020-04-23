@@ -1,5 +1,5 @@
 -- INSERTION D'ARBITRES
---  Arbitres Simple Qualification
+--  Insertions d'Arbitres arbitrant pour le tournoi Simple Qualification
 INSERT INTO ARBITRE(type_arbitre,categorie_arbitre,nom_arbitre,prenom_arbitre,nationalite_arbitre,telephone_arbitre) VALUES('Arbitre de chaise','ITT1','Dupont','Jean','FR','06.01.00.00.01');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Gagnon','Quincy','FR','06.01.00.00.02');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de ligne','JAT2','Routhier','Vernon','FR','06.01.00.00.03');
@@ -46,7 +46,8 @@ INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitr
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Sivonjić','Bahrudin','SI','06.01.00.00.44');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Jurekić','Jože','SI','06.01.00.00.45');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Pejaković','Tobija','SI','06.01.00.00.46');
--- Arbitres Double Qualification
+
+-- Arbitres d'arbitre pour le tournoi Double Qualification
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Ukyou','Yoshino','JP','06.01.00.00.47');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Taketo','Yano','JP','06.01.00.00.48');
 INSERT INTO ARBITRE (type_arbitre, categorie_arbitre, nom_arbitre, prenom_arbitre, nationalite_arbitre, telephone_arbitre) VALUES ('Arbitre de chaise','ITT1','Shun','Senda','JP','06.01.00.00.49');
@@ -121,6 +122,9 @@ INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-13'
 INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('11:30:00','2020-06-14','13:30:00');
 INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-14','16:00:00');
 INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-14','18:00:00');
+
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('14:00:00','2020-06-14', null);
+INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES ('16:00:00','2020-06-14', null);
 
 
 -- INSERTION D'EQUIPES DE RAMASSEURS
@@ -393,7 +397,7 @@ INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_
 INSERT INTO RAMASSEUR (nom_ramasseur, prenom_ramasseur, telephone_ramasseur, id_equipe_ramasseur) VALUES ('Veronneau', 'Robert', '06.02.00.01.92', 32);
 
 -- INSERTION DE JOUEURS
--- Joueurs en Simple
+-- Joueurs en Simple Qualification
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Cantin','Aubrey','FR','19','ES001','canaub','canaub');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carter','Joshua','US','24','ES002','carjos','carjos');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Gibbons','Nicholas','GB','22','ES003','gibnic','gibnic');
@@ -427,7 +431,7 @@ INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_e
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Sexton','Aedan','IE','18','ES031','sexaed','sexaed');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Carron','Chrisitian ','CH','26','ES032','carchr','carchr');
 
--- Joueurs en double
+-- Joueurs en double Qualification
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Herman','Phillipp','DE','18','ED001','harphi','harphi');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Aaslund','Theo','NO','33','ED001','aasthe','aasthe');
 INSERT INTO JOUEUR (nom_joueur,prenom_joueur,nationalite_joueur,age_joueur,nom_equipe,login,mdp) VALUES('Zinn','Max','US','26','ED002','zinmax','zinmax');
@@ -564,336 +568,336 @@ INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_To
 
 -- INSERTION DE SETS
 -- SETS 1/16 Qualification Simple
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,1,1);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,1,32);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,1,1);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,1,32);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,1,1,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,1,32,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,1,1,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,1,32,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,2,16);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,2,17);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,2,16);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,2,17);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,2,16,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,30,2,17,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,2,16,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,2,17,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,3,8);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,3,25);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,3,8);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,3,25);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,3,8,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,3,25,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,3,8,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,3,25,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,4,9);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,4,24);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,4,9);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,4,24);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,4,9,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,4,24,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,4,9,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,4,24,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,5,4);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,5,29);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,5,4);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,5,29);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,5,4,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,5,29,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,5,4,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,5,29,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,6,13);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,6,20);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,6,13);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,6,20);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,6,13,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,6,20,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,6,13,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,6,20,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,7,5);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,7,28);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,7,5);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,7,28);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,7,5,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,30,7,28,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,7,5,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,7,28,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,8,12);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,8,21);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,8,12);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,8,21);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,8,12,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,8,21,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,8,12,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,8,21,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,9,2);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(5,30,9,31);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,9,2);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,9,31);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,9,2,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(5,30,9,31,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,9,2,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,9,31,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,10,15);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,10,18);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,10,15);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,10,18);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,10,15,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,10,18,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,10,15,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,10,18,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,11,7);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,11,26);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,11,7);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,11,26);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,11,7,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,11,26,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,11,7,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,11,26,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,12,10);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,12,23);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,12,10);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,12,23);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,12,10,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,12,23,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,30,12,10,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,12,23,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,13,3);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,13,30);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,13,3);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,13,30);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,13,3,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,13,30,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,13,3,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,13,30,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,14,14);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,14,19);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,14,14);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,14,19);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,14,14,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,14,19,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,14,14,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,14,19,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,15,6);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,15,27);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,15,6);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,15,27);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,15,6,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,15,27,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,15,6,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,15,27,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,30,16,11);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,16,22);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,16,11);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,16,22);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,30,16,11,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,16,22,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,16,11,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,16,22,2);
 
 -- SETS 1/8 Qualification Simple
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,17,1);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,17,16);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,17,1);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,17,16);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,17,1,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,17,16,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,17,1,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,17,16,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,18,8);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,18,24);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,18,8);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,18,24);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,18,8,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,18,24,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,18,8,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,18,24,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,19,4);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,19,20);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,19,4);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,19,20);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,19,4,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,19,20,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,19,4,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,19,20,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,20,5);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(5,30,20,21);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,20,5);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,20,21);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,20,5,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(5,30,20,21,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,20,5,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,20,21,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,21,2);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(7,30,21,15);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,30,21,2);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,21,15);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,21,2,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(7,30,21,15,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,30,21,2,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,21,15,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,22,26);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,22,23);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,22,26);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,22,23);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,22,26,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,22,23,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,22,26,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,22,23,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,23,3);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,23,19);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,23,3);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,23,19);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,23,3,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,23,19,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,23,3,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,23,19,2);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,30,24,6);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,24,22);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,30,24,6);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,30,24,22);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,30,24,6,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,24,22,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,30,24,6,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,30,24,22,2);
 
 
 -- SETS 1/16 Qualification Double
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,25,45);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,46);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,95);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,96);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,25,45);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,25,46);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,25,95);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,96);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,45);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,25,46);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,25,95);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,25,96);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,25,45,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,25,46,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,25,95,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,25,96,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,25,45,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,25,46,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,25,95,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,25,96,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,25,45,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,25,46,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,25,95,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,25,96,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,26,43);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,44);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,37);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,38);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,26,43);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,26,44);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,26,37);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,38);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,43);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,26,44);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,26,37);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,26,38);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,26,43,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,26,44,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,26,37,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,26,38,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,26,43,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,26,44,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,26,37,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,26,38,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,26,43,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,26,44,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,26,37,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,26,38,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,27,81);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,82);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,77);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,78);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,27,81);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,27,82);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,27,77);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,78);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,81);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,27,82);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,27,77);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,27,78);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,27,81,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,27,82,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,27,77,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,27,78,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,27,81,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,27,82,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,27,77,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,27,78,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,27,81,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,27,82,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,27,77,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,27,78,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,28,55);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,56);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,49);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,50);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,28,55);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,28,56);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,28,49);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,50);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,55);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,28,56);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,28,49);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,28,50);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,28,55,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,28,56,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,28,49,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,28,50,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,28,55,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,28,56,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,28,49,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,28,50,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,28,55,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,28,56,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,28,49,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,28,50,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,29,67);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,68);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,47);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,48);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,29,67);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,29,68);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,29,47);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,48);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,67);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,29,68);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,29,47);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,29,48);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,29,67,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,29,68,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,29,47,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,29,48,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,29,67,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,29,68,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,29,47,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,29,48,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,29,67,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,29,68,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,29,47,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,29,48,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,75);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,76);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,30,33);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,30,34);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,75);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,76);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,33);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,34);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,30,75);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,30,76);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,30,33);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,30,34);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,30,75,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,30,76,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,30,33,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,30,34,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,30,75,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,30,76,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,30,33,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,30,34,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,30,75,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,30,76,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,30,33,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,30,34,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,31,63);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,64);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,71);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,72);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,31,63);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,31,64);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,31,71);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,72);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,63);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,31,64);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,31,71);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,31,72);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,31,63,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,31,64,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,31,71,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,31,72,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,31,63,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,31,64,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,31,71,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,31,72,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,31,63,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,31,64,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,31,71,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,31,72,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,39);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,40);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,32,69);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,32,70);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,39);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,40);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,69);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,70);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,32,39);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,32,40);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,32,69);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,32,70);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,32,39,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,32,40,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,32,69,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,32,70,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,32,39,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,32,40,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,32,69,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,32,70,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,32,39,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,32,40,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,32,69,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,32,70,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,33,89);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,90);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,65);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,66);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,33,89);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,33,90);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,33,65);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,66);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,89);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,33,90);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,33,65);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,33,66);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,33,89,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,33,90,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,33,65,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,33,66,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,33,89,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,33,90,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,33,65,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,33,66,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,33,89,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,33,90,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,33,65,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,33,66,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,34,51);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,52);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,91);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,92);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,34,51);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,34,52);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,34,91);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,92);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,51);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,34,52);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,34,91);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,34,92);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,34,51,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,34,52,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,34,91,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,34,92,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,34,51,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,34,52,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,34,91,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,34,92,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,34,51,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,34,52,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,34,91,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,34,92,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,53);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,54);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,35,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,35,36);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,53);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,54);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,36);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,35,53);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,35,54);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,35,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,35,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,35,53,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,35,54,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,35,35,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,35,36,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,35,53,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,35,54,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,35,35,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,35,36,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,35,53,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,35,54,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,35,35,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,35,36,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,36,85);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,86);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,36);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,36,85);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,36,86);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,36,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,36);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,85);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,36,86);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,36,35);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,36,36);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,36,85,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,36,86,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,36,35,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,36,36,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,36,85,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,36,86,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,36,35,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,36,36,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,36,85,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,36,86,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,36,35,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,36,36,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,73);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,74);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,37,61);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,37,62);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,73);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,74);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,61);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,62);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,37,73);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,37,74);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,37,61);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,37,62);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,37,73,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,37,74,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,37,61,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,37,62,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,37,73,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,37,74,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,37,61,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,37,62,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,37,73,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,37,74,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,37,61,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,37,62,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,41);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,42);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,38,59);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,38,60);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,41);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,42);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,59);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,60);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,38,41);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,38,42);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,38,59);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,38,60);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,38,41,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,38,42,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,38,59,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,38,60,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,38,41,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,38,42,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,38,59,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,38,60,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,38,41,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,38,42,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,38,59,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,38,60,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,39,79);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,80);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,93);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,94);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,39,79);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,39,80);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,39,93);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,94);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,79);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,39,80);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,39,93);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,39,94);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,39,79,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,39,80,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,39,93,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,39,94,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,39,79,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,39,80,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,39,93,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,39,94,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,39,79,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,39,80,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,39,93,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,39,94,3);
 
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,87);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,88);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(6,15,40,57);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,40,58);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,87);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,88);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,57);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,58);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(1,15,40,87);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(3,15,40,88);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(4,15,40,57);
-INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur) VALUES(2,15,40,58);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,40,87,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,40,88,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(6,15,40,57,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,40,58,1);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,40,87,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,40,88,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,40,57,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,40,58,2);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(1,15,40,87,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(3,15,40,88,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(4,15,40,57,3);
+INSERT INTO BALLE_SET (nb_jeu,duree_set,id_Match,id_joueur,num_set) VALUES(2,15,40,58,3);
 
 -- INSERTION DE SE_DEROULE2
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(1,1,'Matin');
@@ -946,12 +950,98 @@ INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(42,5,'Midi')
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(43,5,'Midi');
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(44,5,'Midi');
 
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(21,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(22,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(23,6,'Soirée');
-INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(24,6,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(21,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(22,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(23,7,'Soirée');
+INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(24,7,'Soirée');
 
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(45,6,'Soirée');
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(46,6,'Soirée');
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(47,6,'Soirée');
 INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(48,6,'Soirée');
+
+
+-- INSERTION POPULARITE
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Unknown', '0', '4999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Novice', '5000', '19999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Rookie', '20000', '49999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Hasbeen', '50000', '99999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Maestro', '100000', '499999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Famous', '500000', '999999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Star', '1000000', '4999999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Master', '5000000', '9999999');
+INSERT INTO POPULARITE (popularite_VIP, nb_followers_instagram_Min, nb_followers_instagram_Max) VALUES ('Legendary', '10000000', '300000000');
+
+
+-- INSERTION VIP
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Jane', 'Miller', 'Accompagnateur', 'GB', 0, 0, 0, 1);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Xin', 'Hsueh', 'Accompagnateur', 'CN', 0, 0, 0, 1);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Viggo', 'Bertelsen', 'Accompagnateur', 'DK', 0, 0, 0, 1);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Jacob', 'Jones', 'Accompagnateur', 'US', 0, 0, 0, 1);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Philippe', 'Henry', 'Entraineur', 'FR', 0, 0, 0, 1);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Sofie', 'Olofsson', 'Accompagnateur', 'SE', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('GroLill', 'Simonsen', 'Accompagnateur', 'NO', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Luis', 'Sanchis', 'Entraineur', 'ES', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Laetitia', 'Vittoz', 'Entraineur', 'FR', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alexandre', 'Duchene', 'Journaliste', 'FR', 0, 0, 0, 2);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Pierre", "Manhès", "Entraineur", "FR", 0, 0, 0, 2);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alba', 'Fuentes', 'Entraineur', 'ES', 0, 0, 0, 3);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Josep', 'Pascual', 'Entraineur', 'ES', 0, 0, 0, 3);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Jørgen', 'Økland', 'Journaliste', 'NO', 0, 0, 0, 3);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Eric', 'Butaye', 'Journaliste', 'FR', 0, 0, 0, 3);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Marianne', 'Halot', 'Joueur', 'FR', 0, 0, 0, 3);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Pierre', 'Selignan', 'Entraineur', 'FR', 0, 0, 0, 4);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Levi', 'Brinkman', 'Ancien joueur', 'NL', 0, 0, 0, 4);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Mohammed', 'Alosaimi', 'Ancien joueur', 'SA', 0, 0, 0, 4);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Nicolas', 'Boivin', 'Ancien joueur', 'FR', 0, 0, 0, 4);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Enzo', 'Leone', 'Ancien joueur', 'IT', 0, 0, 0, 4);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Morgane', 'Gallo', 'Journaliste', 'FR', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Anton', 'Leskov', 'Journaliste', 'RU', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Francesco', 'DiSabato', 'Joueur', 'IT', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Aurélie', 'Ponsen', 'Influenceur', 'FR', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Romain', 'Nicolay', 'Photographe', 'FR', 0, 0, 0, 5);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Akira", "Yamaguchi", "Joueur", "JP", 0, 0, 0, 5);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('George', 'Warner', 'Journaliste', 'GB', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Gabin', 'Cabrita', 'Journaliste', 'FR', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Charlotte', 'Janvier', 'Photographe', 'FR', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Aydin', 'Taşkent', 'Joueur', 'TR', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Maeva', 'Pellouin', 'Influenceur', 'FR', 0, 0, 0, 6);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Arthur", "Abernathy", "Journaliste", "US", 0, 0, 0, 6);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Özge', 'Gökdere', 'Journaliste', 'TR', 0, 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Mads', 'Jensen', 'Ancien joueur', 'DK', '1', 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Jochen', 'Greisle', 'Joueur', 'DE', '1', 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Marie', 'Moine', 'Commentateur', 'FR', 0, 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Laurent', 'Chavane', 'Commentateur', 'FR', 0, 0, 0, 7);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ("Baptiste", "Pétolas", "Joueur", "FR", 0, 0, 0, 7);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Luke', 'Tremblay', 'Journaliste', 'CA', 0, 0, 0, 8);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alistair', 'McCrea', 'Ancien joueur', 'GB', '2', 0, 0, 8);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Alain', 'Chazaux', 'Joueur', 'FR', '1', 0, 0, 8);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Emeline', 'Michel', 'Joueur', 'FR', '2', 0, 0, 8);
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Marine', 'Gyomlai', 'Influenceur', 'FR', 0, 0, 0, 8);
+
+INSERT INTO VIP (prenom_VIP, nom_VIP, type_VIP, nationalite_VIP, nb_grands_chelems, classement_ATP_Simple, classement_ATP_Double, id_Popularite) VALUES ('Maxime', 'François', 'Joueur', 'FR', '4', 0, 0, 9);
+
+
+
+-- INSERTION RESERVATION
+INSERT INTO RESERVATION (id_Court, id_joueur) VALUES (2, 1);
+INSERT INTO RESERVATION (id_Court, id_joueur) VALUES (2, 2);
+INSERT INTO RESERVATION (id_Court, id_joueur) VALUES (3,1);
+
+
+-- INSERTION CORRESPOND2
+INSERT INTO CORRESPOND2(id_Reservation, id_Horaire) VALUES (1, 1);
+INSERT INTO CORRESPOND2(id_Reservation, id_Horaire) VALUES (2, 3);
+INSERT INTO CORRESPOND2(id_Reservation, id_Horaire) VALUES (3, 4);
+
+
+-- INSERTION OBSERVE
+INSERT INTO OBSERVE (id_Match, id_VIP) VALUES (2, 1);
+INSERT INTO OBSERVE (id_Match, id_VIP) VALUES (1, 6);

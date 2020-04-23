@@ -56,18 +56,23 @@ else {
             echo"<h3 class=\"h3Tournois\">$phase</h3>
             <hr class=\"sousH3\">
             <div class=\"conteneurRencontres\">";
+
             foreach ($matchs as $match => $equipes) {
+              $nbEquipe = 0;
+
               echo "
               <div class=\"rencontre\">
               <table>";
-              if(isset($tabScore)){
-                unset($tabScore);
-                unset($tabScorePrec);
-              }
+
               foreach ($equipes as $key => $joueurs) {
-                if(isset($tabScore)){
-                  $tabScorePrec = $tabScore;
+                $nbEquipe++;
+
+                if ($nbEquipe == 1) {
+                  $next = next($equipes);
+                }elseif($nbEquipe == 2){
+                  $tabScorePrev = $tabScore;
                 }
+
                 echo "<tr class=\"equipe\">";
                 // On créé un tableau de score pour chaque équipe
                 $tabScore;
@@ -75,22 +80,37 @@ else {
                 foreach ($joueurs as $key => $a) {
                   //Ce sera donc $a
                 }
+
                 // On initialise les valeurs du tableau à zéro. Pour chaque set, les valeurs sont au départ à zéro.
-                $l = 0;
+                $l = 1;
                 for ($i=3; $i < sizeof($a) ; $i++) {
+                  if ($next!=null) {
+                    $tabScoreNext[$l] = 0;
+                  }
                   $tabScore[$l] = 0;
                   $l++;
                 }
                 // Ensuite, on additionne pour chaque joueurs les points marqué des sets, pour avoir un total de set marqué
                 foreach ($joueurs as $key => $infos) {
-                  $j = 0;
+                  $j = 1;
                   for ($i=3; $i < sizeof($infos) ; $i++) {
-                    $tabScore[$j] = $tabScore[$j] + $infos[$i];
+                    $tabScore[$j] = $tabScore[$j] + $infos[$i][1];
                     $j++;
                   }
                 }
 
-                //  Puis, on les affiches
+                if ($next != null) {
+                  foreach ($next as $key => $joueursNext) {
+                      $j = 1;
+                      for ($i=3; $i < sizeof($joueursNext) ; $i++) {
+                        $tabScoreNext[$j] = $tabScoreNext[$j] + $joueursNext[$i][1];
+                        $j++;
+                      }
+                  }
+                }
+
+
+            // Puis, on les affiches
                 $nbJ = 0;
                 foreach ($joueurs as $key => $infos) {
                   $nbJ++;
@@ -102,11 +122,23 @@ else {
                   <td class=\"nation\"> <img src=$lienDrap alt=\"$nomPays\"> <td>";
                   // Si c'est le premier joueur, alors on affiche le score dans un td avec rowspan à 2 pour qu'il englobe les deux joueurs
                   if ($nbJ == 1) {
-                    for ($k=0; $k < sizeof($tabScore) ; $k++) {
-                      if (isset($tabScorePrec) && $tabScorePrec[$k] < $tabScore[$k]) {
-                        echo" <td class=\"set setWin\" rowspan=2>$tabScore[$k]</td>";
-                      }else{
-                        echo" <td class=\"set\" rowspan=2>$tabScore[$k]</td>";
+                    for ($k=1; $k < sizeof($tabScore)+1 ; $k++) {
+                      if ($nbEquipe==1) {
+                        if ($tabScoreNext[$k] < $tabScore[$k]) {
+                            $jeu = $tabScore[$k];
+                            echo" <td class=\"set setWin\" rowspan=2>$jeu</td>";
+                        }else{
+                            $jeu = $tabScore[$k];
+                            echo" <td class=\"set\" rowspan=2>$jeu</td>";
+                        }
+                      }elseif($nbEquipe==2){
+                        if ($tabScorePrev[$k] < $tabScore[$k]) {
+                            $jeu = $tabScore[$k];
+                            echo" <td class=\"set setWin\" rowspan=2>$jeu</td>";
+                        }else{
+                            $jeu = $tabScore[$k];
+                            echo" <td class=\"set\" rowspan=2>$jeu</td>";
+                        }
                       }
                     }
                   }
@@ -120,8 +152,6 @@ else {
             echo"</div>";
           }
         }
-
-
         ?>
 
       </div>
@@ -137,13 +167,15 @@ else {
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
-      <li><a href="#" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
+      <li class="marginBottom10"><a href="../view/stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="../view/reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
+      <li class="marginBottom10"><a href="#" class="linkWhite">Se connecter</a></li>
       <li><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>

@@ -1,0 +1,124 @@
+/* ========================= VIP ============================ */
+#conteneurPage {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ======== Menu =========== */
+#menuvip {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #e1e1e1;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#navigationvip {
+  width: 100%;
+}
+
+#navigationvipol {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: auto;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+#navigationvipol li a:hover {
+  color: var(--rouge-logo);
+  text-decoration: none;
+}
+
+/* ======== Echelle =========== */
+.echelle {
+  width: 80%;
+  margin: auto;
+}
+
+#PresentationCategories {
+  text-align: left;
+}
+
+#ConteneurEchelle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgEchelle {
+  float: center;
+  width: 120%;
+}
+
+/* ======== Profil =========== */
+.photoVIP {
+  float: left;
+  width: 20%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border-radius: 100%;
+  border: 3px solid var(--rouge-logo);
+}
+
+#profilVIP {
+  justify-content: space-between;
+  text-align: left;
+  margin: auto;
+  width: 80%;
+}
+
+#actualitevip {
+  justify-content: space-between;
+  text-align: left;
+  margin: auto;
+  width: 80%;
+}
+
+.imgreseaux {
+  width: 2.5%;
+  margin: 0.3%;
+}
+
+.imgDrap {
+  width: 40.5px;
+  height: 27px;
+  margin-left: 1%;
+  border: 1px solid #000000;
+}
+
+/* ======== Liste =========== */
+#conteneurDivVIP {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2%;
+}
+
+#presentlistevip {
+  width: 20%;
+}
+
+.listevip {
+  text-align: center;
+  margin: 1%;
+  border: 1px solid #e1e1e1;
+  background-color: #F2F2F2;
+}
+
+.listevip:hover {
+  text-decoration: none;
+  background-color: #e1e1e1;
+}
+
+/* ======== DYLAN =========== */
+#boxvip {
+  display: flex;
+  margin: auto;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+}
+
+.photodedicasse {
+  width: 20%;
+}

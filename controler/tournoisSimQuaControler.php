@@ -40,6 +40,8 @@
   }
   include("../view/tournoisSimQua.php")
 
-
-
  ?>
+
+</div>
+</div>
+</div>
