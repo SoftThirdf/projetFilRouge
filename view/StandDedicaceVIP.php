@@ -15,6 +15,7 @@ $reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularit
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style/VIP.css">
   <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/StandMenu.css">
   <title> Dédicaces </title>
 </head>
 

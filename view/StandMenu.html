@@ -5,47 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/StandMenu.css">
   <title>StandMenu</title>
 </head>
-<style>
-  .filterDiv {
-    float: left;
-    background-color: #e1e1e1;
-    color: #000000;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 2px;
-    display: none;
-  }
-
-  .show {
-    display: block;
-  }
-
-  .container {
-    margin-top: 20px;
-    overflow: hidden;
-  }
-
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-
-  .btn:hover {
-    background-color: #ddd;
-  }
-
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }
-</style>
 
 <body>
   <header class="s100" id="haut">
@@ -75,34 +37,35 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <div id="conteneurMiddlePage" class="conteneurPage marginBotConteneur3">
-      <h2>Les différents atelier de l'Open Sopra Steria !</h2>
+    <div id="conteneurMiddlePage" class="marginBotConteneur3">
+      <h2>Les différents ateliers de l'Open Sopra Steria !</h2>
+      <hr class="sousH2">
 
       <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Toutes les activité</button>
-        <button class="btn" onclick="filterSelection('AS')"> Activité sportive</button>
+        <button class="btn active" onclick="filterSelection('all')"> Toutes les activités</button>
+        <button class="btn" onclick="filterSelection('AS')"> Activités sportives</button>
         <button class="btn" onclick="filterSelection('VR')"> Réalité virtuelle</button>
         <button class="btn" onclick="filterSelection('VIP')"> VIP</button>
-        <button class="btn" onclick="filterSelection('food')"> Nourriture</button>
+        <button class="btn" onclick="filterSelection('food')"> Restauration</button>
       </div>
 
-      <div class="container">
+      <div id="conteneurSousMenu">
 
-        <div class="filterDiv AS"> <a href="StandSquash.html">Squash </a> </div>
-        <div class="filterDiv VR"><a href="StandMatchVR.html">Match VR </a></div>
-        <div class="filterDiv food"><a href="StandRestaurant.html">Restaurant </a></div>
-        <div class="filterDiv VR"><a href="StandSpectatorVR.html">SpectatorVR </a></div>
-        <div class="filterDiv food"><a href="StandFastFood.html">FastFood </a></div>
-        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php">DedicasseVIP </a></div>
-        <div class="filterDiv food AS"><a href="StandNutrisensBar.html">NutrisensBar </a></div>
-        <div class="filterDiv food VIP"><a href="StandCocktail.html">Cocktail </a></div>
-        <div class="filterDiv AS"><a href="StandLearnTennis.html">LearnTennis </a></div>
+        <div class="filterDiv AS"> <a href="StandSquash.html" class="linkAct">Squash </a> </div>
+        <div class="filterDiv VR"><a href="StandMatchVR.html" class="linkAct">Match VR </a></div>
+        <div class="filterDiv food"><a href="StandRestaurant.html" class="linkAct">Restaurant </a></div>
+        <div class="filterDiv VR"><a href="StandSpectatorVR.html" class="linkAct">SpectatorVR </a></div>
+        <div class="filterDiv food"><a href="StandFastFood.html" class="linkAct">FastFood </a></div>
+        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php" class="linkAct">DedicasseVIP </a></div>
+        <div class="filterDiv food AS"><a href="StandNutrisensBar.html" class="linkAct">NutrisensBar </a></div>
+        <div class="filterDiv food VIP"><a href="StandCocktail.html" class="linkAct">Cocktail </a></div>
+        <div class="filterDiv AS"><a href="StandLearnTennis.html" class="linkAct">LearnTennis </a></div>
 
       </div>
       <br>
-      <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </center>
+      <div id="conteneurVideo">
+        <iframe src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </body>
