@@ -7,9 +7,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="../style/index.css">
-  <link rel="stylesheet" href="../style/StandMenu.css">
+  <link rel="stylesheet" href="../style/StandSpectatorVR.css">
   <title>StandSpectatorVR</title>
 </head>
 
@@ -26,26 +26,28 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <!-- First Grid: Logo & About -->
-    <center>
-      <p class="w3-jumbo"> SpectatorVR </p>
-      <p class="w3-xxlarge w3-text-grey"> Que diriez vous d'animer un stade en entier ? </p>
-    </center>
-    <!-- Second Grid: Resent -->
-    <div class="w3-row">
-      <div class="w3-half w3-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/yP3KVI1RIMk?start=59" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="w3-xlarge w3-text-grey">
+
+      <h2> SpectatorVR </h2>
+      <hr class="sousH2">
+      <p id="textSousH2"> Que diriez vous d'animer un stade en entier ? </p>
+    <div id="conteneurTextVideo">
+      <div class="conteneurInfos">
+        <div class="iframeInfos">
+          <iframe src="https://www.youtube.com/embed/yP3KVI1RIMk?start=59" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>
           Pendant que vous faîtes la queue ou si vous accompagnez juste quelqu’un, vous pourrez affronter un de nos fabuleux joueur en réalité augmenté. Munissez-vous de votre smartphone définissez votre terrain de jeux et lancer la partie. Partez à
           l’assaut des plus grands joueurs de tennis virtuel de l’open. Prenez l’avantage sur vos adversaires et remportez la victoire ! Un tournoi sera organisé le premier soir de l’open au stand DreamMatchVR, venez nombreux ! <br>
         </p>
       </div>
-      <div class="w3-half w3-container">
-        <p class="w3-xlarge w3-text-grey">
+      <div class="conteneurInfos">
+        <p>
           SpectatorVR est un jeu en réalité virtuel proposant d’incarner un spectateur d’un match de tennis. Les matchs de tennis ont la mauvaise réputation de ne pas être particulièrement animé par les spectateurs. Il est temps de changer !
           L’espace d’une dizaine de minute venez ambiancer tout un match de tennis ! Un moment à partager en famille, accès gratuit !
         </p>
-        <iframe title="vimeo-player" src="https://player.vimeo.com/video/277669653" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        <div class="iframeInfos">
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/277669653" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>

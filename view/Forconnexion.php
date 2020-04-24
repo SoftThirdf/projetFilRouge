@@ -1,5 +1,5 @@
 <?php
-  session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -27,18 +27,21 @@
 
     <h2>Connexion à la plateforme</h2>
     <hr class="sousH2">
-        <?php
-          global $echec;
-          if (isset($echec)) {
-            echo"<p> $echec </p>";
-          }
-         ?>
+
         <form id="formConnexion"action="../controler/MoncompteControler.php" method="post">
           <div id="conteneurFormLogin">
             <div id="formImg">
-              <img class="s100" src="img/loginForm.jpg" alt="raquette">
+              <img class="s100" src="../view/img/loginForm.jpg" alt="raquette">
             </div>
             <div id="conteneurInputsBtn">
+              <?php
+                global $echec;
+                if (isset($echec)) {
+                  echo"<p id=\"msgErreur\"> $echec </p>";
+                }else{
+                    session_start();
+                }
+               ?>
               <div id="conteneurInputs">
                 <div id="formLogin" class="conteneurChamps">
                   <label class="labelConnexion">NOM DE COMPTE</label>

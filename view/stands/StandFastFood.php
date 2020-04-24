@@ -26,8 +26,8 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <h3><b>Pas le temps pour manger ? Prenez à emporter pour ne pas prendre une miète des matchs !</b></h3>
-    <hr class="sousH3">
+    <h2><b>Pas le temps pour manger ? Prenez à emporter pour ne pas prendre une miète des matchs !</b></h2>
+    <hr class="sousH2">
     <!-- First Photo Grid -->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
