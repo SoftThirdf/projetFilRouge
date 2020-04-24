@@ -1,0 +1,25 @@
+#conteneurBody {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#conteneurDivisionsInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.conteneurInfos {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+}
+
+.conteneurInfos iframe {
+  width: 100%;
+  height: 35vh;
+}
+
+.conteneurInfos img {
+  width: 100%;
+}

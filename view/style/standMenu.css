@@ -27,23 +27,6 @@
   display: block;
 }
 
-#conteneurSousMenu {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 2%;
-  width: 100%;
-}
-
-#conteneurVideo {
-  text-align: center;
-  height: 100vh;
-}
-
-#conteneurVideo iframe {
-  width: 100%;
-  height: 100%;
-}
-
 /* Style the buttons */
 .btnM {
   outline: none;
@@ -61,4 +44,21 @@
 .btnM.active {
   background-color: var(--rouge-logo);
   color: white;
+}
+
+#conteneurSousMenu {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2%;
+  width: 100%;
+}
+
+#conteneurVideo {
+  text-align: center;
+  height: 100vh;
+}
+
+#conteneurVideo iframe {
+  width: 100%;
+  height: 100%;
 }

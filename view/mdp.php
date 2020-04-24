@@ -13,13 +13,15 @@ session_start();
 <body>
 
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../view/headerlog.php');
-    }
-    else {
-      include_once('../view/headernotlog.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../view/headerlog.php');
+  }elseif (isset($_SESSION['admin'])) {
+    include_once('../view/headerAdmin.php');
+  }
+  else {
+    include_once('../view/headernotlog.php');
+  }
   ?>
 
   <div id="conteneurBody">
@@ -68,7 +70,7 @@ session_start();
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>    
+      <li class="marginBottom10"><a href="reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
       <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>

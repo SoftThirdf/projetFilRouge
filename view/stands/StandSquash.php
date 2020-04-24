@@ -9,47 +9,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="../style/index.css">
-  <link rel="stylesheet" href="../style/StandMenu.css">
+  <link rel="stylesheet" href="../style/StandSquash.css">
   <title>StandSquash</title>
 </head>
 
 <body>
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../headerlogStand.php');
-    }
-    else {
-      include_once('../headernotlogStand.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../headerlogStand.php');
+  }
+  elseif (isset($_SESSION['admin'])) {
+    include_once('../headerAdminStand.php');
+  }
+  else {
+    include_once('../headernotlogStand.php');
+  }
   ?>
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <center>
-      <p class="w3-jumbo"> Squash </p>
-      <p class="w3-xxlarge w3-text-grey"> Entrez dans une partie pleine de rebondissement !</p>
-    </center>
+      <h2> Squash </h2>
+      <hr class="sousH2">
+      <p id="textSousH2"> Entrez dans une partie pleine de rebondissement !</p>
 
-    <!-- Second Grid: Resent -->
-    <div class="w3-panel w3-text-grey">
-    </div>
-    <div class="w3-row">
-      <div class="w3-half w3-container">
-        <img src="../img/PhotoStand/Squash.jpg" style="width:100%">
+    <div id="conteneurInfos">
+      <div id="conteneurImg">
+        <img src="../img/PhotoStand/Squash.jpg" class="s100">
       </div>
-      <div class="w3-half w3-container">
-        <p class="w3-xlarge w3-text-grey">
+      <div id="conteneurDescription">
+        <p id="descriptionSquash">
           Pour vous dégourdir un peu entre deux longues sessions de match que diriez-vous de vous bougez un peu dans une de nos salles consacrées au squash ! Venez défier vos amis ou votre famille en un contre un ! <br>
-          Ouvert de 9h à 18h. <br> Entré libre et gratuite.
-
         </p>
+        <p id="horaireSquash">Ouvert de 9h à 18h. <br> Entrée libre et gratuite.</p>
       </div>
-    </div> <br>
+    </div>
     <h4>
       <center>Highlights du match de l'année de Squash de 2018 !</center>
     </h4>
-    <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/-KxgMl0Wp04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <center> <iframe id="videoHi" src="https://www.youtube.com/embed/-KxgMl0Wp04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </center>
   </div>
 

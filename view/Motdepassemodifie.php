@@ -11,7 +11,15 @@
 
 <body>
   <?php
-  include_once('../view/headerlog.php');
+  if (isset($_SESSION['id']))
+  {
+    include_once('../view/headerlog.php');
+  }elseif (isset($_SESSION['admin'])) {
+    include_once('../view/headerAdmin.php');
+  }
+  else {
+    include_once('../view/headernotlog.php');
+  }
   ?>
 
   <div id="corps">

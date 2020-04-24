@@ -15,19 +15,22 @@
 
 <body>
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../headerlogStand.php');
-    }
-    else {
-      include_once('../headernotlogStand.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../headerlogStand.php');
+  }
+  elseif (isset($_SESSION['admin'])) {
+    include_once('../headerAdminStand.php');
+  }
+  else {
+    include_once('../headernotlogStand.php');
+  }
   ?>
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <h3><b> Tout nos restaurants à votre disposition</b></h3>
-    <hr class="sousH3">
+    <h2><b> Tout nos restaurants à votre disposition</b></h2>
+    <hr class="soush2">
     <!-- First Photo Grid -->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">

@@ -14,13 +14,16 @@
 
 <body>
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../headerlogStand.php');
-    }
-    else {
-      include_once('../headernotlogStand.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../headerlogStand.php');
+  }
+  elseif (isset($_SESSION['admin'])) {
+    include_once('../headerAdminStand.php');
+  }
+  else {
+    include_once('../headernotlogStand.php');
+  }
   ?>
 
   <div id="conteneurBody">
