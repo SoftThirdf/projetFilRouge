@@ -1,72 +1,62 @@
 <?php
-session_start();
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../view/style/index.css">
   <link rel="stylesheet" href="../view/style/Forconnexion.css">
   <title>Connexion</title>
 </head>
 
 <body>
 
-  <header class="s100" id="haut">
-    <div id="conteneurNavigation">
-      <div id="conteneurLogoMenu">
-        <a href="../view/index.php" class="s100"><img src="../view/img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
-      </div>
-      <nav id="navigation">
-        <ol id="navigationOl">
-          <li> <a href="../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-		  <li><a href="../view/stands/StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
-          <li><a href="../view/ListeVIP.php" class="linkBlackRouge">VIP</a></li>
-        </ol>
-      </nav>
-      <div id="conteneurConnexionMenu">
-        <a href="../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-      </div>
-    </div>
-  </header>
+  <?php
+    if (isset($_SESSION['id']))
+    {
+      include_once('../view/headerlog.php');
+    }
+    else {
+      include_once('../view/headernotlog.php');
+    }
+  ?>
 
   <div id="conteneurBody">
 
-    <div class="conteneur">
-
-      <div align="center">
+    <h2>Connexion à la plateforme</h2>
+    <hr class="sousH2">
         <?php
           global $echec;
           if (isset($echec)) {
             echo"<p> $echec </p>";
           }
          ?>
-        <form action="MoncompteControler.php" method="post">
-          <tr>
-            <td>
-              <h4>Login</h4>
-            </td>
-            <td><input type="text" name="login"></br>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h4>Mot de passe</h4>
-            </td>
-            <td><input type="password" name="mdp"></br>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="submit" value="Connexion">
-            </td>
-          </tr>
+        <form id="formConnexion"action="../controler/MoncompteControler.php" method="post">
+          <div id="conteneurFormLogin">
+            <div id="formImg">
+              <img class="s100" src="img/loginForm.jpg" alt="raquette">
+            </div>
+            <div id="conteneurInputsBtn">
+              <div id="conteneurInputs">
+                <div id="formLogin" class="conteneurChamps">
+                  <label class="labelConnexion">NOM DE COMPTE</label>
+                  <input class="inputConnexion" type="text" name="login" required>
+                </div>
+                <div id="formMdp" class="conteneurChamps">
+                  <label class="labelConnexion">MOT DE PASSE</label>
+                  <input class="inputConnexion" type="password" name="mdp" required>
+                </div>
+              </div>
+              <div id="btnConnexion">
+                <input id="btnG" type="submit" value="CONNEXION">
+                <input id="btnD" type="submit" value=">">
+              </div>
+            </div>
+          </div>
         </form>
-      </div>
 
-    </div>
   </div>
 
 </body>
@@ -79,13 +69,13 @@ session_start();
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="../view/stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="../view/stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
+      <li class="marginBottom10"><a href="../view/reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
       <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>

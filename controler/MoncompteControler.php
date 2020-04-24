@@ -22,6 +22,8 @@
       $echec = "Echec de la connexion, veuillez réessayer";
       include('../view/Forconnexion.php');
     }
+  }elseif(isset($_SESSION['id'])){
+    include('../view/MonCompte.php');
   }else{
     include('../view/Forconnexion.php');
   }

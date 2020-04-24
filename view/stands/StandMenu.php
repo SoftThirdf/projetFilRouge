@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -10,30 +13,15 @@
 </head>
 
 <body>
-  <header class="s100" id="haut">
-    <div id="conteneurNavigation">
-      <div id="conteneurLogoMenu">
-        <a href="../index.php" class="s100"><img src="../img/logoOpen.png" alt="logoTournoi" id="logoOpen" class="s100"></a>
-      </div>
-      <nav id="navigation">
-        <ol id="navigationOl">
-          <li> <a href="../index.php" class="linkBlackRouge">ACCUEIL</a></li>
-          <li><a href="../../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
-          <li><a href="StandMenu.html" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
-          <li><a href="../ListeVIP.php" class="linkBlackRouge">VIP</a></li>
-        </ol>
-      </nav>
-      <div id="conteneurConnexionMenu">
-        <a href="../../controler/MoncompteControler.php" class="linkBlack btn" id="btnConnexion">
-          <div>Connexion</div>
-        </a>
-
-        <a href="#" class="linkBlack btn" id="btnInscription">
-          <div>S'inscrire </div>
-        </a>
-      </div>
-    </div>
-  </header>
+  <?php
+    if (isset($_SESSION['id']))
+    {
+      include_once('../headerlogStand.php');
+    }
+    else {
+      include_once('../headernotlogStand.php');
+    }
+  ?>
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
@@ -42,24 +30,24 @@
       <hr class="sousH2">
 
       <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Toutes les activités</button>
-        <button class="btn" onclick="filterSelection('AS')"> Activités sportives</button>
-        <button class="btn" onclick="filterSelection('VR')"> Réalité virtuelle</button>
-        <button class="btn" onclick="filterSelection('VIP')"> VIP</button>
-        <button class="btn" onclick="filterSelection('food')"> Restauration</button>
+        <button class="btnM active" onclick="filterSelection('all')"> Toutes les activités</button>
+        <button class="btnM" onclick="filterSelection('AS')"> Activités sportives</button>
+        <button class="btnM" onclick="filterSelection('VR')"> Réalité virtuelle</button>
+        <button class="btnM" onclick="filterSelection('VIP')"> VIP</button>
+        <button class="btnM" onclick="filterSelection('food')"> Restauration</button>
       </div>
 
       <div id="conteneurSousMenu">
 
-        <div class="filterDiv AS"> <a href="StandSquash.html" class="linkAct">Squash </a> </div>
-        <div class="filterDiv VR"><a href="StandMatchVR.html" class="linkAct">Match VR </a></div>
-        <div class="filterDiv food"><a href="StandRestaurant.html" class="linkAct">Restaurant </a></div>
-        <div class="filterDiv VR"><a href="StandSpectatorVR.html" class="linkAct">SpectatorVR </a></div>
-        <div class="filterDiv food"><a href="StandFastFood.html" class="linkAct">FastFood </a></div>
-        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php" class="linkAct">DedicasseVIP </a></div>
-        <div class="filterDiv food AS"><a href="StandNutrisensBar.html" class="linkAct">NutrisensBar </a></div>
-        <div class="filterDiv food VIP"><a href="StandCocktail.html" class="linkAct">Cocktail </a></div>
-        <div class="filterDiv AS"><a href="StandLearnTennis.html" class="linkAct">LearnTennis </a></div>
+        <div class="filterDiv AS"> <a href="StandSquash.php" class="linkAct linkBlack">Squash </a> </div>
+        <div class="filterDiv VR"><a href="StandMatchVR.php" class="linkAct linkBlack">Match VR </a></div>
+        <div class="filterDiv food"><a href="StandRestaurant.php" class="linkAct linkBlack">Restaurant </a></div>
+        <div class="filterDiv VR"><a href="StandSpectatorVR.php" class="linkAct linkBlack">SpectatorVR </a></div>
+        <div class="filterDiv food"><a href="StandFastFood.php" class="linkAct linkBlack">FastFood </a></div>
+        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php" class="linkAct linkBlack">DedicasseVIP </a></div>
+        <div class="filterDiv food AS"><a href="StandNutrisensBar.php" class="linkAct linkBlack">NutrisensBar </a></div>
+        <div class="filterDiv food VIP"><a href="StandCocktail.php" class="linkAct linkBlack">Cocktail </a></div>
+        <div class="filterDiv AS"><a href="StandLearnTennis.php" class="linkAct linkBlack">LearnTennis </a></div>
 
       </div>
       <br>
@@ -78,14 +66,13 @@
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-      <li class="marginBottom10"><a href="StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="StandMenu.php" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
       <li class="marginBottom10"><a href="../contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
       <li class="marginBottom10"><a href="../reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
-      <li class="marginBottom10"><a href="../../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
       <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
@@ -132,7 +119,7 @@
 
   // Add active class to the current button (highlight it)
   var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
+  var btns = btnContainer.getElementsByClassName("btnM");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
       var current = document.getElementsByClassName("active");

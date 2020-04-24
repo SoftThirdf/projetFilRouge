@@ -1,16 +1,14 @@
 <?php
-session_start();
-?>
+  session_start();
 
-<?php
-try {
-  $bdd = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'root', 'root');
-}
-catch (Exception $e) {
-  die ("Erreur : " . $e -> getMessage());
-}
+  try {
+    $bdd = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'root', 'root');
+  }
+  catch (Exception $e) {
+    die ("Erreur : " . $e -> getMessage());
+  }
 
-$reponse = $bdd -> query ("SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi FROM rencontre R  INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur  INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match INNER JOIN court C ON C.id_court = R.id_court INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'simple' AND R.libelle_match LIKE '1/8' ORDER BY R.id_Match");
+  $reponse = $bdd -> query ("SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi FROM rencontre R  INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur  INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match INNER JOIN court C ON C.id_court = R.id_court INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'simple' AND R.libelle_match LIKE '1/8' ORDER BY R.id_Match");
 
 ?>
 
@@ -25,15 +23,14 @@ $reponse = $bdd -> query ("SELECT DISTINCT R.id_Match, R.type_match, R.libelle_m
 
 <body>
   <?php
-if (isset($_SESSION['id']))
-{
-  include_once('../view/headerlog.php');
-}
-else {
-  include_once('../view/headernotlog.php');
-}
+    if (isset($_SESSION['id']))
+    {
+      include_once('../view/headerlog.php');
+    }
+    else {
+      include_once('../view/headernotlog.php');
+    }
   ?>
-
 
 <div id="info">
 <h2> Tournoi simple qualificatif - 1/8 </h2>
@@ -94,14 +91,14 @@ while ($donnees = $reponse -> fetch()) {
       <ol class="navigationFooterOl">
         <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-	  <li class="marginBottom10"><a href="stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
+	  <li class="marginBottom10"><a href="stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
       <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
 
       </ol>
       <ol class="navigationFooterOl">
         <li class="marginBottom10"><a href="contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="../controler/MoncompteControler.php" class="linkWhite">Se connecter</a></li>
-      <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
+        <li class="marginBottom10"><a href="reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
+        <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
       </ol>
     </nav>
