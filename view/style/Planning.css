@@ -2,12 +2,14 @@
   width: 80%;
   margin: auto;
   margin-top: 10px;
+
 }
 
 #conteneurplanning {
   width: 60%;
   display: flex;
   text-align: center;
+  margin: auto;
 }
 
 .equipe1 {

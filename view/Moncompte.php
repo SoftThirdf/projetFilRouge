@@ -26,7 +26,7 @@ else {
     <!-- C'est ici que l'on met le corps de la page -->
      <div class="conteneur">
         <div class="roundedImage">
-        <a href="#"><img src="../view/img/Monplanning.jpg" class="lienImage"></a>
+        <a href="../view/MonPlanning.php"><img src="../view/img/Monplanning.jpg" class="lienImage"></a>
         </div>
         <div class="roundedImage">
           <a href="#"><img src="../view/img/Reserver.jpg" class="lienImage"></a>
