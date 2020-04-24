@@ -4,6 +4,11 @@
   margin-top: 2%;
 }
 
+#msgErreur {
+  text-align: center;
+  color: var(--orange-logo);
+}
+
 .labelConnexion {
   color: #424446;
   letter-spacing: 0.1rem;

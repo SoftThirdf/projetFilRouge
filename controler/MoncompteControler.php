@@ -17,6 +17,9 @@
       $_SESSION['nationalite']=$tab[0]['nationalite_joueur'];
 
       include('../view/MonCompte.php');
+    }elseif ($Login == "admin" && $Mdp == "admin") {
+      $_SESSION['admin']=true;
+      header('Location: adminCreerMatchControler.php');
     }else
     {
       $echec = "Echec de la connexion, veuillez réessayer";

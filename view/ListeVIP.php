@@ -12,13 +12,15 @@
 </head>
 <body>
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../view/headerlog.php');
-    }
-    else {
-      include_once('../view/headernotlog.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../view/headerlog.php');
+  }elseif (isset($_SESSION['admin'])) {
+    include_once('../view/headerAdmin.php');
+  }
+  else {
+    include_once('../view/headernotlog.php');
+  }
   ?>
 
   <div id="conteneurPage">

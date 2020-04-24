@@ -1,0 +1,38 @@
+#conteneurBody {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#textSousH2 {
+  font-size: 1.2em;
+}
+
+#conteneurInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#conteneurImg {
+  width: 60%;
+}
+
+#conteneurDescription {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 35%;
+}
+
+#descriptionSquash, #horaireSquash {
+  font-size: 1.2em;
+}
+
+h4 {
+  margin-top: 3%;
+}
+
+#videoHi {
+  width: 100%;
+  height: 100vh;
+}
