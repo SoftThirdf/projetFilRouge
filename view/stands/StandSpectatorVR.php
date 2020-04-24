@@ -7,7 +7,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="../style/index.css">
   <link rel="stylesheet" href="../style/StandSpectatorVR.css">
   <title>StandSpectatorVR</title>
@@ -27,9 +26,9 @@
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
 
-      <h2> SpectatorVR </h2>
-      <hr class="sousH2">
-      <p id="textSousH2"> Que diriez vous d'animer un stade en entier ? </p>
+    <h2> SpectatorVR </h2>
+    <hr class="sousH2">
+    <p id="textSousH2"> Que diriez vous d'animer un stade en entier ? </p>
     <div id="conteneurTextVideo">
       <div class="conteneurInfos">
         <div class="iframeInfos">

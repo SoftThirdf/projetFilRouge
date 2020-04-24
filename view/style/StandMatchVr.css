@@ -1,0 +1,35 @@
+#conteneurBody {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#textSousH2 {
+  font-size: 1.2em;
+}
+
+#conteneurInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#conteneurImg {
+  width: 50%;
+}
+
+#conteneurTextVideo {
+  display: flex;
+  flex-flow: column;
+  width: 45%;
+  align-items: center;
+}
+
+#conteneurTextVideo iframe {
+  width: 100%;
+  height: 40vh;
+}
+
+#conteneurTextVideo p {
+  width: 100%;
+  margin-top: 10%;
+}

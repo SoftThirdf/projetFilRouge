@@ -7,9 +7,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="../style/index.css">
-  <link rel="stylesheet" href="../style/StandMenu.css">
+  <link rel="stylesheet" href="../style/StandMatchVr.css">
   <title>StandMatchVr</title>
 </head>
 
@@ -27,39 +26,32 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-
-    <!-- First Grid: Logo & About -->
-    <div class="w3-row">
-      <div class="w3-half w3-container">
-        <p class="w3-xxlarge w3-text-grey">"Ce jeu est le meilleur jeu de tennis"</p>
-        <h1 class="w3-xxlarge w3-text-grey">Frank Drebin - Gamopat</h1>
-        <h1 class="w3-jumbo">DreamMatchVR</h1>
-      </div>
-      <div class="w3-half w3-container w3-xlarge w3-text-grey">
-        <p class="w3-xlarge w3-text-grey">Il n’est pas toujours possible de se consacrer à sa passion pour le tennis. Que diriez vous de jouer au tennis dans votre salon ?</p>
-        <p>Nous vous proposons une expérience en réalité virtuel ! Il sera possible pour les plus chanceux de repartir avec un exemplaire du jeux !</p>
-
-      </div>
+    <h2>DreamMatchVR</h2>
+    <hr class="sousH2">
+    <div id="textSousH2">
+      <p><q>Ce jeu est le meilleur jeu de tennis</q>, Frank Drebin - Gamopat</p>
+    </div>
+    <div>
+      <p class="">Il n’est pas toujours possible de se consacrer à sa passion pour le tennis. Que diriez vous de jouer au tennis dans votre salon ?</p>
+      <p>Nous vous proposons une expérience en réalité virtuel ! Il sera possible pour les plus chanceux de repartir avec un exemplaire du jeux !</p>
     </div>
 
-    <!-- Second Grid: Resent -->
-    <div class="w3-panel w3-text-grey">
+    <div>
       <h4>
         <center>Trailer de DreamMatchVR:</center>
       </h4>
-    </div>
-    <div class="w3-row">
-      <div class="w3-half w3-container">
-        <img src="../img/PhotoStand/MatchVR.jpg" style="width:100%">
-      </div>
-      <div class="w3-half w3-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TdMU35xSMgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p class="w3-xlarge w3-text-grey">
-          Bimboosoft revient avec leur nouveau jeux vidéo en réalité virtuel ! Après Rollercoaster Dreams sur PlayStation 4, venez essayer DreamMatchVR vous proposant de jouer au tennis en réalité virtuel comme si vous y étiez ! Une expérience
-          immersive et passionnante ! <br>
-          Ouvert de 9h à 18h. Entré libre et gratuite.
-
-        </p>
+      <div id="conteneurInfos">
+        <div id="conteneurImg">
+          <img class="s100" src="../img/PhotoStand/MatchVR.jpg">
+        </div>
+        <div id="conteneurTextVideo">
+          <iframe src="https://www.youtube.com/embed/TdMU35xSMgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>
+            Bimboosoft revient avec leur nouveau jeux vidéo en réalité virtuel ! Après Rollercoaster Dreams sur PlayStation 4, venez essayer DreamMatchVR vous proposant de jouer au tennis en réalité virtuel comme si vous y étiez ! Une expérience
+            immersive et passionnante ! <br>
+            Ouvert de 9h à 18h. Entré libre et gratuite.
+          </p>
+        </div>
       </div>
     </div>
   </div>
