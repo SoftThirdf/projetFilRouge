@@ -17,6 +17,7 @@
   font-weight: bold;
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
 }
 
 .equipe2 {
@@ -24,10 +25,12 @@
   font-weight: bold;
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
 }
 
 .infostournoi {
   margin-top: 0;
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
 }

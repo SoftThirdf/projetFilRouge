@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -19,7 +20,8 @@ if (isset($_SESSION['id']))
 {
   include_once('../view/headerlog.php');
 }
-else {
+else
+{
   include_once('../view/headernotlog.php');
 }
   ?>
@@ -32,6 +34,7 @@ else {
        <hr class="sousH2">
      </div>
 
+
      <div id="info">
        <h3> <?php echo $donnees['date_']; ?> </h3>
        <hr class="sousH3">
@@ -43,7 +46,7 @@ else {
        </div>
 
        <div class="infostournoi">
-         <?php echo "Match n°" . $match['id'] . "<br>"; ?>
+         <?php echo "Match n°" . $donnees['id'] . "<br>"; ?>
          Court :
          <?php echo $donnees['libelle_court'] . "<br>"; ?>
          Heure :
@@ -56,34 +59,6 @@ else {
      </div>
 </div>
 
-
-
-
-     <!-- <div class="informations">
-       <div class="titre"><h2>Mes informations personelles</h2></div>
-       <h3>Prénom: <?php
-       // $nom=$_SESSION['nom'];
-       // $nationalite=$_SESSION['nationalite'];
-       // echo $prenom;?><br></h3>
-       <h3>Nom: <?php //echo $nom;?><br></h3>
-       <h3>Nationalité: <?php //echo $nationalite;
-         //echo"
-          //<img src=../view/img/pays/$nationalite.png alt=\"$nationalite\">";
-       ?><br></h3>
-     </div>
-     <div class="identifiants">
-       <div class="titre"><h2>Mes identifiants</h2>
-       </div>
-       <h3>Login: <?php
-         //$Login=$_SESSION['login'];
-        //echo $Login;
-        ?></h3>
-        <div id="btnInscription" class="btn">
-       <a href="../view/mdp.php" class="linkBlack">Modifier mon mot de passe</a></li>
-     </div>
-   </div>
- </div>
-  </div> -->
 
 </body>
 

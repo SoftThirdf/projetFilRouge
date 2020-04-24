@@ -27,8 +27,8 @@
 <div id="menuvip">
   <nav id="navigationvip">
     <ol id="navigationvipol">
-      <li><a href="../controler/ListeVIPControler.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
-      <li><a href="../view/EchelleVIP.php" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
+      <li><a href="ListeVIP.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
+      <li><a href="EchelleVIP.html" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
     </ol>
   </nav>
 </div>
@@ -74,7 +74,7 @@
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
 	  <li class="marginBottom10"><a href="../view/stands/StandMenu.html" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="../controler/ListeVIPControler.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

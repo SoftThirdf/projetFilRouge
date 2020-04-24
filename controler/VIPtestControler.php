@@ -4,7 +4,6 @@ require ('../model/test.php');
 
 $req = getVIP2();
 
-require ('../view/ListeVIP.php');
-
+require ('../view/VIPtest.php');
 
 ?>
