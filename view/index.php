@@ -15,13 +15,15 @@ session_start();
 
 <body>
   <?php
-    if (isset($_SESSION['id']))
-    {
-      include_once('../view/headerlog.php');
-    }
-    else {
-      include_once('../view/headernotlog.php');
-    }
+  if (isset($_SESSION['id']))
+  {
+    include_once('../view/headerlog.php');
+  }elseif (isset($_SESSION['admin'])) {
+    include_once('../view/headerAdmin.php');
+  }
+  else {
+    include_once('../view/headernotlog.php');
+  }
   ?>
   <div id="conteneurBody">
     <div id="carousel" class="carousel slide marginBotConteneur3" data-ride="carousel" data-interval="10000">

@@ -1,6 +1,7 @@
 <?php
+  session_start();
 
-include_once("../model/DAO.class.php");
+  include_once("../model/DAO.class.php");
 
   if (isset($_POST['type_match']) && isset($_POST['libelle_match']) && isset($_POST['id_court']) && isset($_POST['id_Tournoi'])&& isset($_POST['categorieMatch'])&& isset($_POST['id_joueur1'])&& isset($_POST['id_joueur2']) && isset($_POST['id_erb1']) && isset($_POST['id_erb2']) && isset($_POST['id_arbitre1'])&& isset($_POST['id_arbitre2'])&& isset($_POST['id_arbitre3'])&& isset($_POST['id_arbitre4'])&& isset($_POST['id_arbitre5'])&& isset($_POST['id_arbitre6'])&& isset($_POST['id_arbitre7'])&& isset($_POST['id_arbitre8'])&& isset($_POST['id_arbitre9'])&& isset($_POST['id_arbitre10'])) {
     $idJoueur1 = $_POST['id_joueur1'];
