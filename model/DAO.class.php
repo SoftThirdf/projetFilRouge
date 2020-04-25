@@ -401,31 +401,50 @@
          return $res2;
        }
 
-
-       //Liste VIP
-       function getVIP() {
-         $req = "SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC";
+       //Méthode qui retourne les informations d'un VIP suivant l'id passé en paramètre de la fonction
+       //Elle retourne un tableau associatif avec les informations du VIP
+       function getInfoVIP($idVIP){
+         $req="SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = $idVIP;";
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
 
-       function getMatchSimple2() {
-         $req = $bdd->query('SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC');
-         $res = $req->fetchAll();
-         //$req->closeCursor();
-         return $res;
-       }
-
-
-       //Planning matchs simples
-       function getMatchSimple() {
-         $req = "SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi FROM rencontre R  INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur  INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match INNER JOIN court C ON C.id_court = R.id_court INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'simple' AND R.libelle_match LIKE '1/8' ORDER BY R.id_Match";
+       //Méthode qui permet d'obteneir toutes els informations de tout les VIP
+       //Elle retourne un tableau associatif avec les informations de chaque VIP
+       function getAllVIP(){
+         $req='SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC';
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
        }
 
+       function getVIPDedicaces($nomVIP1, $prenomVIP1, $nomVIP2, $prenomVIP2, $nomVIP3, $prenomVIP3){
+         $req="SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
+         FROM vip V, popularite P
+         WHERE V.id_popularite = P.id_popularite
+         AND V.nom_VIP LIKE \"$nomVIP1\"
+         AND V.prenom_VIP LIKE \"$prenomVIP1\"
+
+         UNION
+         SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
+         FROM vip V, popularite P
+         WHERE V.id_popularite = P.id_popularite
+         AND V.nom_VIP LIKE \"$nomVIP2\"
+         AND V.prenom_VIP LIKE \"$prenomVIP2\"
+
+         UNION
+         SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
+         FROM vip V, popularite P
+         WHERE V.id_popularite = P.id_popularite
+         AND V.nom_VIP LIKE \"$nomVIP3\"
+         AND V.prenom_VIP LIKE \"$prenomVIP3\"";
+
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+
+       }
 
     }
 

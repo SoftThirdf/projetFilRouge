@@ -36,7 +36,7 @@
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
 	  <li class="marginBottom10"><a href="stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

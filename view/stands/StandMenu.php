@@ -47,7 +47,7 @@
         <div class="filterDiv food"><a href="StandRestaurant.php" class="linkAct linkBlack">Restaurant </a></div>
         <div class="filterDiv VR"><a href="StandSpectatorVR.php" class="linkAct linkBlack">SpectatorVR </a></div>
         <div class="filterDiv food"><a href="StandFastFood.php" class="linkAct linkBlack">FastFood </a></div>
-        <div class="filterDiv VIP"><a href="StandDedicaceVIP.php" class="linkAct linkBlack">DedicasseVIP </a></div>
+        <div class="filterDiv VIP"><a href="../../controler/StandDedicaceVIPControler.php" class="linkAct linkBlack">DedicasseVIP </a></div>
         <div class="filterDiv food AS"><a href="StandNutrisensBar.php" class="linkAct linkBlack">NutrisensBar </a></div>
         <div class="filterDiv food VIP"><a href="StandCocktail.php" class="linkAct linkBlack">Cocktail </a></div>
         <div class="filterDiv AS"><a href="StandLearnTennis.php" class="linkAct linkBlack">LearnTennis </a></div>
@@ -73,7 +73,7 @@
       <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
       <li class="marginBottom10"><a href="StandMenu.php" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="../ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../../controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

@@ -9,7 +9,7 @@
         <li> <a href="../view/index.php" class="linkBlackRouge">ACCUEIL</a></li>
           <li><a href="../controler/tournoisSimQuaControler.php" class="linkBlackRouge">TABLEAUX DES TOURNOIS</a></li>
 		  <li><a href="../view/stands/StandMenu.php" class="linkBlackRouge">STANDS DE L'OPEN </a></li>
-          <li><a href="../view/ListeVIP.php" class="linkBlackRouge">VIP</a></li>
+          <li><a href="../controler/listeVIPControler.php" class="linkBlackRouge">VIP</a></li>
       </ol>
     </nav>
     <div id="conteneurConnexionMenu">
