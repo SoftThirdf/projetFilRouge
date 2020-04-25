@@ -69,13 +69,6 @@
   width: 80%;
 }
 
-#actualitevip {
-  justify-content: space-between;
-  text-align: left;
-  margin: auto;
-  width: 80%;
-}
-
 .imgreseaux {
   width: 2.5%;
   margin: 0.3%;
@@ -109,16 +102,4 @@
 .listevip:hover {
   text-decoration: none;
   background-color: #e1e1e1;
-}
-
-/* ======== DYLAN =========== */
-#boxvip {
-  display: flex;
-  margin: auto;
-  border: 1px solid #e1e1e1;
-  width: 100%;
-}
-
-.photodedicasse {
-  width: 20%;
 }
