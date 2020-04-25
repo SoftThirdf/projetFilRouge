@@ -1,42 +1,9 @@
-<?php
-  session_start();
-
-  try {
-    $bdd = new PDO('mysql:host=localhost;port=3308;dbname=testdb;charset=utf8', 'root', '');
-  }
-  catch (Exception $e) {
-    die ("Erreur : " . $e -> getMessage());
-  }
-
-$reponse = $bdd -> query ("SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
-FROM vip V, popularite P
-WHERE V.id_popularite = P.id_popularite
-AND V.nom_VIP LIKE \"François\"
-AND V.prenom_VIP LIKE \"Maxime\"
-
-UNION
-SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
-FROM vip V, popularite P
-WHERE V.id_popularite = P.id_popularite
-AND V.nom_VIP LIKE \"Michel\"
-AND V.prenom_VIP LIKE \"Emeline\"
-
-UNION
-SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
-FROM vip V, popularite P
-WHERE V.id_popularite = P.id_popularite
-AND V.nom_VIP LIKE \"Gökdere\"
-AND V.prenom_VIP LIKE \"Özge\"
-");
-
-?>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../style/index.css">
-  <link rel="stylesheet" href="../style/VIP.css">
-  <link rel="stylesheet" href="../style/StandDedicaceVIP.css">
+  <link rel="stylesheet" href="../view/style/index.css">
+  <link rel="stylesheet" href="../view/style/VIP.css">
+  <link rel="stylesheet" href="../view/style/StandDedicaceVIP.css">
   <title> Dédicaces </title>
 </head>
 
@@ -44,13 +11,13 @@ AND V.prenom_VIP LIKE \"Özge\"
   <?php
   if (isset($_SESSION['id']))
   {
-    include_once('../headerlogStand.php');
+    include_once('../view/header.php');
   }
   elseif (isset($_SESSION['admin'])) {
-    include_once('../headerAdminStand.php');
+    include_once('../view/headerAdmin.php');
   }
   else {
-    include_once('../headernotlogStand.php');
+    include_once('../view/headernotlog.php');
   }
   ?>
 
@@ -63,22 +30,33 @@ AND V.prenom_VIP LIKE \"Özge\"
     <div id="conteneurProfils">
 
       <?php
+        global $tab;
 
-        while ($donnees = $reponse -> fetch()) {
+        if ($tab==null) {
+          echo "<div style=\"height:30vh;\">
+          <h3 style=\"margin-top:5em;\">Désolé il n'y a pas d'informations concernant ces VIPs</h3>
+          </div>";
+        }else{
 
-        $nomPays = strtolower($donnees['nationalite_VIP']);
-        $lienDrap = "../img/pays/$nomPays.png";
+        foreach ($tab as $key => $vip) {
 
-        $id_vip = $donnees['id_VIP'];
-        $nom_vip = $donnees['nom_VIP'];
-        $prenom_vip = $donnees['prenom_VIP'];
-        $lienphoto = "../img/imgVIP/imgProfilVIP/$nom_vip-$prenom_vip.jpg";
+        $nomPays = strtolower($vip['nationalite_VIP']);
+        $lienDrap = "../view/img/pays/$nomPays.png";
+
+        $id_vip = $vip['id_VIP'];
+        $nom_vip = $vip['nom_VIP'];
+        $prenom_vip = $vip['prenom_VIP'];
+        $lienphoto = "$nom_vip-$prenom_vip.jpg";
 
       ?>
 
       <div class="profilVIP">
         <?php
-          echo "<img src=$lienphoto alt=\"vip\" class=\"photoVIP\">";
+        if(file_exists("../view/img/imgVIP/imgProfilVIP/$lienphoto")){
+          echo "<img src=../view/img/imgVIP/imgProfilVIP/$lienphoto alt=\"vip\" class=\"photoVIP\">";
+        }else{
+          echo "<img src=../view/img/imgVIP/imgProfilVIP/none.png alt=\"vip\" class=\"photoVIP\">";
+        }
         ?>
         <h3>
         <?php
@@ -87,24 +65,25 @@ AND V.prenom_VIP LIKE \"Özge\"
         </h3>
         <hr class="sousH3">
 
-        <a href="https://www.instagram.com" target="_blank"><img src="../img/imgVIP/insta.png" class="rs"></a>
-        <a href="https://www.facebook.com" target="_blank"><img src="../img/imgVIP/fb.png" class="rs"></a>
-        <a href="https://twitter.com" target="_blank"><img src="../img/imgVIP/twitter.png" class="rs"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../view/img/imgVIP/insta.png" class="rs"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="../view/img/imgVIP/fb.png" class="rs"></a>
+        <a href="https://twitter.com" target="_blank"><img src="../view/img/imgVIP/twitter.png" class="rs"></a>
 
         <h3>
-          <?php echo $donnees['popularite_VIP']; ?>
+          <?php echo $vip['popularite_VIP']; ?>
         </h3>
         Type de VIP :
-        <?php echo $donnees['type_VIP']; ?> <br>
+        <?php echo $vip['type_VIP']; ?> <br>
 
-        <?php if ($donnees['nb_grands_chelems'] != 0){ echo "Nombre de Grands chelems : ". $donnees['nb_grands_chelems'];} ?> <br>
-        <?php if ($donnees['classement_ATP_simple'] != 0){ echo "Classement ATP Simple : " . $donnees['classement_ATP_simple'];} ?> <br>
-        <?php if ($donnees['classement_ATP_double'] != 0){ echo "Classement ATP Double: " . $donnees['classement_ATP_double'];} ?> <br>
+        <?php if ($vip['nb_grands_chelems'] != 0){ echo "Nombre de Grands chelems : ". $vip['nb_grands_chelems'];} ?> <br>
+        <?php if ($vip['classement_ATP_simple'] != 0){ echo "Classement ATP Simple : " . $vip['classement_ATP_simple'];} ?> <br>
+        <?php if ($vip['classement_ATP_double'] != 0){ echo "Classement ATP Double: " . $vip['classement_ATP_double'];} ?> <br>
       </div>
 
       <?php
-}
-?>
+        }
+      }
+      ?>
     </div>
     <div id="actualitevip">
       <h3>Dédicaces</h3>
@@ -119,19 +98,19 @@ AND V.prenom_VIP LIKE \"Özge\"
 
 <footer>
   <div id="conteneurNavigationFooter">
-    <a href="../../view/index.php" class="s100"><img src="../img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
+    <a href="../../view/index.php" class="s100"><img src="../view/img/logoOpenFooter.png" alt="logoTournoi" id="logoOpenFooter" class="s100"></a>
   </div>
   <nav id="navigationFooter">
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="../index.php" class="linkWhite">Accueil</a></li>
-      <li class="marginBottom10"><a href="../../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
-      <li class="marginBottom10"><a href="StandMenu.php" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="../../controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
+      <li class="marginBottom10"><a href="controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
+      <li class="marginBottom10"><a href="../view/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
+      <li class="marginBottom10"><a href="controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
-      <li class="marginBottom10"><a href="../contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
-      <li class="marginBottom10"><a href="../reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
+      <li class="marginBottom10"><a href="../view/contact.php" class="linkWhite">Infos Pratiques et Contact</a></li>
+      <li class="marginBottom10"><a href="../view/reseaux.php" class="linkWhite">Nos réseaux sociaux</a></li>
       <li class="marginBottom10"><a href="#haut" class="linkWhite">Revenir en haut de la page</a></li>
 
     </ol>
