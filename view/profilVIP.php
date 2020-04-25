@@ -24,7 +24,7 @@
 <div id="menuvip">
   <nav id="navigationvip">
     <ol id="navigationvipol">
-      <li><a href="../view/ListeVIP.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
+      <li><a href="listeVIPControler.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
       <li><a href="../view/EchelleVIP.php" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
     </ol>
   </nav>
@@ -32,7 +32,7 @@
 
 
 <?php
-
+  global $tab;
   if ($tab==null) {
     echo "<div style=\"height:30vh;\">
     <h3 style=\"margin-top:5em;\">Désolé il n'y a pas d'informations concernant ce VIP</h3>
@@ -92,7 +92,7 @@
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="tournoisSimQuaControler.php" class="linkWhite">Tableau du tournoi</a></li>
       <li class="marginBottom10"><a href="../view/stands/StandMenu.php" class="linkWhite">Stand tu tournoi</a></li>
-      <li><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li><a href="../view/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

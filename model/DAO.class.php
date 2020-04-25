@@ -410,6 +410,15 @@
          return $res;
        }
 
+       //Méthode qui permet d'obteneir toutes els informations de tout les VIP
+       //Elle retourne un tableau associatif avec les informations de chaque VIP
+       function getAllVIP(){
+         $req='SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC';
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
     }
 
     ?>
