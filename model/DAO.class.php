@@ -410,6 +410,13 @@
          return $res;
        }
 
+       function getMatchSimple2() {
+         $req = $bdd->query('SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC');
+         $res = $req->fetchAll();
+         //$req->closeCursor();
+         return $res;
+       }
+
 
        //Planning matchs simples
        function getMatchSimple() {

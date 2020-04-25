@@ -52,6 +52,10 @@
   width: 120%;
 }
 
+.remarque {
+  font-size: x-small;
+}
+
 /* ======== Profil =========== */
 .photoVIP {
   float: left;

@@ -1,6 +1,6 @@
 <?php
 
-require ('../model/test.php');
+require ('../model/ListeVIPModel.php');
 
 $req = getVIP2();
 
