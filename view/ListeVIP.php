@@ -24,12 +24,12 @@
   <?php
   if (isset($_SESSION['id']))
   {
-    include_once('../view/headerlog.php');
+    include_once('headerlog.php');
   }elseif (isset($_SESSION['admin'])) {
-    include_once('../view/headerAdmin.php');
+    include_once('headerAdmin.php');
   }
   else {
-    include_once('../view/headernotlog.php');
+    include_once('headernotlog.php');
   }
   ?>
 
@@ -55,7 +55,6 @@ $id_vip = $donnees['id_VIP'];
 $nom_vip = $donnees['nom_VIP'];
 $prenom_vip = $donnees['prenom_VIP'];
 $popularite = $donnees['popularite_VIP'];
-$lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 
 
 ?>
@@ -63,7 +62,7 @@ $lienVIP = "Profils VIP/$id_vip-$nom_vip-$prenom_vip.php";
 <div id="presentlistevip">
 			<div class="listevip">
 				<?php
-						echo "<a href='$lienVIP' class='linkBlackOrange'> $prenom_vip $nom_vip <br> $popularite </a>";
+						echo "<a href=\"../controler/profilVIPControler.php?idVIP=$id_vip\" class='linkBlackOrange'> $prenom_vip $nom_vip <br> $popularite </a>";
 				?>
 		</div>
 </div>

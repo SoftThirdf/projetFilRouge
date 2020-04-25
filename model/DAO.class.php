@@ -401,6 +401,15 @@
          return $res2;
        }
 
+       //Méthode qui retourne les informations d'un VIP suivant l'id passé en paramètre de la fonction
+       //Elle retourne un tableau associatif avec les informations du VIP
+       function getInfoVIP($idVIP){
+         $req="SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double FROM vip V, popularite P WHERE V.id_popularite = P.id_popularite AND V.id_VIP = $idVIP;";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
     }
 
     ?>
