@@ -50,7 +50,7 @@
       Duis
       aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <img src="img/imgVIP/91406379_1048183125557140_7890726603544592384_n.jpg" alt="vip" class="imgEchelle">
+    <img src="img/imgVIP/graphEchelleVIP.jpg" alt="vip" class="imgEchelle">
 
     <!-- <div id="ConteneurEchelle">
   <div class="CategoriesVIP">
