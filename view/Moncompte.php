@@ -31,7 +31,7 @@
           <a href="#"><img src="../view/img/Reserver.jpg" class="lienImage"></a>
         </div>
         <div class="roundedImage">
-          <a href="../view/ListeVIP.php"><img src="../view/img/VIP.jpg" class="lienImage"></a>
+          <a href="../view/listeVIPControler.php"><img src="../view/img/VIP.jpg" class="lienImage"></a>
         </div>
        </div>
   </div>
@@ -47,7 +47,7 @@
       <li class="marginBottom10"><a href="../view/index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
 	  <li class="marginBottom10"><a href="../view/stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="../view/ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">

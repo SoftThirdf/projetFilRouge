@@ -29,7 +29,7 @@
   <div id="menuvip">
     <nav id="navigationvip">
       <ol id="navigationvipol">
-        <li><a href="ListeVIP.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
+        <li><a href="../controler/listeVIPControler.php" class="linkBlackRouge"> VOIR LES VIP </a></li>
         <li><a href="EchelleVIP.php" class="linkBlackRouge"> PRESENTATION DE L'ECHELLE DE POPULARITE </a></li>
       </ol>
     </nav>
@@ -50,7 +50,7 @@
       Duis
       aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <img src="img/imgVIP/91406379_1048183125557140_7890726603544592384_n.jpg" alt="vip" class="imgEchelle">
+    <img src="img/imgVIP/graphEchelleVIP.jpg" alt="vip" class="imgEchelle">
 
     <!-- <div id="ConteneurEchelle">
   <div class="CategoriesVIP">
@@ -113,7 +113,7 @@
       <li class="marginBottom10"><a href="index.php" class="linkWhite">Accueil</a></li>
       <li class="marginBottom10"><a href="../controler/tournoisSimQuaControler.php" class="linkWhite">Tableaux des tournois</a></li>
       <li class="marginBottom10"><a href="stands/StandMenu.php" class="linkWhite">Stands de l'open</a></li>
-      <li class="marginBottom10"><a href="ListeVIP.php" class="linkWhite">VIP</a></li>
+      <li class="marginBottom10"><a href="../controler/listeVIPControler.php" class="linkWhite">VIP</a></li>
 
     </ol>
     <ol class="navigationFooterOl">
