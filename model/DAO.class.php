@@ -446,6 +446,157 @@
 
        }
 
+	   function getPlanS() {
+		   $req = "SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi
+		   FROM rencontre R
+		   INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+		   INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+		   INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+		   INNER JOIN court C ON C.id_court = R.id_court
+		   INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire
+		   INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+		   WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'simple' AND R.libelle_match LIKE '1/8'
+		   ORDER BY R.id_Match";
+
+		   $sth = $this->db->query($req);
+           $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+           return $res;
+	   }
+
+	   function getPlanD() {
+		   $req = "SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi
+		   FROM rencontre R
+		   INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur  AND  R.id_joueur3 = J1.id_joueur AND  R.id_joueur4 = J1.id_joueur
+		   INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+		   INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+		   INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+		   INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+		   INNER JOIN court C ON C.id_court = R.id_court
+		   INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire
+		   INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+		   WHERE J1.id_joueur < J2.id_joueur  AND J3.id_joueur < J4.id_joueur  AND T.categorie_tournoi LIKE 'Double' AND R.libelle_match LIKE '1/8'";
+
+		   $sth = $this->db->query($req);
+           $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+           return $res;
     }
+
+
+		function getMonPlanningDouble($IdJoueur) {
+			$req = "SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi
+					FROM rencontre R
+					INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+					INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+					INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+					INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+					INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+					INNER JOIN court C ON C.id_court = R.id_court
+					INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+					WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur1 = $IdJoueur
+					AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+					UNION
+					SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi
+					FROM rencontre R
+					INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+					INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+					INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+					INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+					INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+					INNER JOIN court C ON C.id_court = R.id_court
+					INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+					WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur2 = $IdJoueur
+					AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+					UNION
+					SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi
+					FROM rencontre R
+					INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+					INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+					INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+					INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+					INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+					INNER JOIN court C ON C.id_court = R.id_court
+					INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+					WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur3 = $IdJoueur
+					AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+					UNION
+					SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi
+					FROM rencontre R
+					INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+					INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+					INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+					INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+					INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+					INNER JOIN court C ON C.id_court = R.id_court
+					INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+					WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur4 = $IdJoueur
+					AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
+
+     $sth = $this->db->query($req);
+     $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+     return $res;
+   }
+
+   function getMonPlanningSimple($IdJoueur) {
+     $req = "SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi
+		   FROM rencontre R
+		   INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+		   INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+		   INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+		   INNER JOIN court C ON C.id_court = R.id_court
+		   INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire
+		   INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+		   WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur1 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+       UNION
+       SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, T.categorie_tournoi, T.type_tournoi
+		   FROM rencontre R
+		   INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+		   INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+		   INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+		   INNER JOIN court C ON C.id_court = R.id_court
+		   INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire
+		   INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+		   WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur2 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
+       $sth = $this->db->query($req);
+       $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+       return $res;
+   }
+
+
+   function getCategorie($IdJoueur) {
+     $req = "SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+        FROM rencontre R
+        INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+        WHERE R.id_joueur1 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+        UNION
+        SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+        FROM rencontre R
+        INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+        WHERE R.id_joueur2 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+        UNION
+        SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+        FROM rencontre R
+        INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+        WHERE R.id_joueur3 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+        UNION
+        SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+        FROM rencontre R
+        INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+        WHERE R.id_joueur4 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
+     $sth = $this->db->query($req);
+     $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+     for ($i = 0; $i < sizeof($res) ; $i++) {
+       if ($res[$i]['categorie_tournoi'] == 'Simple') {
+         $this->getMonPlanningSimple($IdJoueur);
+       }
+       else {
+         $this->getMonPlanningDouble($IdJoueur);
+       }
+
+     }
+     return $res;
+   }
+
+
+	}
 
     ?>

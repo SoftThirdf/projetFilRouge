@@ -1,19 +1,3 @@
-<?php
-session_start();
-?>
-
-<?php
-try {
-  $bdd = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'root', 'root');
-}
-catch (Exception $e) {
-  die ("Erreur : " . $e -> getMessage());
-}
-
-$reponse = $bdd -> query ("SELECT DISTINCT R.id_Match, R.type_match, R.libelle_match, C.id_court,  C.libelle_court, H.id_horaire, H.date_, SD.libelle_horaire, H.heure_debut, J1.id_joueur, J1.nom_joueur AS nom_joueur1, J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.id_joueur, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2,J3.id_joueur, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3, J3.nom_equipe AS nom_equipe3, J4.id_joueur, J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4, J4.nom_equipe AS nom_equipe4, T.categorie_tournoi, T.type_tournoi FROM rencontre R INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur  AND  R.id_joueur3 = J1.id_joueur AND  R.id_joueur4 = J1.id_joueur INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match INNER JOIN court C ON C.id_court = R.id_court INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi WHERE J1.id_joueur < J2.id_joueur  AND J3.id_joueur < J4.id_joueur  AND T.categorie_tournoi LIKE 'Double' AND R.libelle_match LIKE '1/8'");
-
-?>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,37 +27,61 @@ else {
 </div>
 
 <?php
+        global $tab;
 
-while ($donnees = $reponse -> fetch()) {
+        if ($tab==null) {
+          echo "Ok";
+        }else {
 
-?>
+        foreach ($tab as $key => $match) {
+
+        $id_match = $match['id_Match'];
+        $typematch = $match['type_match'];
+		$nomjoueur1 = $match['nom_joueur1'];
+		$prenomjoueur1 = $match['prenom_joueur1'];
+		$nomequipe1 = $match['nom_equipe1'];
+		$libellecourt = $match['libelle_court'];
+		$heuredebut = $match['heure_debut'];
+		$nomjoueur2 = $match['nom_joueur2'];
+		$prenomjoueur2 = $match['prenom_joueur2'];
+		$nomequipe2 = $match['nom_equipe2'];
+		$nomjoueur3 = $match['nom_joueur3'];
+		$prenomjoueur3 = $match['prenom_joueur3'];
+		$nomequipe3 = $match['nom_equipe3'];
+		$nomjoueur4 = $match['nom_joueur4'];
+		$prenomjoueur4 = $match['prenom_joueur4'];
+		$nomequipe4 = $match['nom_equipe4'];
+		
+		
+      ?>
 
 
  <div id="conteneurplanning">
    <div class="equipe1">
-     <?php echo $donnees['nom_joueur1'] . " " . $donnees['prenom_joueur1'] . "<br>"; ?>
-     <?php echo $donnees['nom_joueur2'] . " " . $donnees['prenom_joueur2'] . "<br>"; ?>
-     <?php echo $donnees['nom_equipe2']; ?>
+     <?php echo $match['nom_joueur1'] . " " . $match['prenom_joueur1'] . "<br>"; ?>
+     <?php echo $match['nom_joueur2'] . " " . $match['prenom_joueur2'] . "<br>"; ?>
+     <?php echo $match['nom_equipe2']; ?>
    </div>
 
    <div class="infostournoi">
-     <?php echo "Match n°" . $donnees['id_Match'] . "<br>"; ?>
+     <?php echo "Match n°" . $match['id_Match'] . "<br>"; ?>
      Court :
-     <?php echo $donnees['libelle_court'] . "<br>"; ?>
+     <?php echo $match['libelle_court'] . "<br>"; ?>
      Heure :
-     <?php echo $donnees['heure_debut']; ?>
+     <?php echo $match['heure_debut']; ?>
    </div>
 
    <div class="equipe2">
-     <?php echo $donnees['nom_joueur3'] . " " . $donnees['prenom_joueur3'] . "<br>"; ?>
-     <?php echo $donnees['nom_joueur4'] . " " . $donnees['prenom_joueur4'] . "<br>"; ?>
-     <?php echo $donnees['nom_equipe3']; ?>
+     <?php echo $match['nom_joueur3'] . " " . $match['prenom_joueur3'] . "<br>"; ?>
+     <?php echo $match['nom_joueur4'] . " " . $match['prenom_joueur4'] . "<br>"; ?>
+     <?php echo $match['nom_equipe3']; ?>
    </div>
  </div>
 
 
 <?php
 }
+		}
 ?>
 
 

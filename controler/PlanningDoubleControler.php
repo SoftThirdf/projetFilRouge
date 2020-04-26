@@ -3,8 +3,8 @@
 
   include_once("../model/DAO.class.php");
 
-  $tab = $dao->getPlanS();
+  $tab = $dao->getPlanD();
 
-  include("../view/PlanningSimple.php");
+  include("../view/PlanningDouble.php");
 
 ?>

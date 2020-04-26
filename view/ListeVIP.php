@@ -36,7 +36,6 @@
   <?php
   while ($donnees = $req->fetch()) {
 
-<?php
   global $tab;
   foreach ($tab as $key => $vip){
 
@@ -44,6 +43,7 @@
   $nom_vip = $vip['nom_VIP'];
   $prenom_vip = $vip['prenom_VIP'];
   $popularite = $vip['popularite_VIP'];
+
 ?>
 
 <div id="presentlistevip">
@@ -56,6 +56,7 @@
 
 <?php
   }
+}
 ?>
 </div>
 </div>
