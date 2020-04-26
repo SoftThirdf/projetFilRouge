@@ -439,11 +439,26 @@
          WHERE V.id_popularite = P.id_popularite
          AND V.nom_VIP LIKE \"$nomVIP3\"
          AND V.prenom_VIP LIKE \"$prenomVIP3\"";
-         
+
          $sth = $this->db->query($req);
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
 
+       }
+
+       //Méthode qui permet d'obtenir toutes les réservations d'un joueur
+       //Elle retourne un tableau associatif avec les réservations d'un joueur
+       function getReservations ($idJoueur){
+         $req="SELECT r.id_reservation, c.libelle_court, h.date_, h.heure_debut, h.heure_fin
+                FROM reservation r
+                INNER JOIN joueur j ON j.id_joueur = r.id_Joueur
+                INNER JOIN correspond2 co ON co.id_Reservation = r.id_Reservation
+                INNER JOIN horaire h ON h.id_Horaire = co.id_Horaire
+                INNER JOIN court c ON r.id_Court = c.id_Court
+                WHERE j.id_joueur = $idJoueur";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
        }
 
     }
