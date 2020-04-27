@@ -28,7 +28,6 @@ else
 ?>
 
 
-
 <div id="info">
 <h2> Mon planning </h2>
 <hr class="sousH2">
