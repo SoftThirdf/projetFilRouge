@@ -20,7 +20,7 @@
       </script>";
     }else{
       echo"<script>
-        alert(\"Le court a bien été reservé !\");
+        alert(\"Le court a bien été reservé !\");        
       </script>";
     }
 
