@@ -28,7 +28,7 @@
         <a href="#"><img src="../view/img/Monplanning.jpg" class="lienImage"></a>
         </div>
         <div class="roundedImage">
-          <a href="#"><img src="../view/img/Reserver.jpg" class="lienImage"></a>
+          <a href="reserverCourtControler.php"><img src="../view/img/Reserver.jpg" class="lienImage"></a>
         </div>
         <div class="roundedImage">
           <a href="../view/listeVIPControler.php"><img src="../view/img/VIP.jpg" class="lienImage"></a>
