@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -50,37 +46,29 @@ if ($tab2 == null) {
 
 else {
 
-  foreach ($tab2 as $key => $match2) {
+  foreach ($tab2 as $key => $match) {
 
-    if ($match2['categorie_tournoi'] == "Double") {
+    $typematch = $match['type_match'];
+    $nomjoueur1 = $match['nom_joueur1'];
+    $prenomjoueur1 = $match['prenom_joueur1'];
+    $nomequipe1 = $match['nom_equipe1'];
+    $libellecourt = $match['libelle_court'];
+    $heuredebut = $match['heure_debut'];
+    $nomjoueur2 = $match['nom_joueur2'];
+    $prenomjoueur2 = $match['prenom_joueur2'];
+    $nomequipe2 = $match['nom_equipe2'];
+    $date = $match['date_'];
+    $tournoi = $match['type_tournoi'];
+    $categorie = $match['categorie_tournoi'];
+    $type = $match['type_match'];
+    $libelle = $match['libelle_match'];
 
-      $tab = $dao->getMonPlanningDouble($IdJoueur);
-
-      if ($tab != null) {
-
-      foreach($tab as $key => $match) {
-
-        $id_match = $match['id_Match'];
-        $typematch = $match['type_match'];
-        $nomjoueur1 = $match['nom_joueur1'];
-        $prenomjoueur1 = $match['prenom_joueur1'];
-        $nomequipe1 = $match['nom_equipe1'];
-        $libellecourt = $match['libelle_court'];
-        $heuredebut = $match['heure_debut'];
-        $nomjoueur2 = $match['nom_joueur2'];
-        $prenomjoueur2 = $match['prenom_joueur2'];
-        $nomequipe2 = $match['nom_equipe2'];
-        $nomjoueur3 = $match['nom_joueur3'];
-        $prenomjoueur3 = $match['prenom_joueur3'];
-        $nomequipe3 = $match['nom_equipe3'];
-        $nomjoueur4 = $match['nom_joueur4'];
-        $prenomjoueur4 = $match['prenom_joueur4'];
-        $nomequipe4 = $match['nom_equipe4'];
-        $date = $match['date_'];
-        $tournoi = $match['type_tournoi'];
-        $categorie = $match['categorie_tournoi'];
-        $type = $match['type_match'];
-        $libelle = $match['libelle_match'];
+    if ($categorie == "Double") {
+      $nomjoueur3 = $match['nom_joueur3'];
+      $prenomjoueur3 = $match['prenom_joueur3'];
+      $nomjoueur4 = $match['nom_joueur4'];
+      $prenomjoueur4 = $match['prenom_joueur4'];
+    }
 
 ?>
 
@@ -93,22 +81,30 @@ else {
 
   <div id="conteneurplanning">
     <div class="equipe1">
-      <?php echo $nomjoueur1 . " " . $prenomjoueur1 . "<br>"; ?>
-      <?php echo $nomjoueur2 . " " . $prenomjoueur2 . "<br>"; ?>
-      <?php echo $nomequipe1; ?>
+      <?php
+        echo $nomjoueur1 . " " . $prenomjoueur1 . "<br>";
+        if ($categorie == "Double") {
+          echo $nomjoueur2 . " " . $prenomjoueur2 . "<br>";
+        }
+        echo $nomequipe1; ?>
     </div>
 
     <div class="infostournoi">
       <?php echo $type . " " . $categorie . " " . $tournoi . " - " . $libelle . "<br>"; ?>
-      <?php echo "Match n°" . $id_match . "<br>"; ?>
       Court : <?php echo $libellecourt . "<br>"; ?>
       Heure : <?php echo $heuredebut; ?>
     </div>
 
     <div class="equipe2">
-      <?php echo $nomjoueur3 . " " . $prenomjoueur3 . "<br>"; ?>
-      <?php echo $nomjoueur4 . " " . $prenomjoueur4 . "<br>"; ?>
-      <?php echo $nomequipe3; ?>
+      <?php
+        if ($categorie == "Double") {
+          echo "$nomjoueur3  $prenomjoueur3  <br>
+          $nomjoueur4  $prenomjoueur4 <br>";
+        }else{
+          echo "$nomjoueur2  $prenomjoueur2";
+        }
+        echo $nomequipe2;
+      ?>
     </div>
   </div>
 
@@ -117,63 +113,6 @@ else {
 
 
 <?php
-}
-}
-}
-
-else {
-
-  $tab3 = $dao->getMonPlanningSimple($IdJoueur);
-
-  if ($tab3 != null) {
-
-  foreach($tab3 as $key => $match3) {
-
-    $id_match = $match3['id_Match'];
-    $typematch = $match3['type_match'];
-    $nomjoueur1 = $match3['nom_joueur1'];
-    $prenomjoueur1 = $match3['prenom_joueur1'];
-    $nomequipe1 = $match3['nom_equipe1'];
-    $libellecourt = $match3['libelle_court'];
-    $heuredebut = $match3['heure_debut'];
-    $nomjoueur2 = $match3['nom_joueur2'];
-    $prenomjoueur2 = $match3['prenom_joueur2'];
-    $nomequipe2 = $match3['nom_equipe2'];
-    $date = $match3['date_'];
-    $tournoi = $match3['type_tournoi'];
-    $categorie = $match3['categorie_tournoi'];
-    $type = $match3['type_match'];
-    $libelle = $match3['libelle_match'];
-
-?>
-
-  <div id="info">
-    <h3> <?php echo $date ?> </h3>
-    <hr class="sousH3">
-  </div>
-
-  <div id="conteneurplanning">
-    <div class="equipe1">
-      <?php echo $nomjoueur1 . " " . $prenomjoueur1 . " " . $nomequipe1; ?>
-    </div>
-
-    <div class="infostournoi">
-      <?php echo $type . " " . $categorie . " " . $tournoi . " - " . $libelle . "<br>"; ?>
-      <?php echo "Match n°" . $id_match . "<br>"; ?>
-      Court : <?php echo $libellecourt . "<br>"; ?>
-      Heure : <?php echo $heuredebut; ?>
-    </div>
-
-    <div class="equipe2">
-      <?php echo $nomjoueur2 . " " . $prenomjoueur2 . " " . $nomequipe2; ?>
-    </div>
-  </div>
-
-<?php
-}
-}
-}
-
 }
 }
 ?>
