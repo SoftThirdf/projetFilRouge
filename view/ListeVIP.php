@@ -5,7 +5,6 @@
   <link rel="stylesheet" href="../view/style/VIP.css">
   <title> VIP </title>
 </head>
-
 <body>
   <?php
   if (isset($_SESSION['id']))
@@ -31,10 +30,10 @@
   </nav>
 </div>
 
+
 <div id="conteneurDivVIP">
 
-
-<?php
+  <?php
   global $tab;
   foreach ($tab as $key => $vip){
 
@@ -42,6 +41,7 @@
   $nom_vip = $vip['nom_VIP'];
   $prenom_vip = $vip['prenom_VIP'];
   $popularite = $vip['popularite_VIP'];
+
 ?>
 
 <div id="presentlistevip">
@@ -56,7 +56,6 @@
   }
 ?>
 </div>
-
 </div>
 </body>
 
@@ -83,3 +82,4 @@
 
 
 </footer>
+</html>

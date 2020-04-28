@@ -2,30 +2,36 @@
   width: 80%;
   margin: auto;
   margin-top: 10px;
+
 }
 
 #conteneurplanning {
   width: 60%;
   display: flex;
   text-align: center;
+  margin: auto;
 }
 
 .equipe1 {
   margin-top: 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
+  align-items: center;
 }
 
 .equipe2 {
   margin-top: 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
 }
 
 .infostournoi {
   margin-top: 0;
   width: 40%;
   border: 1px solid #e1e1e1;
+  margin-top: 1px;
 }
