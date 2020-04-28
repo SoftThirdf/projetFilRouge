@@ -74,6 +74,10 @@
                   $tabScorePrev = $tabScore;
                 }
 
+                if (isset($tabScore)) {
+                  unset($tabScore);
+                }
+
                 echo "<tr class=\"equipe\">";
                 // On créé un tableau de score pour chaque équipe
                 $tabScore;

@@ -55,6 +55,7 @@
           </div>";
         }else{
           foreach ($tabFinal as $phase => $matchs) {
+
             echo"<h3 class=\"h3Tournois\">$phase</h3>
             <hr class=\"sousH3\">
             <div class=\"conteneurRencontres\">";
@@ -73,6 +74,10 @@
                   $next = next($equipes);
                 }elseif($nbEquipe == 2){
                   $tabScorePrev = $tabScore;
+                }
+
+                if (isset($tabScore)) {
+                  unset($tabScore);
                 }
 
                 echo "<tr class=\"equipe\">";

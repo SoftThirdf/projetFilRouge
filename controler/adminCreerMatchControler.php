@@ -3,7 +3,10 @@
 
   include_once("../model/DAO.class.php");
 
-  if (isset($_POST['type_match']) && isset($_POST['libelle_match']) && isset($_POST['id_court']) && isset($_POST['id_Tournoi'])&& isset($_POST['categorieMatch'])&& isset($_POST['id_joueur1'])&& isset($_POST['id_joueur2']) && isset($_POST['id_erb1']) && isset($_POST['id_erb2']) && isset($_POST['id_arbitre1'])&& isset($_POST['id_arbitre2'])&& isset($_POST['id_arbitre3'])&& isset($_POST['id_arbitre4'])&& isset($_POST['id_arbitre5'])&& isset($_POST['id_arbitre6'])&& isset($_POST['id_arbitre7'])&& isset($_POST['id_arbitre8'])&& isset($_POST['id_arbitre9'])&& isset($_POST['id_arbitre10'])) {
+  if (isset($_POST['type_match']) && isset($_POST['libelle_match']) && isset($_POST['id_court']) && isset($_POST['id_Tournoi'])&& isset($_POST['categorieMatch'])&& isset($_POST['id_joueur1'])&& isset($_POST['id_joueur2']) &&
+  isset($_POST['id_erb1']) && isset($_POST['id_erb2']) && isset($_POST['id_arbitre1'])&& isset($_POST['id_arbitre2'])&& isset($_POST['id_arbitre3'])&& isset($_POST['id_arbitre4'])&&
+  isset($_POST['id_arbitre5'])&& isset($_POST['id_arbitre6'])&& isset($_POST['id_arbitre7'])&& isset($_POST['id_arbitre8'])&& isset($_POST['id_arbitre9'])&& isset($_POST['id_arbitre10']) &&
+  isset($_POST['date']) && isset($_POST['horaire'])) {
     $idJoueur1 = $_POST['id_joueur1'];
     $idJoueur2 = $_POST['id_joueur2'];
 
@@ -24,14 +27,16 @@
     $idArbitre8 = $_POST['id_arbitre8'];
     $idArbitre9 = $_POST['id_arbitre9'];
     $idArbitre10 = $_POST['id_arbitre10'];
+    $date = $_POST['date'];
+    $horaire = $_POST['horaire'];
 
 
     if ($categorieMatch =="simple") {
-      $reponseDaoInsert = $dao->insertRencontre($typeMatch, "null", $libelle_match, $idCourt, $idTournoi, $idJoueur1, $idJoueur2, "null", "null", $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch);
+      $reponseDaoInsert = $dao->insertRencontre($typeMatch, "null", $libelle_match, $idCourt, $idTournoi, $idJoueur1, $idJoueur2, "null", "null", $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch, $date, $horaire);
     }elseif ($categorieMatch =="double" && isset($_POST['id_joueur3']) && isset($_POST['id_joueur4'])){
       $idJoueur3 = $_POST['id_joueur3'];
       $idJoueur4 = $_POST['id_joueur4'];
-      $reponseDaoInsert = $dao->insertRencontre($typeMatch, "null", $libelle_match, $idCourt, $idTournoi, $idJoueur1, $idJoueur2, $idJoueur3, $idJoueur4, $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch);
+      $reponseDaoInsert = $dao->insertRencontre($typeMatch, "null", $libelle_match, $idCourt, $idTournoi, $idJoueur1, $idJoueur2, $idJoueur3, $idJoueur4, $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch, $date, $horaire);
     }
 
     if ($reponseDaoInsert) {
