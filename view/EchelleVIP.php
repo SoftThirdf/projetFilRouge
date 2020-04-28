@@ -40,8 +40,8 @@
     <div id="PresentationCategories">
       <h2> Présentation de l'échelle de popularité des VIP </h2>
       <hr class="sousH2">
-      <p>Vous retrouverez ici l’échelle des VIP et l’importance (relative*) de chaque catégorique !
-        Vous pourrez ainsi facilement repérer les stars ou futures stars du tennis et ainsi plus facilement venir à leur rencontre et d’éviter les hasbeens de l’évènement ! </p>
+      <p>Vous retrouverez ici l’échelle des VIP et l’importance (relative*) de chaque catégorie !
+        Vous pourrez ainsi facilement repérer les stars ou futures stars du tennis pour finalement venir à leur rencontre et d’éviter les hasbeens de l’évènement ! </p>
     </div>
 
     <h2> Les différentes catégories de VIP </h2>
