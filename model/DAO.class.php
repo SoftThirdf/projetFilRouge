@@ -359,7 +359,7 @@
          return $res2;
        }
 
-       //Méthode qui met à jour et calcule le gagnt d'un match
+       //Méthode qui met à jour et calcule le gagant d'un match
        //Elle retourne un boolean pour savoir si la mise à jour a bien été faite
        function termineMatch($id_match){
          $req = "SELECT b.num_set,j.nom_equipe, SUM(b.nb_jeu) as 'nb_jeu'
@@ -411,7 +411,7 @@
          return $res;
        }
 
-       //Méthode qui permet d'obteneir toutes els informations de tout les VIP
+       //Méthode qui permet d'obtenir toutes les informations de tout les VIP
        //Elle retourne un tableau associatif avec les informations de chaque VIP
        function getAllVIP(){
          $req='SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC';
@@ -420,6 +420,8 @@
          return $res;
        }
 
+       //Méthode qui permet d'obtenir les informations des vip passés en paramètres
+       //Elle retourne un tableau associatif de vip
        function getVIPDedicaces($nomVIP1, $prenomVIP1, $nomVIP2, $prenomVIP2, $nomVIP3, $prenomVIP3){
          $req="SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
          FROM vip V, popularite P
@@ -462,6 +464,8 @@
          return $res;
        }
 
+       //Méthode qui permet d'obtenir tous les courts non utilisés lors des horaires renseignés
+       //Elle retourne un tableau associatif avec les courts disponibles
        function getCourtsDispo($date, $heure_debut,$heure_fin){
          $req="SELECT c.id_Court, c.libelle_court
                 FROM court c
@@ -487,6 +491,9 @@
          return $res;
        }
 
+
+       //Méthode qui insère une réservation faite par un joueur et vérifie que le joueurs peut effectuer cette réservation
+       //Elle retourne un boolean
        function insertReservation($idJoueur, $date, $heure_debut, $heure_fin, $court){
          $reqVerifDispo = "SELECT h.date_, h.heure_debut
           FROM horaire h
