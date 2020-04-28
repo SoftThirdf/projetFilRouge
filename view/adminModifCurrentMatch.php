@@ -195,7 +195,7 @@
           }
           echo "<input type=\"button\" value=\"Ajouter un jeu à $j1\" onclick=\"addJeu(this,$idj1,$numMatch)\">";
           echo "<input type=\"button\" value=\"Ajouter un jeu à $j2\" onclick=\"addJeu(this,$idj2,$numMatch)\">";
-          echo "<input class=\"btnSet\" type=\"button\" value=\"Ajouter un Set\" onclick=>";
+          echo "<input class=\"btnSet\" type=\"button\" value=\"Ajouter un Set\" onclick=\"addSet(this,$numMatch)\"";
           echo "<input class=\"btnSet\" type=\"button\" value=\"Terminer le match\" onclick=\"termineMatch(this,$numMatch)\">";
         }
       }

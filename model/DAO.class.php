@@ -151,7 +151,7 @@
 
        //Méthode qui insère une rencontre dans la base de donnée
        //Elle retourne un boolean qui représente si l'insertion a été effectuée ou non
-       function insertRencontre($typeMatch,$nomGagnant, $libelle_match, $idCourt, $id_Tournoi, $idJoueur1, $idJoueur2, $idJoueur3, $idJoueur4, $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch){
+       function insertRencontre($typeMatch,$nomGagnant, $libelle_match, $idCourt, $id_Tournoi, $idJoueur1, $idJoueur2, $idJoueur3, $idJoueur4, $idErb1, $idErb2, $idArbitre1,$idArbitre2,$idArbitre3,$idArbitre4,$idArbitre5,$idArbitre6,$idArbitre7,$idArbitre8,$idArbitre9,$idArbitre10,$categorieMatch, $date, $horaire){
          $req = $this->db->prepare("INSERT INTO RENCONTRE(type_match,nom_equipe_gagnant,libelle_match,id_Court,id_Tournoi,id_joueur1,id_joueur2,id_joueur3,id_joueur4,id_equipe_ramasseur1,id_equipe_ramasseur2,id_arbitre1,id_arbitre2,id_arbitre3,id_arbitre4,id_arbitre5,id_arbitre6,id_arbitre7,id_arbitre8,id_arbitre9,id_arbitre10)
          VALUES (:type_match,:nomGagnant,:libelle_match,:idCourt,:id_Tournoi,:idJoueur1,:idJoueur2,:idJoueur3,:idJoueur4,:idErb1,:idErb2,:idArbitre1,:idArbitre2,:idArbitre3,:idArbitre4,:idArbitre5,:idArbitre6,:idArbitre7,:idArbitre8,:idArbitre9,:idArbitre10)");
 
@@ -186,7 +186,77 @@
 
          $res=$req->execute();
 
-         return $res;
+         // Avoir l'id du match inséré
+
+         if ($categorieMatch=="simple") {
+           $reqIdMatch = "SELECT r.id_Match
+           FROM rencontre r
+           WHERE r.libelle_match like \"$libelle_match\"
+           AND r.type_match like \"$typeMatch\"
+           AND r.id_joueur1 = $idJoueur1
+           AND r.id_joueur2 = $idJoueur2
+           AND r.id_joueur3 IS NULL
+           AND r.id_joueur4 IS NULL
+           AND r.id_Court = $idCourt
+           AND r.id_Tournoi = $id_Tournoi";
+           $sth = $this->db->query($reqIdMatch);
+           $resIdMatch = $sth->fetchAll(PDO::FETCH_ASSOC);
+           $idMatch = $resIdMatch[0]['id_Match'];
+         }else{
+           $reqIdMatch = "SELECT r.id_Match
+           FROM rencontre r
+           WHERE r.libelle_match like \"$libelle_match\"
+           AND r.type_match like \"$typeMatch\"
+           AND r.id_joueur1 = $idJoueur1
+           AND r.id_joueur2 = $idJoueur2
+           AND r.id_joueur3 = $idJoueur3
+           AND r.id_joueur4 = $idJoueur4
+           AND r.id_Court = $idCourt
+           AND r.id_Tournoi = $id_Tournoi";
+           $sth = $this->db->query($reqIdMatch);
+           $resIdMatch = $sth->fetchAll(PDO::FETCH_ASSOC);
+           $idMatch = $resIdMatch[0]['id_Match'];
+         }
+
+         // insérer dans horaire
+
+         if ($horaire == "Matin") {
+           $hd ='11:30:00';
+           $hf = null;
+         }elseif($horaire == "Midi"){
+           $hd ='14:00:00';
+           $hf = null;
+         }elseif($horaire == "Soirée"){
+           $hd ='16:00:00';
+           $hf = null;
+         }
+
+         $reqInsertHoraire = $this->db->prepare("INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES (:heure_debut,:dateR,:heure_fin)");
+         $reqInsertHoraire->bindValue(':heure_debut',$hd, PDO::PARAM_STR);
+         $reqInsertHoraire->bindValue(':dateR',$date, PDO::PARAM_STR);
+         $reqInsertHoraire->bindValue(':heure_fin',$hf, PDO::PARAM_NULL);
+         $resInsertHoraire=$reqInsertHoraire->execute();
+
+         // insérer dans se_deroule2
+
+         $reqIdHoraire = "SELECT h.id_Horaire
+          FROM horaire h
+          WHERE h.heure_debut = \"$hd\"
+          AND h.heure_fin IS NULL
+          AND h.date_ = \"$date\"
+          ORDER BY h.id_Horaire DESC
+          LIMIT 1";
+          $sth = $this->db->query($reqIdHoraire);
+          $resIdHoraire = $sth->fetchAll(PDO::FETCH_ASSOC);
+          $idHoraire = $resIdHoraire[0]['id_Horaire'];
+
+          $reqInsertSeDeroule = $this->db->prepare("INSERT INTO SE_DEROULE2(id_Match,id_Horaire,libelle_horaire) VALUES(:idMatch,:idHoraire,:libelle_horaire);");
+          $reqInsertSeDeroule->bindValue(':idMatch',$idMatch, PDO::PARAM_INT);
+          $reqInsertSeDeroule->bindValue(':idHoraire',$idHoraire, PDO::PARAM_INT);
+          $reqInsertSeDeroule->bindValue(':libelle_horaire',$horaire, PDO::PARAM_STR);
+          $resInsertSeDeroule=$reqInsertSeDeroule->execute();
+
+         return $resInsertSeDeroule;
        }
 
        //Méthode qui insère un arbitre dans la base de donnée

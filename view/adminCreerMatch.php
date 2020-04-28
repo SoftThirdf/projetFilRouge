@@ -293,6 +293,20 @@
            ?>
         </div>
 
+        <div class="conteneurForm">
+          <label for="date">Date du match</label>
+          <input type="date" name="date" min="2020-06-13" max="2020-06-20" required>
+        </div>
+
+        <div class="conteneurForm">
+          <label for="horaire">Choisissez votre horaire</label>
+          <select class="" name="horaire" required>
+            <option value="Matin">Matin</option>
+            <option value="Midi">Midi</option>
+            <option value="Soirée">Soirée</option>
+          </select>
+        </div>
+
         <input type="submit" value="Enregistrer">
 
       </form>
