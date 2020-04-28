@@ -54,12 +54,9 @@
 
       </div>
       <br>
-      <!-- <div id="conteneurVideo">
-        <iframe src="https://www.youtube.com/embed/3FUTHoqXvgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div> -->
-      <div id="conteneurPlan">
-        <img src="../img/PhotoStand/Plan.pdf" alt="Plan des stands" id="PlanStands">
-      </div>
+
+        <img src="../img/PhotoStand/Plan.png" alt="Plan des stands" class="PlanStands">
+
     </div>
   </div>
 </body>
