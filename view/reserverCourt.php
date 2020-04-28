@@ -4,10 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../view/style/index.css">
   <link rel="stylesheet" href="../view/style/reserverCourt.css">
+  <link rel="stylesheet" href="../view/style/admin.css">
 
   <title> Profil VIP </title>
+
+  <script type="text/javascript">
+  function majCourt(e) {
+    $.ajax({
+      url: "reserverCourtControler.php",
+      type: "POST",
+      data: 'heure_debutR=' + $("#hd").val() + '&heure_finR=' + e.value + '&dateR=' + $("#date").val(),
+      dataType: "json",
+
+      success: function(data) {
+        $("#courts").find('option').remove();
+        for (var i = 0; i < data.length; i++) {
+          var option = document.createElement("option");
+          var x = document.getElementById("courts");
+          option.text = data[i]['libelle_court'];
+          option.value = data[i]['id_Court'];
+          x.add(option);
+        }
+      },
+
+      error: function(resultat, statut, erreur) {
+        console.log(resultat);
+        console.log(statut);
+        console.log(erreur);
+        alert("une erreur est survenue !");
+      }
+    });
+  };
+  </script>
 </head>
 
 <body>
@@ -55,15 +86,14 @@
       <form  action="reserverCourtControler.php" method="post">
 
         <label for="date">Date de la réservation :</label>
-        <input type="date" name="date">
+        <input id="date" type="date" name="date" min="2020-06-13" max="2020-06-20" required>
         <label for="date">Heure de début :</label>
-        <input type="time" name="heure_debut" value="">
+        <input id="hd" type="time" name="heure_debut" value="" required>
         <label for="date">Heure de fin :</label>
-        <input type="time" name="heure_fin" value="">
+        <input type="time" name="heure_fin" value="" onchange="majCourt(this)" required >
 
         <label for="court">Court :</label>
-        <select class="" name="">
-          <option value=""></option>
+        <select id="courts" class="" name="court" required>
         </select>
 
         <input type="submit" name="reserver" value="Réserver">
