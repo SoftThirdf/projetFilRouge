@@ -35,8 +35,9 @@
     //Méthode qui renvoies les informlations lors d'un tournoi et d'une catégorie donnée en paramètre
     //Elle retourne un tableau associatif avec les noms et prénoms des joueurs ainsi que les sets mis ordonné par les numéro de matchs
     function getInfoTypeMatchTournoiSimple($typeTournoi) {
-      $req = "SELECT R.id_Match, J.id_joueur, R.libelle_match, J.Nom_joueur, J.Prenom_joueur, J.Nationalite_joueur, B.Nb_jeu FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi'
-      AND T.categorie_tournoi like 'Simple' ORDER BY R.id_Match, J.id_joueur";
+      $req = "SELECT R.id_Match, J.id_joueur, R.libelle_match, J.Nom_joueur, J.Prenom_joueur, J.Nationalite_joueur, B.Nb_jeu
+        FROM balle_set B INNER JOIN rencontre R ON B.id_match = R.id_Match INNER JOIN joueur J ON B.id_joueur = J.id_joueur INNER JOIN tournoi T ON R.id_Tournoi = T.id_Tournoi WHERE T.type_tournoi like '$typeTournoi'
+        AND T.categorie_tournoi like 'Simple' ORDER BY R.id_Match, J.id_joueur";
       $sth = $this->db->query($req);
       $res = $sth->fetchAll(PDO::FETCH_ASSOC);
       return $res;
@@ -358,7 +359,7 @@
          return $res2;
        }
 
-       //Méthode qui met à jour et calcule le gagnt d'un match
+       //Méthode qui met à jour et calcule le gagant d'un match
        //Elle retourne un boolean pour savoir si la mise à jour a bien été faite
        function termineMatch($id_match){
          $req = "SELECT b.num_set,j.nom_equipe, SUM(b.nb_jeu) as 'nb_jeu'
@@ -410,7 +411,7 @@
          return $res;
        }
 
-       //Méthode qui permet d'obteneir toutes els informations de tout les VIP
+       //Méthode qui permet d'obtenir toutes les informations de tout les VIP
        //Elle retourne un tableau associatif avec les informations de chaque VIP
        function getAllVIP(){
          $req='SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP FROM vip V, popularite P WHERE V.id_Popularite = P.id_Popularite ORDER BY P.id_popularite DESC';
@@ -419,7 +420,8 @@
          return $res;
        }
 
-
+       //Méthode qui permet d'obtenir les informations des vip passés en paramètres
+       //Elle retourne un tableau associatif de vip
        function getVIPDedicaces($nomVIP1, $prenomVIP1, $nomVIP2, $prenomVIP2, $nomVIP3, $prenomVIP3){
          $req="SELECT V.id_VIP, V.nom_VIP, V.prenom_VIP, P.popularite_VIP, V.type_VIP, V.nationalite_VIP, V.nb_grands_chelems, V.classement_ATP_simple, V.classement_ATP_double
          FROM vip V, popularite P
@@ -445,6 +447,128 @@
          $res = $sth->fetchAll(PDO::FETCH_ASSOC);
          return $res;
 
+       }
+
+       //Méthode qui permet d'obtenir toutes les réservations d'un joueur
+       //Elle retourne un tableau associatif avec les réservations d'un joueur
+       function getReservations ($idJoueur){
+         $req="SELECT r.id_reservation, c.libelle_court, h.date_, h.heure_debut, h.heure_fin
+                FROM reservation r
+                INNER JOIN joueur j ON j.id_joueur = r.id_Joueur
+                INNER JOIN correspond2 co ON co.id_Reservation = r.id_Reservation
+                INNER JOIN horaire h ON h.id_Horaire = co.id_Horaire
+                INNER JOIN court c ON r.id_Court = c.id_Court
+                WHERE j.id_joueur = $idJoueur";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+       //Méthode qui permet d'obtenir tous les courts non utilisés lors des horaires renseignés
+       //Elle retourne un tableau associatif avec les courts disponibles
+       function getCourtsDispo($date, $heure_debut,$heure_fin){
+         $req="SELECT c.id_Court, c.libelle_court
+                FROM court c
+                WHERE c.id_Court NOT IN (
+                  SELECT r.id_Court
+                  FROM reservation r
+                  INNER JOIN correspond2 co ON co.id_Reservation = r.id_Reservation
+                  INNER JOIN horaire h ON h.id_Horaire = co.id_Horaire
+                  WHERE date_ = \"$date\"
+                  AND heure_debut >= \"$heure_debut\"
+                	AND heure_fin <= \"$heure_fin\")
+                AND c.id_Court NOT IN (
+                  SELECT re.id_Court
+                  FROM rencontre re
+                  INNER JOIN se_deroule2 se ON se.id_Match = re.id_Match
+                  INNER JOIN horaire h ON h.id_Horaire = se.id_Horaire
+                  WHERE date_ = \"$date\"
+                  AND heure_debut >= \"$heure_debut\"
+                  AND heure_fin <= \"$heure_fin\")
+                ";
+         $sth = $this->db->query($req);
+         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+         return $res;
+       }
+
+
+       //Méthode qui insère une réservation faite par un joueur et vérifie que le joueurs peut effectuer cette réservation
+       //Elle retourne un boolean
+       function insertReservation($idJoueur, $date, $heure_debut, $heure_fin, $court){
+         $reqVerifDispo = "SELECT h.date_, h.heure_debut
+          FROM horaire h
+          INNER JOIN se_deroule2 se ON se.id_Horaire = h.id_Horaire
+          INNER JOIN rencontre r ON r.id_Match = se.id_Match
+          WHERE r.id_joueur1 = $idJoueur
+          OR r.id_joueur2 = $idJoueur
+          OR r.id_joueur3 = $idJoueur
+          OR r.id_joueur4 = $idJoueur
+
+          UNION
+
+          SELECT h.date_, h.heure_debut
+          FROM horaire h
+          INNER JOIN correspond2 c ON c.id_Horaire = h.id_Horaire
+          INNER JOIN reservation re ON re.id_Reservation = c.id_Reservation
+          WHERE re.id_Joueur = $idJoueur";
+
+          $sth = $this->db->query($reqVerifDispo);
+          $resVerifDispo = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+          $possible = true;
+          foreach ($resVerifDispo as $key => $dispo) {
+            if ($dispo['date_'] == $date && $dispo['heure_debut']==($heure_debut.":00")) {
+              $possible = false;
+            }
+          }
+
+          if ($possible) {
+
+         $req = $this->db->prepare("INSERT INTO RESERVATION (id_Court, id_joueur) VALUES (:court, :id_joueur)");
+
+         $req->bindValue(':id_joueur',$idJoueur, PDO::PARAM_INT);
+         $req->bindValue(':court',$court, PDO::PARAM_INT);
+         $res = $req->execute();
+
+           if($res){
+             $req2 = $this->db->prepare("INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES (:heure_debut,:dateR,:heure_fin)");
+             $req2->bindValue(':dateR',$date, PDO::PARAM_STR);
+             $req2->bindValue(':heure_debut',$heure_debut, PDO::PARAM_STR);
+             $req2->bindValue(':heure_fin',$heure_fin, PDO::PARAM_STR);
+             $res2 = $req2->execute();
+
+             if($res2){
+
+               $reqIDHoraire = "SELECT h.id_Horaire FROM horaire h WHERE h.heure_debut = \"$heure_debut\" AND h.date_ = \"$date\" AND h.heure_fin = \"$heure_fin\" ORDER BY h.id_Horaire DESC LIMIT 1";
+               $sth = $this->db->query($reqIDHoraire);
+               $reqIDHoraire = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+               $reqIDReserv = "SELECT r.id_Reservation FROM reservation r WHERE r.id_Court=$court AND r.id_Joueur = $idJoueur ORDER BY r.id_Reservation DESC LIMIT 1";
+               $sth = $this->db->query($reqIDReserv);
+               $resIDReserv = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+               $idHoraire = $reqIDHoraire[0]['id_Horaire'];
+               $idReserv = $resIDReserv[0]['id_Reservation'];
+
+               if ($idReserv >= 0 && $idHoraire>=0) {
+                 $req3 = $this->db->prepare("INSERT INTO CORRESPOND2(id_Reservation, id_Horaire) VALUES (:id_Reservation, :id_Horaire)");
+                 $req3->bindValue(':id_Reservation',$idReserv, PDO::PARAM_INT);
+                 $req3->bindValue(':id_Horaire',$idHoraire, PDO::PARAM_INT);
+                 $res3 = $req3->execute();
+                 return $res3;
+               }else{
+                 return null;
+               }
+
+             }else{
+               return null;
+             }
+           }else{
+             return null;
+           }
+         }else{
+           return null;
+         }
        }
 
    //Méthode qui permet d'obtenir tout les matchs Double d'un joueurs passé en paramètre
