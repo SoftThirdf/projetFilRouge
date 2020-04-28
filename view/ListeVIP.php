@@ -34,8 +34,6 @@
 <div id="conteneurDivVIP">
 
   <?php
-  while ($donnees = $req->fetch()) {
-
   global $tab;
   foreach ($tab as $key => $vip){
 
@@ -56,7 +54,6 @@
 
 <?php
   }
-}
 ?>
 </div>
 </div>
