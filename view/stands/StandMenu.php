@@ -55,7 +55,7 @@
       </div>
       <br>
 
-        <img src="../img/PhotoStand/Plan.png" alt="Plan des stands" class="PlanStands">
+        <img src="../img/PhotoStand/Plan.png" alt="Plan des stands" class="s100">
 
     </div>
   </div>
