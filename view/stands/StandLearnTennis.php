@@ -29,7 +29,7 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <h2><b>Vous adorez le tennins mais vous ne savez pas jouer ? Venez apprendre avec l'un de nos equipementier !</b></h2>
+    <h2><b>Vous adorez le tennis mais vous ne savez pas jouer ? Venez apprendre avec l'un de nos equipementier !</b></h2>
     <hr class="sousH2">
     <!-- First Photo Grid -->
     <div class="w3-row-padding">
@@ -38,7 +38,7 @@
         <div class="w3-container w3-white">
           <p><b>Apprenez à engager !</b></p>
           <p>Pour bien commencer une partie, savoir servir est essentiel ! <br>
-            Horaire : 10h-17h <br>
+            Horaires : 10h-17h <br>
             Fourchette de prix : €€ <br>
             Niveau : Débutant/Intermédiaire</p>
         </div>
@@ -49,7 +49,7 @@
         <div class="w3-container w3-white">
           <p><b>Stand DUNLOP</b></p>
           <p>Venez sur le stand de la marque Dunlop pour trouver la raquette qu'il vous faut ! Prix préférentiel avec possibilité d'essayer la ou les raquettes ! <br>
-            Horaire : 10h-12h puis 14h-17h <br>
+            Horaires : 10h-12h puis 14h-17h <br>
             Fourchette de prix : Gratuit
         </div>
       </div>
@@ -57,8 +57,8 @@
         <img src="../img/PhotoStand/Déplacement.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Apprenez à vous déplacer !</b></p>
-          <p> Savoir se déplacer et positionner est primordial pour bien anticiperer son adversaire ! <br>
-            Horaire : 9h-12h <br>
+          <p>Savoir se déplacer et se positionner est primordial pour bien anticiperer son adversaire ! <br>
+            Horaires : 9h-12h <br>
             Fourchette de prix : Gratuit <br>
             Niveau : Débutant/Intermédiaire
         </div>
@@ -70,8 +70,8 @@
         <img src="../img/PhotoStand/Renvoie.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Renvoie la balle si tu peux !</b></p>
-          <p>Un petit challenge même pour les débutants ! Une machine te tire dessus 1 balle toute les 3 secondes, renvoies en le plus possible ! <br>
-            Horaire : 9h-11h puis 13h-17h<br>
+          <p>Un petit challenge, même pour les débutants ! Une machine te tire dessus 1 balle toutes les 3 secondes, renvoie en le plus possible ! <br>
+            Horaires : 9h-11h puis 13h-17h<br>
             Fourchette de prix : € <br>
             Niveau : Tout niveau
         </div>
@@ -81,7 +81,7 @@
         <div class="w3-container w3-white">
           <p><b>LittleTennis</b></p>
           <p>Pour les enfants qui souhaitent eux aussi jouer, il est possible d'affronter ses camarades sur un petit terrain pour leur faire mordre la poussière ! <br>
-            Horaire : 9h-16h<br>
+            Horaires : 9h-16h<br>
             Fourchette de prix : € <br>
             Pour les moins de 10 ans
         </div>
@@ -90,8 +90,8 @@
         <img src="../img/PhotoStand/Nike.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Stand Nike</b></p>
-          <p>Venez sur le stand de la marque Nike pour trouver la paire de chaussure qu'il vous faut ! Prix préférentiel avec possibilité d'essayer la ou les paires ! <br>
-            Horaire : 10h-17h<br>
+          <p>Venez sur le stand de la marque Nike pour trouver la paire de chaussures qu'il vous faut ! Prix préférentiel avec possibilité d'essayer la ou les paires ! <br>
+            Horaires : 10h-17h<br>
             Fourchette de prix : Gratuit
         </div>
       </div>

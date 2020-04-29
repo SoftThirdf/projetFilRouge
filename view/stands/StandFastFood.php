@@ -29,7 +29,7 @@
 
   <div id="conteneurBody">
     <!-- C'est ici que l'on met le corps de la page -->
-    <h2><b>Pas le temps pour manger ? Prenez à emporter pour ne pas prendre une miète des matchs !</b></h2>
+    <h2><b>Pas le temps pour manger ? Prenez à emporter pour ne pas perdre une miète des matchs !</b></h2>
     <hr class="sousH2">
     <!-- First Photo Grid -->
     <div class="w3-row-padding">
@@ -37,8 +37,8 @@
         <img src="../img/PhotoStand/Tête de série.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Tête de série</b></p>
-          <p>Envie de manger un sandwich ? Un croque monsieur ? Une barquette de fritte ? Tête de série vous permettra de prendre des ressources pour la journée ou de manger en terasse ! <br>
-            Horaire : 11h-17h <br>
+          <p>Envie de manger un sandwich ? Un croque monsieur ? Une barquette de frites ? Tête de série vous permettra de prendre des ressources pour la journée ou de manger en terasse ! <br>
+            Horaires : 11h-17h <br>
             Fourchette de prix : € </p>
         </div>
       </div>
@@ -46,8 +46,8 @@
         <img src="../img/PhotoStand/Sandwicherie Steria.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Sandwicherie Steria</b></p>
-          <p>Si vous souhaitez manger rapidement à moindre coût venez vous rassasiez à la sandwicherie de l'open pour ne louper aucun match de la journée ! <br>
-            Horaire : 10h-18h <br>
+          <p>Si vous souhaitez manger rapidement à moindre coût, venez vous rassasiez à la sandwicherie de l'open pour ne louper aucun match de la journée ! <br>
+            Horaires : 10h-18h <br>
             Fourchette de prix : €
         </div>
       </div>
@@ -56,7 +56,7 @@
         <div class="w3-container w3-white">
           <p><b>La glace des champions</b></p>
           <p>Venez vous raffraichir les idées entre 2 matchs et prenez une de nos délicieuses glaces ! <br>
-            Horaire : 12h-18h <br>
+            Horaires : 12h-18h <br>
             Fourchette de prix : €
         </div>
       </div>
@@ -68,8 +68,8 @@
         <img src="../img/PhotoStand/Engagement !.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Engagement !</b></p>
-          <p>Pour bien démarer la journée que dîtes vous de déjeuner à l'engagement ? Le service est primoridial pour remporter la partie, alors il ne vaut mieux pas le rater ! <br>
-            Horaire : 9h-11h puis 15h-17h<br>
+          <p>Pour bien démarrer la journée, que dîtes vous de déjeuner à l'engagement ? Le service est primoridial pour remporter la partie, alors il ne vaut mieux pas le rater ! <br>
+            Horaires : 9h-11h puis 15h-17h<br>
             Fourchette de prix : €€
         </div>
       </div>
@@ -77,8 +77,8 @@
         <img src="../img/PhotoStand/Churros.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Churros</b></p>
-          <p>Churros comme son nom l'indique vous proposera de goûter les meilleurs churros de l'Open ! Set à vous de jouer maintenant ! <br>
-            Horaire : 13h-17h<br>
+          <p>Churros, comme son nom l'indique, vous proposera de goûter les meilleurs churros de l'open ! Set à vous de jouer maintenant ! <br>
+            Horaires : 13h-17h<br>
             Fourchette de prix : €
         </div>
       </div>
@@ -86,8 +86,8 @@
         <img src="../img/PhotoStand/Les crêpes de l'open !.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Les crêpes de l'open !</b></p>
-          <p>Venez passer un agréable moment on companie des meilleurs crêpes de cette Open ! Sucré, sallé et même sucré-sallé seront là ! <br>
-            Horaire : 13h-17h<br>
+          <p>Venez passer un agréable moment en compagnie des meilleurs crêpes de cet open ! Sucrée, salée et même sucrée-salée seront là ! <br>
+            Horaires : 13h-17h<br>
             Fourchette de prix : €
         </div>
       </div>

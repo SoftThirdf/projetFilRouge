@@ -36,12 +36,12 @@
     </div>
     <div>
       <p class="">Il n’est pas toujours possible de se consacrer à sa passion pour le tennis. Que diriez vous de jouer au tennis dans votre salon ?</p>
-      <p>Nous vous proposons une expérience en réalité virtuel ! Il sera possible pour les plus chanceux de repartir avec un exemplaire du jeux !</p>
+      <p>Nous vous proposons une expérience en réalité virtuelle ! Il sera possible pour les plus chanceux de repartir avec un exemplaire du jeux !</p>
     </div>
 
     <div>
       <h4>
-        <center>Trailer de DreamMatchVR:</center>
+        <center>Trailer de DreamMatchVR :</center>
       </h4>
       <div id="conteneurInfos">
         <div id="conteneurImg">
@@ -50,9 +50,9 @@
         <div id="conteneurTextVideo">
           <iframe src="https://www.youtube.com/embed/TdMU35xSMgY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p>
-            Bimboosoft revient avec leur nouveau jeux vidéo en réalité virtuel ! Après Rollercoaster Dreams sur PlayStation 4, venez essayer DreamMatchVR vous proposant de jouer au tennis en réalité virtuel comme si vous y étiez ! Une expérience
+            Bimboosoft revient avec leur nouveau jeux vidéo en réalité virtuelle ! Après Rollercoaster Dreams sur PlayStation 4, venez essayer DreamMatchVR vous proposant de jouer au tennis en réalité virtuelle comme si vous y étiez ! Une expérience
             immersive et passionnante ! <br>
-            Ouvert de 9h à 18h. Entré libre et gratuite.
+            Ouvert de 9h à 18h. Entrée libre et gratuite.
           </p>
         </div>
       </div>
