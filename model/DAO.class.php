@@ -1,7 +1,5 @@
 <?php
 
-    require_once("rencontre.class.php");
-
     // Definition de l'unique objet de DAO
     $dao = new DAO();
 
@@ -704,27 +702,29 @@
    //Méthode qui permet d'obtenir tout les matchs Simple d'un joueurs passé en paramètre
    //Elle retourne un tableau associatif avec les informations de ces matchs
    function getMonPlanningSimple($IdJoueur) {
-     $req = "SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_joueur AS nom_joueur1,
-             J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2
-             FROM rencontre R
-             INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
-             INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
-             INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
-             INNER JOIN court C ON C.id_court = R.id_court
-             INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
-             WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur1 = $IdJoueur
-             AND R.id_match NOT IN (SELECT id_match FROM balle_set)
-             UNION
-             SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_joueur AS nom_joueur1,
-             J1.prenom_joueur AS prenom_joueur1, J1.nom_equipe AS nom_equipe1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2
-             FROM rencontre R
-             INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
-             INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
-             INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
-             INNER JOIN court C ON C.id_court = R.id_court
-             INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
-             WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur2 = $IdJoueur
-             AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
+     $req = "SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+            J1.prenom_joueur AS prenom_joueur1, J2.nom_equipe AS nom_equipe2, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2,T.categorie_tournoi, T.type_tournoi
+            FROM rencontre R
+            INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+            INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+            INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+            INNER JOIN court C ON C.id_court = R.id_court
+            INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+            WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur1 = $IdJoueur
+            AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+
+            UNION
+
+            SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+            J1.prenom_joueur AS prenom_joueur1, J2.nom_equipe AS nom_equipe2, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2,T.categorie_tournoi, T.type_tournoi
+            FROM rencontre R
+            INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+            INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+            INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+            INNER JOIN court C ON C.id_court = R.id_court
+            INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+            WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur2 = $IdJoueur
+            AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
        $sth = $this->db->query($req);
        $res = $sth->fetchAll(PDO::FETCH_ASSOC);
        return $res;
@@ -752,18 +752,17 @@
         FROM rencontre R
         INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
         WHERE R.id_joueur4 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)";
-     $sth = $this->db->query($req);
-     $res = $sth->fetchAll(PDO::FETCH_ASSOC);
-     for ($i = 0; $i < sizeof($res) ; $i++) {
-       if ($res[$i]['categorie_tournoi'] == 'Simple') {
-         $res = $this->getMonPlanningSimple($IdJoueur);
+       $sth = $this->db->query($req);
+       $res = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+       if ($res[0]['categorie_tournoi'] == 'Simple') {
+         $result = $this->getMonPlanningSimple($IdJoueur);
        }
        else {
-         $res = $this->getMonPlanningDouble($IdJoueur);
+         $result = $this->getMonPlanningDouble($IdJoueur);
        }
 
-     }
-     return $res;
+     return $result;
    }
 
 

@@ -101,7 +101,7 @@ else {
           echo "$nomjoueur3  $prenomjoueur3  <br>
           $nomjoueur4  $prenomjoueur4 <br>";
         }else{
-          echo "$nomjoueur2  $prenomjoueur2";
+          echo "$nomjoueur2  $prenomjoueur2 <br>";
         }
         echo $nomequipe2;
       ?>
