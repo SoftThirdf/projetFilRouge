@@ -17,8 +17,8 @@
         include_once('../view/Motdepassemodifie.php');
        }
    }else {
-     include('../view/infos.php');
-     echo "Une erreur s'est produite";
+     include('../view/mdp.php');
+     //echo "Une erreur s'est produite";
    }
   }
 ?>

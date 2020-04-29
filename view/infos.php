@@ -52,7 +52,7 @@
         echo $Login;
         ?></h3>
         <div id="btnInscription" class="btn">
-       <a href="../view/mdp.php" class="linkBlack">Modifier mon mot de passe</a></li>
+       <a href="../controler/mdpcontroler.php" class="linkBlack">Modifier mon mot de passe</a></li>
      </div>
    </div>
  </div>
