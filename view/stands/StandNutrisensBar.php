@@ -36,17 +36,17 @@
         <iframe src="https://www.youtube.com/embed/Et-C5Yyv3aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="conteneurText">
           <p><b>Qu’est-ce que Nutrisens ?</b></p>
-          <p>Nutrisens est une entreprise spécialisée dans l’alimentaire avec de nombreux produits comme ceux dans la nutrition médicale, des produits hospitaliers, des produits pour les personnes qui perdent le goût ou encore des produits pour
-            garder la ligne ! Nutrisens propose également des produits pour les sportifs comme des bars énergisants qui permettent de mieux récupérer ou de rester en forme. </p>
+          <p>Nutrisens est une entreprise spécialisée dans l’alimentaire avec de nombreux produits comme la nutrition médicale, des produits hospitaliers, des produits pour les personnes qui perdent le goût ou encore des produits pour
+            garder la ligne ! Nutrisens propose également des produits pour les sportifs comme des barress énergisantes qui permettent de mieux récupérer ou de rester en forme. </p>
         </div>
       </div>
       <div class="conteneurInfos">
         <img src="../img/PhotoStand/NutrisensBar.jpg" alt="nutrisenBat" >
         <div class="conteneurText">
           <p><b>Un atelier de dégustation !</b></p>
-          <p>Nutrisens vous propose de venir goûter ses nombreux produits sur son stand ! Barres énergétiques aux fruits, barres énergétiques au chocolat ou encore shaker seront de la partie pour vous donner envie d’essayer ces produits. Un service
+          <p>Nutrisens vous propose de venir goûter ses nombreux produits sur son stand ! Barres énergétiques aux fruits, barres énergétiques au chocolat ou encore shakers seront de la partie pour vous donner envie d’essayer ces produits. Un service
             gagnant en prime afin de ne pas trop attendre ! Bénéficiez d’un tarif préférentiel entre 10h et 11h ! <br>
-            Horaire : 10h-16h <br>
+            Horaires : 10h-16h <br>
             Fourchette de prix : Gratuit
         </div>
       </div>
@@ -54,9 +54,9 @@
         <img src="../img/PhotoStand/Challenge.jpg" alt="challenge" >
         <div class="conteneurText">
           <p><b>Des défis ! </b></p>
-          <p>Venez participer à un de nos nombreux défis ! Tous les matins retrouver nos organisateurs qui ont prévu de formidables challenge afin de tester l’efficacité des produits Nutrisens ! Pour chaque participation un ensemble d’échantillons
-            vous sera donné afin que vous puissiez rester en forme tout au long de l’open. Alors n’attendez pas et emprunter les couloirs du succès !<br>
-            Horaire : 10h-16h <br>
+          <p>Venez participer à un de nos nombreux défis ! Tous les matins, retrouvez nos organisateurs qui ont prévu de formidables challenges afin de tester l’efficacité des produits Nutrisens ! Pour chaque participation, un ensemble d’échantillons
+            vous sera donné afin que vous puissiez rester en forme tout au long de l’open. Alors n’attendez pas et empruntez les couloirs du succès !<br>
+            Horaires : 10h-16h <br>
             Fourchette de prix : Gratuit
         </div>
       </div>

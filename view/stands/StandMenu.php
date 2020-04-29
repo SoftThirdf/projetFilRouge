@@ -44,10 +44,10 @@
 
         <div class="filterDiv AS"> <a href="StandSquash.php" class="linkAct linkBlack">Squash </a> </div>
         <div class="filterDiv VR"><a href="StandMatchVR.php" class="linkAct linkBlack">Match VR </a></div>
-        <div class="filterDiv food"><a href="StandRestaurant.php" class="linkAct linkBlack">Restaurant </a></div>
+        <div class="filterDiv food"><a href="StandRestaurant.php" class="linkAct linkBlack">Restaurants </a></div>
         <div class="filterDiv VR"><a href="StandSpectatorVR.php" class="linkAct linkBlack">SpectatorVR </a></div>
         <div class="filterDiv food"><a href="StandFastFood.php" class="linkAct linkBlack">FastFood </a></div>
-        <div class="filterDiv VIP"><a href="../../controler/StandDedicaceVIPControler.php" class="linkAct linkBlack">DedicasseVIP </a></div>
+        <div class="filterDiv VIP"><a href="../../controler/StandDedicaceVIPControler.php" class="linkAct linkBlack">Dédicaces VIP </a></div>
         <div class="filterDiv food AS"><a href="StandNutrisensBar.php" class="linkAct linkBlack">NutrisensBar </a></div>
         <div class="filterDiv food VIP"><a href="StandCocktail.php" class="linkAct linkBlack">Cocktail </a></div>
         <div class="filterDiv AS"><a href="StandLearnTennis.php" class="linkAct linkBlack">LearnTennis </a></div>

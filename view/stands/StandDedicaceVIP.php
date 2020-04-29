@@ -63,7 +63,6 @@
           echo $prenom_vip . " " . $nom_vip . " " ."<img src=$lienDrap alt=\"$nomPays\" class='imgDrap'><br>";
         ?>
         </h3>
-        <hr class="sousH3">
 
         <a href="https://www.instagram.com" target="_blank"><img src="../view/img/imgVIP/insta.png" class="rs"></a>
         <a href="https://www.facebook.com" target="_blank"><img src="../view/img/imgVIP/fb.png" class="rs"></a>
@@ -88,10 +87,10 @@
     <div id="actualitevip">
       <h3>Dédicaces</h3>
       <hr class="sousH3">
-      <p>Maxime François tenant du titre de l’Open Sopra Steria, sa compagne Emeline Michel demi-finaliste du grand chelem de Roland Garos sont venus en tant que grands invités à l’Open Sopra Steria !
-        Accompagnés par l’excentrique Özge Gökdere, journaliste talentueuse aussi bien connue pour ses qualités d’investigation que son caractère surprenant, qui mène un reportage sur la vie des stars féminines de l’Open !
-        Ces trois invités prestigieux offriront aux fans une session de dédicace chaque matin de 10h à 12h afin de pouvoir côtoyer leurs fans !
-        C’est un moment unique de passer un moment spécial avec ces célébrités, ne ratez pas cette occasion ! </p>
+      <p>Maxime François, tenant du titre de l’Open Sopra Steria, et sa compagne Emeline Michel, demi-finaliste du grand chelem de Roland Garos sont venus en tant que grands invités à l’Open Sopra Steria !
+        Accompagnés par l’excentrique Özge Gökdere, journaliste talentueuse aussi bien connue pour ses qualités d’investigation que son caractère surprenant, qui mène un reportage sur la vie des stars féminines de l’open !
+        Ces trois invités prestigieux offriront aux fans une session de dédicaces chaque matin de 10h à 12h afin de pouvoir côtoyer leurs fans !
+        C’est une occasion unique de passer un moment spécial avec ces célébrités, ne ratez pas cette occasion ! </p>
     </div>
   </div>
 </body>

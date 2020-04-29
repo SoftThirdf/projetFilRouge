@@ -38,7 +38,7 @@
         <div class="w3-container w3-white">
           <p><b>Le break</b></p>
           <p>Venez faire une pause durant votre journée et prenez un verre ! Lieu préféré des jeunes VIP, ambiance décontractée, tout est là pour passer une bonne soirée ! Soirée spéciale pour le big match avec un happy hour toute la soirée ! <br>
-            Horaire : 21h-15h <br>
+            Horaires : 21h-15h <br>
             Fourchette de prix : €€</p>
         </div>
       </div>
@@ -46,17 +46,17 @@
         <img src="../img/PhotoStand/Jeux set et match.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Jeux set et match !</b></p>
-          <p>Après une journée assis à regarder des matchs, venez danser et festoyer à nos soirée cocktail. En famille ou entre amis, Jeux set et match c’est le bar de l’open qui vous fera finir cet évènement en beauté ! <br>
-            Horaire : 21h-4h <br>
+          <p>Après une journée assis à regarder des matchs, venez danser et festoyer à nos soirées cocktails. En famille ou entre amis, Jeux set et match c’est le bar de l’open qui vous fera finir cet évènement en beauté ! <br>
+            Horaires : 21h-4h <br>
             Fourchette de prix : €€
         </div>
       </div>
       <div class="w3-third w3-container">
         <img src="../img/PhotoStand/L'open bar.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-          <p><b>L'open bar</b></p>
-          <p>L’open bar c’est chaque soir une soirée cocktail (avec alcool ou non), l’occasion de rencontrer les plus grande VIP du tournoi ou de simplement passer un moment en toute tranquillité. <br>
-            Horaire : 19h-2h <br>
+          <p><b>L'Open bar</b></p>
+          <p>L’open bar c’est chaque soir une soirée cocktails (avec alcool ou non), l’occasion de rencontrer les plus grands VIP du tournoi ou de simplement passer un moment en toute tranquillité. <br>
+            Horaires : 19h-2h <br>
             Fourchette de prix : €€€
         </div>
       </div>

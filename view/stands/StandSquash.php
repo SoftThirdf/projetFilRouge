@@ -39,7 +39,7 @@
       </div>
       <div id="conteneurDescription">
         <p id="descriptionSquash">
-          Pour vous dégourdir un peu entre deux longues sessions de match que diriez-vous de vous bougez un peu dans une de nos salles consacrées au squash ! Venez défier vos amis ou votre famille en un contre un ! <br>
+          Pour vous dégourdir un peu entre deux longues sessions de matchs, que diriez-vous de vous bougez un peu dans l'une de nos salles consacrées au squash ! Venez défier vos amis ou votre famille en un contre un ! <br>
         </p>
         <p id="horaireSquash">Ouvert de 9h à 18h. <br> Entrée libre et gratuite.</p>
       </div>

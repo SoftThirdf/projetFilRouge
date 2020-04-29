@@ -37,8 +37,8 @@
         <img src="../img/PhotoStand/SETait bon.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>SETait bon !</b></p>
-          <p>Setait bon est un restaurant avec une cuisine varié pour toute la famille. Entre 2 sets venez vous restaurer ! <br>
-            Horaire : 11h-15h <br>
+          <p>SETait bon est un restaurant avec une cuisine variée pour toute la famille. Entre 2 sets venez vous restaurer ! <br>
+            Horaires : 11h-15h <br>
             Fourchette de prix : €€</p>
         </div>
       </div>
@@ -46,8 +46,8 @@
         <img src="../img/PhotoStand/Jupiter.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Jupiter</b></p>
-          <p>Le Jupiter c'est le restaurant lyonnais de cet open. Une cuisine traditionnelle préparé par les plus grand chef. Qu'attendez vous ? <br>
-            Horaire : 11h45h-16h <br>
+          <p>Le Jupiter c'est le restaurant lyonnais de cet open. Une cuisine traditionnelle préparée par les plus grands chefs. Qu'attendez vous ? <br>
+            Horaires : 11h45h-16h <br>
             Fourchette de prix : €€€€€
         </div>
       </div>
@@ -55,8 +55,8 @@
         <img src="../img/PhotoStand/Apollon.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Apollon</b></p>
-          <p>L'Apollon est le restaurant luxueux de l'open ! Venez vous délecter de son ambiance et ses plats fait par les plus grand chefs de la région ! <br>
-            Horaire : 11h30-16h <br>
+          <p>L'Apollon est le restaurant luxueux de l'open ! Venez vous délecter de son ambiance et ses plats faits par les plus grands chefs de la région ! <br>
+            Horaires : 11h30-16h <br>
             Fourchette de prix : €€€€
         </div>
       </div>

@@ -31,21 +31,21 @@
 
     <h2> SpectatorVR </h2>
     <hr class="sousH2">
-    <p id="textSousH2"> Que diriez vous d'animer un stade en entier ? </p>
+    <p id="textSousH2"> Que diriez-vous d'animer un stade en entier ? </p>
     <div id="conteneurTextVideo">
       <div class="conteneurInfos">
         <div class="iframeInfos">
           <iframe src="https://www.youtube.com/embed/yP3KVI1RIMk?start=59" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>
-          Pendant que vous faîtes la queue ou si vous accompagnez juste quelqu’un, vous pourrez affronter un de nos fabuleux joueur en réalité augmenté. Munissez-vous de votre smartphone définissez votre terrain de jeux et lancer la partie. Partez à
+          Pendant que vous faîtes la queue ou si vous accompagnez juste quelqu’un, vous pourrez affronter l'un de nos fabuleux joueurs en réalité augmentée. Munissez-vous de votre smartphone, définissez votre terrain de jeux et lancez la partie. Partez à
           l’assaut des plus grands joueurs de tennis virtuel de l’open. Prenez l’avantage sur vos adversaires et remportez la victoire ! Un tournoi sera organisé le premier soir de l’open au stand DreamMatchVR, venez nombreux ! <br>
         </p>
       </div>
       <div class="conteneurInfos">
         <p>
-          SpectatorVR est un jeu en réalité virtuel proposant d’incarner un spectateur d’un match de tennis. Les matchs de tennis ont la mauvaise réputation de ne pas être particulièrement animé par les spectateurs. Il est temps de changer !
-          L’espace d’une dizaine de minute venez ambiancer tout un match de tennis ! Un moment à partager en famille, accès gratuit !
+          SpectatorVR est un jeu en réalité virtuelle proposant d’incarner un spectateur d’un match de tennis. Les matchs de tennis ont la mauvaise réputation de ne pas être particulièrement animés par les spectateurs. Il est temps de changer !
+          L’espace d’une dizaine de minutes venez ambiancer tout un match de tennis ! Un moment à partager en famille, accès gratuit !
         </p>
         <div class="iframeInfos">
           <iframe title="vimeo-player" src="https://player.vimeo.com/video/277669653" frameborder="0" allowfullscreen></iframe>
