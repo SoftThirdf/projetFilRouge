@@ -72,23 +72,23 @@ session_start();
         <div class="conteneurMiddleArticle">
           <img src="../view/img/imgArticle/article1.jpg" alt="stand" class="imgArticle">
           <h3>Partager</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+          <p>
+            L’Open Sopra Steria de Lyon est l’occasion de se retrouver. Amis, famille, collègues, réunissez-vous autour d’un rafraîchissement pour débattre du set de Cantin Aubrey ou de la faute Joao Sousa. Organisé à la période des beaux jours dans la ville gastronomique, ce tournoi vous invite à partager des beaux moments avec vos proches. Retrouvez sur notre site toute l’actualité de l’Open pour ne rien manquer.
+          </p>
+          </div>
         <div class="conteneurMiddleArticle">
           <img src="../view/img/imgArticle/article2.jpg" alt="jouer" class="imgArticle">
           <h3>Jouer</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>
+            Jeu, set et match ! Profitez de nos ateliers pour suivre des activités sportives, apprenez à engager, trouvez bonne raquette à votre poignet, et initiez vos enfants au tennis grâce à notre atelier LearnTennis pour les grands mais aussi les petits. C’est l’occasion rêvée de vous dégourdir les jambes et améliorer votre jeu, venez découvrir nos salles gratuites dédiées au Squash. Et si on bougeait un peu ?
+          </p>
         </div>
         <div class="conteneurMiddleArticle">
           <img src="../view/img/imgArticle/article3.jpg" alt="supporter" class="imgArticle">
           <h3>Supporter</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>
+            Gardez un œil sur vos joueurs favoris. Nous avons mis en place, pour vous, le tableau des scores, vous y retrouverez pendant toute la période du tournoi les résultats de tous les joueurs pour tous les matchs. Vous pouvez également retrouvez vos idoles, nos VIP, sur un stand réservé aux dédicaces, c’est une occasion unique de passer un moment spécial avec ces célébrités, ne la ratez surtout pas !
+          </p>
         </div>
       </div>
     </div>
