@@ -1,0 +1,52 @@
+Pour lancer notre site il est obligatoire d'être connecté à Internet.
+En effet nous utilisons le framework Bootstrap pour la génération d'un carousel
+sur la page principale.
+De plus certaines pages de notre site utilise du css provenant de W3Schools.
+Puis, nous avons importé des API de divers réseaux sociaux et une carte de Google Maps.
+Enfin, nous avons sélectionné des Police spéciaux pour rendre le site plus harmonieux provenant
+de chez Google Fonts.
+
+
+Création de la base via phpMyAdmin 
+ 
+Lancez phpMyAdmin (voir annexe 19). 
+ 
+Sur la page phpMyAdmin, créez une nouvelle base de données que vous nommerez “testdb”. 
+Cliquez ensuite sur import puis sur “choisir le fichier”, à partir du dossier “ProjetFilRouge” vous ouvrez 
+le dossier model puis vous sélectionnez tous les documents sauf le fichier DAO.class.php, à la suite de cela, 
+vous pouvez cliquer sur go. 
+Cette action a pour objectif d’importer, dans la base de données que vous venez de créer, toutes les tables 
+que nous avons créées dans le cadre du projet. 
+ 
+
+Modification du port en fonction du serveur 
+ 
+ 
+Dans le dossier “ProjetFilRouge” et dans le fichier DAO.class.php situé dans model, vous devez modifier dans le PDO 
+le numéro de port pour y renseigner le vôtre.  
+ 
+Vous pouvez trouver ce numéro sur votre page d'accueil phpMyAdmin, vous est indiqué le numéro de port de votre serveur
+ 
+
+Installation du site en lui-même 
+ 
+Une fois votre serveur wamp activé, vous pouvez lancer Localhost, en faisant un clic droit sur l'icône wamp située 
+dans la barre des tâches
+ 
+Vous atterrissez ensuite sur la page localhost. Vous y trouverez tous vos projets. 
+Dans l’URL de cette page, vous pouvez renseigner le nom du dossier comme suit 
+http://localhost/ProjetFilRouge et appuyer sur entrée. 
+ 
+À la suite de l’action précédente, vous êtes redirigé sur la page suivante index. 
+Il ne vous reste plus qu’à cliquer sur view, en faisant cela, vous atterrissez directement sur la page d'accueil du 
+site web. 
+ 
+Pour vous permettre de visionner l’intégralité des pages web liées à l’espace membre, nous vous proposons de vous 
+connecter à l’aide du profil d’un joueur existant dans la base de données, 
+il s’agit de Cantin Aubrey: 
+Login: canaub 
+Mot de passe: canaub
+
+Concernant la partie administrateur,
+Login: admin
+Mot de passe: admin
