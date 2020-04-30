@@ -276,5 +276,104 @@ INSERT INTO HORAIRE(heure_debut,date_,heure_fin) VALUES (:heure_debut,:dateR,:he
  ORDER BY r.id_Reservation DESC
  LIMIT 1
 
- -- Insère dans la tbale correspond2 les informations pour une réservation à un horaire
+ -- Insère dans la table correspond2 les informations pour une réservation à un horaire
  INSERT INTO CORRESPOND2(id_Reservation, id_Horaire) VALUES (:id_Reservation, :id_Horaire)
+
+ -- Renvoi tout les matchs Double d'un joueurs passé en paramètre
+ SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+ J1.prenom_joueur AS prenom_joueur1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3,J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4,T.categorie_tournoi, T.type_tournoi
+ FROM rencontre R
+ INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+ INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+ INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+ INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+ INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+ INNER JOIN court C ON C.id_court = R.id_court
+ INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+ WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur1 = $IdJoueur
+ AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+ UNION
+ SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+ J1.prenom_joueur AS prenom_joueur1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3,J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4,T.categorie_tournoi, T.type_tournoi
+ FROM rencontre R
+ INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+ INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+ INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+ INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+ INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+ INNER JOIN court C ON C.id_court = R.id_court
+ INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+ WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur2 = $IdJoueur
+ AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+ UNION
+ SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+ J1.prenom_joueur AS prenom_joueur1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3,J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4,T.categorie_tournoi, T.type_tournoi
+ FROM rencontre R
+ INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+ INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+ INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+ INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+ INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+ INNER JOIN court C ON C.id_court = R.id_court
+ INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+ WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur3 = $IdJoueur
+ AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+ UNION
+ SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+ J1.prenom_joueur AS prenom_joueur1, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2, J2.nom_equipe AS nom_equipe2, J3.nom_joueur AS nom_joueur3, J3.prenom_joueur AS prenom_joueur3,J4.nom_joueur AS nom_joueur4, J4.prenom_joueur AS prenom_joueur4,T.categorie_tournoi, T.type_tournoi
+ FROM rencontre R
+ INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur AND R.id_joueur3 = J1.id_joueur AND R.id_joueur4 = J1.id_joueur
+ INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+ INNER JOIN joueur J3 on R.id_joueur3 = J3.id_joueur OR R.id_joueur3 = J3.id_joueur
+ INNER JOIN joueur J4 on R.id_joueur3 = J4.id_joueur OR R.id_joueur4 = J4.id_joueur
+ INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+ INNER JOIN court C ON C.id_court = R.id_court
+ INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+ WHERE J1.id_joueur < J2.id_joueur AND J3.id_joueur < J4.id_joueur AND T.categorie_tournoi LIKE 'Double' AND id_joueur4 = $IdJoueur
+ AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+
+-- Renvoi tout les matchs Simple d'un joueurs passé en paramètre
+SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+J1.prenom_joueur AS prenom_joueur1, J2.nom_equipe AS nom_equipe2, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2,T.categorie_tournoi, T.type_tournoi
+FROM rencontre R
+INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+INNER JOIN court C ON C.id_court = R.id_court
+INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur1 = $IdJoueur
+AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+
+UNION
+
+SELECT DISTINCT R.type_match, R.libelle_match,C.libelle_court, H.date_, SD.libelle_horaire, H.heure_debut, J1.nom_equipe AS nom_equipe1, J1.nom_joueur AS nom_joueur1,
+J1.prenom_joueur AS prenom_joueur1, J2.nom_equipe AS nom_equipe2, J2.nom_joueur AS nom_joueur2, J2.prenom_joueur AS prenom_joueur2,T.categorie_tournoi, T.type_tournoi
+FROM rencontre R
+INNER JOIN joueur J1 on R.id_joueur1 = J1.id_joueur OR R.id_joueur2 = J1.id_joueur
+INNER JOIN joueur J2 on R.id_joueur1 = J2.id_joueur OR R.id_joueur2 = J2.id_joueur
+INNER JOIN se_deroule2 SD ON SD.id_Match = R.id_Match
+INNER JOIN court C ON C.id_court = R.id_court
+INNER JOIN horaire H ON H.id_Horaire = SD.id_Horaire INNER JOIN tournoi T ON T.id_tournoi = R.id_tournoi
+WHERE J1.id_joueur < J2.id_joueur AND T.categorie_tournoi LIKE 'Simple' AND id_joueur2 = $IdJoueur
+AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+
+-- Renvoi tout les matchs (avec lerus catégroie et joueurs) d'un joueur selon l'id du joueurs passé en paramètre
+SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+FROM rencontre R
+INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+WHERE R.id_joueur1 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+UNION
+SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+FROM rencontre R
+INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+WHERE R.id_joueur2 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+UNION
+SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+FROM rencontre R
+INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+WHERE R.id_joueur3 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
+UNION
+SELECT R.id_Match, R.id_joueur1, R.id_joueur2, R.id_joueur3, R.id_joueur4, T.categorie_tournoi
+FROM rencontre R
+INNER JOIN tournoi T ON T.id_Tournoi = R.id_Tournoi
+WHERE R.id_joueur4 = $IdJoueur AND R.id_match NOT IN (SELECT id_match FROM balle_set)
