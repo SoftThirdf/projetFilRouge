@@ -755,10 +755,12 @@
        $sth = $this->db->query($req);
        $res = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-       if ($res[0]['categorie_tournoi'] == 'Simple') {
+       if ($res == null) {
+         $result = null;
+       }elseif ($res[0]['categorie_tournoi'] == 'Simple') {
          $result = $this->getMonPlanningSimple($IdJoueur);
        }
-       else {
+       elseif($res[0]['categorie_tournoi'] == 'Double') {
          $result = $this->getMonPlanningDouble($IdJoueur);
        }
 
